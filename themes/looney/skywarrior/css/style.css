@@ -1,0 +1,2248 @@
+/* ==========================================================================
+	@font-face
+   ========================================================================== */
+@font-face {
+	font-family:'OpenSans ExtraBold';
+		src:url('/font/opensans-extrabold-webfont.eot');
+		src:url('/font/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/font/opensans-extrabold-webfont.woff') format('woff'),
+		url('/font/opensans-extrabold-webfont.ttf') format('truetype'),
+		url('/font/opensans-extrabold-webfont.svg#opensans-extrabold-webfont') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'CaviarDreams';
+		src:url('/font/CaviarDreams-webfont.eot');
+		src:url('/font/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/font/CaviarDreams-webfont.woff') format('woff'),
+		url('/font/CaviarDreams-webfont.ttf') format('truetype'),
+		url('/font/CaviarDreams-webfont.svg#opensans-extrabold-webfont') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'OpenSans CondBold';
+		src:url('/font/opensans-condbold-webfont.eot');
+		src:url('/font/opensans-condbold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/font/opensans-condbold-webfont.woff') format('woff'),
+		url('/font/opensans-condbold-webfont.ttf') format('truetype'),
+		url('/font/opensans-condbold-webfont.svg#webfont') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+
+/* ==========================================================================
+	Фон
+   ========================================================================== */
+body {
+	background:#202020 url('../images/bg/page-bg-01.jpg') center top no-repeat fixed;
+}
+
+
+
+/*  ==========================================================================
+	 Базовый стиль — настройки шаблона: резиновый, фиксированный, ширина
+    ========================================================================== */
+/* Обертка для всей страницы */
+.wrapper {
+
+}
+
+/* Максимальная ширина шаблона и выравнивание по центру.
+   Классы можно использовать по отдельности например для того,
+   чтобы рястянуть шапку на всю ширину страницы и при этом
+   задать для контента и подвала фиксированную ширину */
+.header-wrap,
+.content-wrap,
+.footer-wrap {
+	padding:0 16px; /* чтобы шаблон не "прилипал" к краям окна браузера */
+}
+
+.header,
+.content,
+.footer {
+	margin:0 auto; /* выравниваем по центру */
+	width:1160px; /* для резинового шаблона указываем max-width и min-width */
+}
+
+
+
+/* ==========================================================================
+	Шапка
+   ========================================================================== */
+.header {
+
+}
+.header .cap {
+	position:relative;
+	margin-top:20px;
+	padding:20px 0 25px 30px;
+	overflow:hidden;
+	background:#242424;
+
+}
+.header .cap .logotip {
+
+}
+.header .cap .logotip a {
+	text-shadow:0 0 2px rgba(255, 255, 255, 1);
+	display:inline-block;
+	padding:12px 0 12px 110px;
+	background:url('../images/demo-logo-wg.png') left center no-repeat;
+	font-size:2.75em;
+	font-family:'CaviarDreams', Arial, sans-serif;
+	color:#eee;
+	text-decoration:none;
+}
+.header .cap .logotip a:hover {
+	text-shadow:none;
+	color:#FFE975;
+}
+.header .cap .slogan {display:none;
+	margin-top:-20px;
+	padding:0 0 0 170px;
+	font-style:italic;
+	font-size:.7em;
+	float:left;
+	color:#999;
+
+}
+
+
+
+/* ==========================================================================
+	Меню
+   ========================================================================== */
+/*
+	 Функционал
+    ===================================== */
+.cap-navigation ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.cap-navigation > ul {
+	width:100%;
+}
+.cap-navigation > ul:after{
+	content:'';
+	display:block;
+	clear:both;
+	*zoom:1;
+}
+.cap-navigation > ul > li {
+	display:inline-block;
+	float:left;
+	position:relative;
+}
+/* Выпадающее меню */
+.cap-navigation ul li ul {
+	display:none;
+	position:absolute;
+	white-space:nowrap;
+	z-index:99;
+}
+.js .cap-navigation ul li:hover ul {
+	display:block;
+}
+/*  */
+.cap-navigation > ul > li.right {
+	float:right;
+}
+/*
+	 Стилизация меню
+    ===================================== */
+.cap-navigation {
+	background-color:#f1f1f1;
+	padding-bottom:3px;
+
+}
+.cap-navigation > ul { position:relative;
+	height:68px;
+	padding:0 20px;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,.6), inset 0 1px 1px 1px #f3ab46;
+	-moz-box-shadow:0 1px 2px rgba(0,0,0,.6), inset 0 1px 1px 1px #f3ab46;
+	box-shadow:0 1px 2px rgba(0,0,0,.6), inset 0 1px 1px 1px #f3ab46;
+	background-image:-webkit-linear-gradient(bottom, #c43e2f, #d16428);
+	background-image:-moz-linear-gradient(bottom, #c43e2f, #d16428);
+	background-image:-o-linear-gradient(bottom, #c43e2f, #d16428);
+	background-image:linear-gradient(to top, #c43e2f, #d16428);
+}
+.cap-navigation > ul::after {
+	background:url('../images/bg/menu-extra.png') center center no-repeat;
+	content:' ';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:1;
+}
+.cap-navigation > ul > li {
+	margin:0 6px;
+	z-index:2;
+}
+.cap-navigation > ul > li > a {
+	color:#fff;
+	display:block;
+	padding:26px 0 18px;
+	text-decoration:none;
+	font-size:.8em;
+	font-family:'OpenSans ExtraBold', Arial, sans-serif;
+	text-transform:uppercase;
+}
+.cap-navigation > ul > li > a::before,
+.cap-navigation > ul > li > a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition:-webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition:-moz-transform 0.3s, opacity 0.2s;
+	transition:transform 0.3s, opacity 0.2s;
+}
+.cap-navigation > ul > li > a::before {
+	padding-right:4px;
+	content: '[';
+	color:#fff;
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+.cap-navigation > ul > li > a::after {
+	padding-left:4px;
+	content: ']';
+	color:#fff;
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+.header .cap-navigation > ul > li > a:hover::before,
+.header .cap-navigation > ul > li > a:hover::after,
+.header .cap-navigation > ul > li > a:focus::before,
+.cap-navigation > ul > li > a:focus::after {
+	opacity:1;
+	-webkit-transform:translateX(0px);
+	-moz-transform:translateX(0px);
+	transform:translateX(0px);
+}
+.cap-navigation > ul > li > a:hover,
+.cap-navigation > ul > li:hover a {
+	color:#FFE975;
+}
+.cap-navigation ul li ul {
+	margin-left:-10px;
+
+}
+.cap-navigation ul li ul li {
+	border-bottom:1px solid #444;
+
+}
+.cap-navigation ul li ul li:first-child {
+	border-top:3px solid #000;
+}
+.cap-navigation ul li ul li:last-child {
+	border-bottom:none;
+}
+.cap-navigation ul li ul li a {
+	display:block;
+	background:#262626;
+	padding:8px 18px;
+	color:#fff !important;
+	font-size:.75em;
+	text-decoration:none;
+}
+.cap-navigation ul li ul li a:hover {
+	background:#383838;
+}
+.cap-navigation ul li ul {
+	padding:6px 0;
+	background:none;
+}
+.cap-navigation > ul > li.right a {
+
+}
+.cap-navigation .subnarr {
+	background:url('../images/subnarr.png') center 50px no-repeat;
+}
+
+
+
+/* ==========================================================================
+	Контент
+   ========================================================================== */
+.content {
+	position:relative;
+	overflow:hidden;
+	background:#f1f1f1;
+}
+.content p {
+	margin:0 0 .85em;
+	color:#555;
+	font-size:.85em;
+}
+.content p a {
+	
+}
+
+.news ul,
+.singlnews ul,
+.news-comment ul,
+.forum-theme ul,
+.news ol,
+.singlnews ol,
+.news-comment ol,
+.forum-theme ol {
+	margin:0 0 .85em 32px;
+	color:#444;
+	font-size:.85em;
+}
+
+/* Выбор положения сайдбара (боковой колонки) — слева или справа. Нужное раскомментировать. */
+
+/* Контент слева, сайдбар справа */
+.content .column {
+}
+.content .column:nth-of-type(2) {
+	width:301px; /* Ширина сайдбара */
+	 padding:0 20px;
+}
+.content .column:nth-of-type(1) {
+	width:859px; /* Ширина колонки с контентом */
+	 padding:0 0 0 20px;
+}
+.content .column {
+	float:left;
+}
+.content .column:nth-of-type(2n+1) {
+	margin-left:0;
+	clear:left;
+}
+
+/* Контент справа, сайдбар слева */
+/*.content .column {
+	margin-right:15px;
+}
+.content .column:nth-of-type(2) {
+	width:240px;
+}
+.content .column:nth-of-type(1) {
+	width:845px;
+}
+.content .column {
+	float:right;
+}
+.content .column:nth-of-type(2n+1) {
+	margin-right:0;
+	clear:right;
+} */
+
+
+
+/* ==========================================================================
+	Оформление модулей
+   ========================================================================== */
+.modul .pastic {
+	padding:12px 14px;
+	overflow:hidden; /* очищаетм поток, чтобы ничего не "вывалилось" */
+	background:#fff;
+}
+/*  */
+
+.modul {
+	margin:20px 0;
+	-webkit-box-shadow:0 0 3px 0px rgba(0, 0, 0, .14);
+	-moz-box-shadow:0 0 3px 0px rgba(0, 0, 0, .14);
+	box-shadow:0 0 3px 0px rgba(0, 0, 0, .14);
+}
+.modul .custom-title {
+	background:url('../images/b-title-b.gif') left top repeat-x;
+}
+.modul .custom-title h4 {
+	position:relative;
+	display:inline-block;
+	font-family:'OpenSans ExtraBold', Arial, sans-serif;
+	font-size:.8em;
+	text-transform:uppercase;
+	font-weight:normal;
+	padding:12px 36px 0 20px;
+	margin:0;
+	color:#eee;
+	height:42px;
+	background:url('../images/b-title-c.gif') left top repeat-x;
+}
+.modul .custom-title h4::after {
+	background:url('../images/b-title-l.gif') left center no-repeat;
+	content:' ';
+	position:absolute;
+	top:0;
+	left:0;
+	width:3px;
+	height:42px;
+	z-index:1;
+}
+.modul .custom-title h4::before {
+	background:url('../images/b-title-r.gif') center center no-repeat;
+	content:' ';
+	position:absolute;
+	top:0;
+	right:0;
+	width:21px;
+	height:42px;
+	z-index:1;
+}
+
+.modul .custom-title h4 a {
+	text-decoration:none;	
+	color:#fff;
+	text-decoration:underline;
+}
+.modul .custom-title h4 a:hover {
+	text-decoration:none;
+}
+
+/*
+	 Приветствие на главной
+    ===================================== */
+.welcome .pastic {
+	
+}
+
+.welcome .pastic p:last-child {
+	margin-bottom:0;
+}
+
+/*
+	 Видео на главной
+    ===================================== */
+.video .pastic {
+		
+}
+
+/*
+	 Субнавигация
+    ===================================== */
+.adminnav .pastic,
+.subnav .pastic {
+	padding:8px 0 8px 8px;
+	overflow:visible;
+	font-size:.75em;
+	font-weight:bold;
+}
+.adminnav ul,
+.subnav ul {
+	list-style:none;
+	padding:0;
+}
+.adminnav ul li,
+.subnav ul li {
+	position:relative;
+	list-style-type:none;
+}
+.adminnav ul li a,
+.subnav ul li a {
+	border-left:4px solid #eee;
+	color:#555;
+	display:block;
+	padding:5px 14px 5px;
+	text-decoration:none;
+	-webkit-transition:all .20s ease;
+	-moz-transition:all .20s ease;
+	-o-transition:all .20s ease;
+	transition:all .20s ease;
+}
+.subnav ul li.subnarr a {
+	border-left:4px solid #b3b3b3;
+}
+.subnav ul li.subnarr li a {
+	border-left:none;
+}
+.adminnav ul li a:hover,
+.subnav ul li a:hover {
+	border-left:12px solid #FF5B5B;
+}
+.adminnav ul li a:hover,
+.subnav ul li a:hover,
+.adminnav ul li:hover,
+.subnav ul li:hover {
+	color:#FF5B5B;
+
+}
+.adminnav ul li.active a,
+.subnav ul li.active a {
+	color:#999;
+}
+.adminnav ul li ul li.active a,
+.subnav ul li ul li.active a {
+	color:#FFEA00;
+}
+.adminnav ul li.active a:hover,
+.subnav ul li.active a:hover
+.adminnav ul li ul li.active a:hover,
+.subnav ul li ul li.active a:hover {
+	color:#FF5B5B;
+}
+/*
+	 Выпадающее боковое меню
+    ===================================== */
+.subnav ul li ul {
+	display:none;
+	position:absolute;
+	top:0;
+	padding:0;
+	margin:0;
+}
+.subnav ul li:hover ul {
+	display:block;
+}
+/*
+	 Выпадающее боковое меню - стилизация
+    ===================================== */
+.subnav ul li ul li {
+	background:#262626;
+	border-bottom:1px solid #444;
+}
+.subnav ul li ul li:last-child {
+	border-bottom:none;
+}
+.adminnav ul li ul li:hover,
+.subnav ul li ul li:hover {
+	background:#383838;
+}
+.subnav ul li ul {
+	width:234px;
+	right:238px; /* разворачиваем меню влево или вправо */
+	padding-right:16px; /* разворачиваем меню влево или вправо */
+}
+.adminnav ul li ul li a,
+.subnav ul li ul li a {
+	border-left:none;
+	color:#fff;
+	font-size:.95em;
+}
+.adminnav ul li ul li a:hover,
+.subnav ul li ul li a:hover {
+	border-left:none;
+	color:#fff;
+}
+
+/*
+	 Реклама
+    ===================================== */
+.vkontakte .pastic {
+	padding:10px 11px;
+}
+
+/*
+	 Реклама
+	 Внимание! Удаление рекламы через CSS или JavaScript запрещено.
+	 Сайты, нарушающие правила Пользовательского соглашения удаляются.
+    ===================================== */
+.publicity .pastic {
+	padding:10px 11px;
+	text-align: center;
+}
+
+/*
+	 Блок новостей
+    ===================================== */
+.news .pastic {
+	padding:0 22px 2px;
+}
+.news .piece-of-news {
+	overflow:hidden;
+	padding:16px 6px 22px;
+	border-bottom:3px solid #eee;
+}
+.news .piece-of-news:first-child {
+	border-top:none;
+}
+.news .piece-of-news:last-child {
+	border-bottom:none;
+}
+.news .piece-of-news .news-title {
+	padding-bottom:12px;
+}
+.news .piece-of-news .news-title h4 {
+	margin:0;
+}
+.news .piece-of-news .news-title h4 a {
+	font-family:'OpenSans CondBold', Arial, sans-serif;
+	font-weight:bold;
+	font-size:1.05em;
+	text-transform:uppercase;
+	text-decoration:none;
+	-webkit-transition:color .20s ease;
+	-moz-transition:color .20s ease;
+	-o-transition:color .20s ease;
+	transition:color .20s ease;
+}
+.news .piece-of-news .news-contents {
+	overflow:hidden;
+}
+.news .piece-of-news .news-contents p {
+	color:#555;
+}
+.news .piece-of-news .news-contents p:last-child {
+	margin-bottom:0;
+}
+.news .piece-of-news .news-links {
+	position:relative;
+	font-size:.75em;
+	color:#111;
+	padding-top:12px;
+	margin:6px 0 0;
+}
+.news .piece-of-news .news-links .comment a,
+.news .piece-of-news .news-links .more a,
+.news .piece-of-news .news-links .edit a,
+.news .piece-of-news .news-links .delet a {
+	display:inline-block;
+	background-image:url('../images/news-ico.png');
+	background-repeat:no-repeat;
+	padding:8px 12px 8px 32px;
+	text-decoration:none;
+	color:#555;
+	background-color:#ddd;
+	-webkit-transition:background-color .25s ease, color .20s ease;
+	-moz-transition:background-color .25s ease, color .20s ease;
+	-o-transition:background-color .25s ease, color .20s ease;
+	transition:background-color .25s ease, color .20s ease;
+}
+.news .piece-of-news .news-links .comment a:hover,
+.news .piece-of-news .news-links .more a:hover,
+.news .piece-of-news .news-links .edit a:hover,
+.news .piece-of-news .news-links .delet a:hover {
+	color:#fff;
+	background-color:#FF5B5B;
+}
+.news .piece-of-news .news-links .comment a {
+	background-position:12px 10px;
+}
+.news .piece-of-news .news-links .more a {
+	background-position:12px -49px;
+}
+.news .piece-of-news .news-links .edit a {
+	background-position:12px -112px;
+}
+.news .piece-of-news .news-links .delet a {
+	background-position:12px -169px;
+}
+.news .piece-of-news .news-links .comment a:hover {
+	background-position:12px -235px;
+}
+.news .piece-of-news .news-links .more a:hover {
+	background-position:12px -293px;
+}
+.news .piece-of-news .news-links .edit a:hover {
+	background-position:12px -356px;
+}
+.news .piece-of-news .news-links .delet a:hover {
+	background-position:12px -413px;
+}
+
+.news .piece-of-news .news-links .date {
+	position:absolute;
+	right:0;
+	bottom:0;
+	color:#b3b3b3;
+}
+.news .piece-of-news .image {
+	width:258px;
+	float:left;
+	margin:3px 12px 3px 0;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+/*
+	 Одна новость
+    ===================================== */
+.singlnews .pastic {
+	padding:18px 22px 20px;
+}
+.singlnews .pastic .date {
+	font-size:.75em;
+	font-weight:bold;
+	margin-bottom:12px;
+	color:#555;	
+}
+.singlnews .pastic .links {
+	font-size:.85em;
+}
+.singlnews .custom-title {
+	
+}
+.singlnews label.required {
+	display:none !important;
+}
+.singlnews .pastic .image {
+	width:258px;
+	float:left;
+	margin:3px 12px 3px 0;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+/*
+	 Комментарии к новостям
+    ===================================== */
+.news-comment .custom-title {
+	background:none;
+}
+.news-comment .custom-title h4 {
+	position:relative;
+	display:inline-block;
+	font-family:Arial, sans-serif;
+	font-size:1.25em;
+	text-transform:none;
+	font-weight:normal;
+	padding:0 0 18px 1px;
+	margin:0;
+	color:#888;
+	height:auto;
+	background:none;
+}
+.news-comment .custom-title h4::after {
+	background:none;
+	width:auto;
+	height:auto;
+}
+.news-comment .custom-title h4::before {
+	background:none;
+	width:auto;
+	height:auto;
+}
+.news-comment {
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.news-comment .pastic {
+	padding:0;
+	background:#fff;
+}
+
+
+.news-comment table {
+	width:100%;
+	font-size:.85em;
+	color:#555;
+}
+.news-comment th,
+.news-comment td {
+	vertical-align:top;
+}
+.news-comment th {
+	padding:12px 12px;
+}
+.news-comment td {
+	padding:6px 12px;
+	border-bottom:22px solid #f1f1f1;
+}
+
+.news-comment table td:first-child {
+	width:100px;
+}
+.news-comment table td:last-child {
+	padding:0 0 0 30px;
+}
+
+.news-comment .status {
+	font-size:.85em;
+	overflow:hidden;
+	padding:8px 12px;
+}
+.news-comment .status .time {
+	float:left;
+	font-size:.95em;
+	color:#999 !important;
+}
+.news-comment .status .links {
+	float:right;
+}
+.news-comment .status .links a {
+	padding-left:10px;
+}
+.news-comment .status .time {
+	float:left;
+	color:#777;
+}
+.news-comment .status .links {
+	float:right;
+}
+.news-comment .status .links a {
+	padding-left:10px;
+	text-decoration:none;
+}
+.news-comment .message {
+	font-size:1.25em;
+	padding:14px 18px 4px;
+}
+.news-comment .signature {
+	display:none;
+	border-top:1px solid #eee;
+	margin:0 18px 0;
+	padding:8px 0 4px;
+}
+.news-comment .nickname {
+	font-size:.95em;
+	padding-bottom:7px;
+}
+.news-comment .nickname a {
+	font-weight:bold;
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	width:100px;
+	position:relative;
+}
+.news-comment .nickname a:after {
+	background: url('../images/news-comment-nickname.png') center right no-repeat;
+	content:' ';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.news-comment .role {
+	font-size:.8em;
+	padding:7px 0;
+}
+.news-comment .avatar img {
+	max-width:80px;
+	height:auto;
+}
+
+.news-comment .form {
+	margin-top:18px;
+}
+
+/*
+	 Штаб
+    ===================================== */
+.staff .staff-subnav {
+	list-style:none;
+	font-size:.75em;
+	overflow:hidden;
+	margin-bottom:18px;
+}
+.staff .staff-subnav li {
+	display:inline-block;
+	margin-right:2px;
+}
+.staff .staff-subnav li a.reserve,
+.staff .staff-subnav li a.online,
+.staff .staff-subnav li a.companies,
+.staff .staff-subnav li a.battles,
+.staff .staff-subnav li a.provinces,
+.staff .staff-subnav li a.editing,
+.staff .staff-subnav li a.victory-points {
+	background-image:url('../images/staff.png');
+	background-repeat:no-repeat;
+	display:inline-block;
+	padding:8px 12px 8px 32px;
+	text-decoration:none;
+	color:#555;
+	background-color:#ddd;
+	-webkit-transition:background-color .25s ease, color .20s ease;
+	-moz-transition:background-color .25s ease, color .20s ease;
+	-o-transition:background-color .25s ease, color .20s ease;
+	transition:background-color .25s ease, color .20s ease;
+}
+.staff .staff-subnav li a.reserve {
+	background-position:12px 8px;
+}
+.staff .staff-subnav li a:hover.reserve,
+.staff .staff-subnav li.active a.reserve {
+	background-position:12px -192px;
+}
+.staff .staff-subnav li a.online {
+	background-position:12px -501px;
+}
+.staff .staff-subnav li a:hover.online,
+.staff .staff-subnav li.active a.online {
+	background-position:12px -534px;
+}
+.staff .staff-subnav li a.companies {
+	background-position:12px -392px;
+}
+.staff .staff-subnav li a:hover.companies,
+.staff .staff-subnav li.active a.companies {
+	background-position:12px -436px;
+}
+.staff .staff-subnav li a.battles {
+	background-position:12px -32px;
+}
+.staff .staff-subnav li a:hover.battles,
+.staff .staff-subnav li.active a.battles {
+	background-position:12px -232px;
+}
+.staff .staff-subnav li a.provinces {
+	background-position:12px -71px;
+}
+.staff .staff-subnav li a:hover.provinces,
+.staff .staff-subnav li.active a.provinces {
+	background-position:12px -270px;
+}
+.staff .staff-subnav li a.editing{
+	background-position:12px -110px;
+}
+.staff .staff-subnav li a:hover.editing,
+.staff .staff-subnav li.active a.editing  {
+	background-position:12px -309px;
+}
+.staff .staff-subnav li a.victory-points {
+	background-position:12px -150px;
+}
+.staff .staff-subnav li a:hover.victory-points,
+.staff .staff-subnav li.active a.victory-points {
+	background-position:12px -349px;
+}
+.staff .staff-subnav li a:hover,
+.staff .staff-subnav li.active a {
+	color:#fff;
+	background-color:#FF5B5B;
+}
+
+
+.staff .staff-clannav {
+	list-style:none;
+	margin:18px 18px 22px 0;
+}
+.staff .staff-clannav li {
+	display:inline-block;
+	margin:0 18px 0 0;
+}
+.staff .staff-clannav li a {
+	font-size:.85em;
+	display:inline-block;
+	padding:6px 0 7px 30px;
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.staff .staff-clannav li a:hover,
+.staff .staff-clannav li.active a {
+	color:#222;
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.staff .staff-clannav li.active a {
+	font-weight:bold;
+}
+
+
+p.company-title {
+	font-size:1em;
+	font-weight:bold;
+}
+
+
+/*
+	 Легенда клана в штабе
+    ===================================== */
+ul.staff-legend {
+	padding:0 0 18px;
+	list-style:none;
+	color:#444;
+	font-size:.75em;
+}
+ ul.staff-legend .clan-name {
+	font-weight:bold;
+	font-size:1.15em;
+}
+
+/*
+	 Таблицы
+    ===================================== */
+.table-data {
+	margin:0 0 18px;
+}
+.table-data table {
+	margin:0 auto;
+	width:100%;
+	background:#f9f9f9;
+	font-size:.7em;
+	color:#444;
+}
+.table-data table td,
+.table-data table th {
+	text-align:left;
+	padding:3px 4px;
+	border:1px solid #fff;
+}
+.table-data table thead:first-child {
+	background:#eee;
+}
+/*.table-data table tbody tr:hover {
+	background:#eee;
+}*/
+
+/*
+	 Красиво сокращаем длинные ники в таблице штаба
+    ===================================== */
+.staff .table-members tbody td:nth-child(2) a {
+	display:block;
+	overflow:hidden;
+	width:90px;
+	position:relative;
+}
+.staff .table-members tbody td:nth-child(2) a:after {
+	background: url('../images/table-members.png') center right no-repeat;
+	content:' ';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+/*
+	 Военкомат
+    ===================================== */
+.recruitment .recruitment-subnav {
+	list-style:none;
+	font-size:.75em;
+	overflow:hidden;
+	margin-bottom:32px;
+}
+.recruitment .recruitment-subnav li {
+	display:inline-block;
+	margin-right:2px;
+}
+.recruitment .recruitment-subnav li a {
+	display:block;
+	background-repeat:no-repeat;
+	display:inline-block;
+	padding:8px 12px;
+	text-decoration:none;
+	color:#555;
+	background-color:#ddd;
+	-webkit-transition:background-color .25s ease, color .20s ease;
+	-moz-transition:background-color .25s ease, color .20s ease;
+	-o-transition:background-color .25s ease, color .20s ease;
+	transition:background-color .25s ease, color .20s ease;
+}
+.recruitment .recruitment-subnav li a.active,
+.recruitment .recruitment-subnav li a:hover {
+	color:#fff;
+	background-color:#FF5B5B;
+}
+.recruitment .recruitment-subnav li.proposal a {
+	font-weight:bold;
+}
+
+/*
+	 anypage
+    ===================================== */
+.anypage .anypage-edit {
+	overflow:hidden;
+	font-size:.75em;
+	border-top:2px solid #eee;
+	padding:4px 0 0;
+	margin-top:14px;
+}
+.anypage .anypage-edit a,
+.anypage .anypage-edit span {
+	display:block;
+}
+.anypage .anypage-edit a {
+	float:left;
+}
+.anypage .anypage-edit span {
+	float:right;
+	color:#777;
+}
+
+
+
+/* ==========================================================================
+	Формы
+   ========================================================================== */
+.form {
+	font-size:.85em;
+	color:#444;
+}
+.form .row {
+	overflow:hidden;
+	margin:12px 22px 18px;	
+}
+.form input[type="text"],
+.form select {
+	width:220px;
+	display:block;
+	float:left;
+}
+.form label {
+	display:block;
+	float:left;
+	padding:5px 0;
+	font-weight:bold;
+	font-size:.95em;
+}
+.form textarea {
+	height:120px;
+	width:600px;
+}
+.form input[type="text"],
+.form input[type="submit"],
+.form select,
+.form textarea {
+	border:1px solid #ccc;
+	padding:5px;
+	background:#fff;
+	display:block;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+.form input:focus,
+.form textarea:focus {
+	border:1px solid #73B8EE;
+	background:#fff;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.form input[type="submit"], .form input[type="button"] {
+	-webkit-border-radius:0 !important;
+	-moz-border-radius:0 !important;
+	border-radius:0 !important;
+	border:none !important;
+	display:inline-block;
+	background-repeat:no-repeat;
+	display:inline-block;
+	padding:8px 12px;
+	text-decoration:none;
+	color:#555;
+	background-color:#ddd;
+	-webkit-transition:background-color .25s ease, color .20s ease;
+	-moz-transition:background-color .25s ease, color .20s ease;
+	-o-transition:background-color .25s ease, color .20s ease;
+	transition:background-color .25s ease, color .20s ease;
+}
+.form input[type="submit"]:hover, .form input[type="button"]:hover {
+	color:#fff;
+	background-color:#FF5B5B;
+}
+.form input[type="text"].upload {
+	-webkit-border-radius:2px 0 0 2px;
+	-moz-border-radius:2px 0 0 2px;
+	border-radius:2px 0 0 2px;
+	width: 197px;
+}
+.form input[type="button"].upload {
+	-webkit-border-radius:0 2px 2px 0 !important;
+	-moz-border-radius:0 2px 2px 0 !important;
+	border-radius:0 2px 2px 0 !important;
+	margin-left: -1px;
+	padding: 0;
+	width: 24px;
+	height: 29px;
+	line-height: 29px;
+	text-align: center;
+	float: left;
+}
+.form .row {  }
+.form .row label { width:180px; }
+
+
+
+/* ==========================================================================
+	Подвал
+   ========================================================================== */
+.footer {
+	overflow:hidden;
+	padding:32px 0;
+	margin-top:15px;
+	margin-bottom:15px;
+	background:#242424;
+	text-align:center;
+	color:#ccc;
+	font-size:.75em;
+}
+.footer a {
+	color:#999;
+}
+.copy-wg {
+	float:left; padding-left:26px;
+}
+.copy-pw {
+	float:right; padding-right:26px;
+}
+.copy-wg a,
+.copy-pw a {
+	display:inline-block;
+}
+.copy-wg a:nth-child(1) {
+	padding:3px 0 3px 25px;
+	background:url('../images/small-wg-wot-dark.png') center left no-repeat;
+}
+.copy-wg a:nth-child(2) {
+	padding:3px 0 3px 25px;
+	background:url('../images/small-wg-cpp-dark.png') center left no-repeat;
+}
+.copy-pw a:nth-child(1) {
+	padding:3px 0 3px 25px;
+	background:url('../images/wot-pw-small-white.png') center left no-repeat;
+}
+
+
+
+/* ==========================================================================
+	Пагинация
+   ========================================================================== */
+.pager {
+	overflow:hidden;
+	padding:3px 0;
+	margin:18px 0 18px;
+}
+.pager ul {
+	list-style:none;
+	float:right;
+}
+.pager ul li {
+	display:inline-block;
+}
+.pager ul li.first,
+.pager ul li.last {
+	display:none;
+}
+.pager ul li.previous/*,
+.pager ul li.next*/ {
+	display:none;
+}
+.pager ul li a {
+	font-size:.75em;
+	font-weight:bold;
+	background:#ddd;
+	color:#444;
+	padding:6px 9px;
+	text-decoration:none;
+	-webkit-transition:background-color .25s ease, color .20s ease;
+	-moz-transition:background-color .25s ease, color .20s ease;
+	-o-transition:background-color .25s ease, color .20s ease;
+	transition:background-color .25s ease, color .20s ease;
+}
+.pager ul li.selected a {
+	background:#FF5B5B;
+	color:#fff;
+}
+.pager ul li a:hover {
+	background:#FF5B5B;
+	color:#fff;
+}
+
+
+
+/* ==========================================================================
+	Цвета для рейтингов, званий, событий
+   ========================================================================== */
+/* Рейтинги */
+.very-bad {color:#FE0E00;}
+.bad {color:#FE7903;}
+.normal {color:#D7CA2B;}
+.good {color:#A0C419;}
+.very-good {color:#02C9B3;}
+.unique {color:#D042F3;}
+
+/* Звания */
+span.leader {color:#D93DF9;}
+span.vice-leader {color:#D93DF9;}
+span.personnel-officer {color:#489928;}
+span.commander {color:#489928;}
+span.diplomat {color:#D7CA2B;}
+span.treasurer {color:#D7CA2B;}
+span.recruiter {color:#FF7D00;}
+span.junior-officer {color:#FF7D00;}
+span.private {color:#FE0E01;}
+span.recruit {color:#FE0E01;}
+span.reservist {color:#FE0E01;}
+
+/* События */
+.joined-clan {color:#009900;} /* Вступил в клан */
+.left-clan {color:#FF0000;} /* Покинул клан */
+
+
+
+
+/* ==========================================================================
+	ФОРУМ
+   ========================================================================== */
+/* 
+	Категории
+    ===================================== */
+.forum-group .pastic {
+	padding:2px 0 0;
+}
+.forum-group .table-forum table {
+	width:100%;
+	font-size:.75em;
+	color:#555;
+}
+.forum-group .table-forum th,
+.forum-group .table-forum td {
+	border:2px solid #fff;
+	vertical-align:top;
+}
+.forum-group .table-forum th {
+	background:#ddd;
+	padding:10px 12px;
+	white-space:nowrap;
+	font-size:1.05em;
+}
+.forum-group .table-forum td {
+	background:#f7f7f7;
+	padding:7px 12px;
+	vertical-align:middle;
+}
+.forum-group .table-forum tr:hover td {
+	-webkit-transition:background .35s ease;
+	-moz-transition:background .35s ease;
+	-o-transition:background .35s ease;
+	transition:background .35s ease;
+	background:#fff;
+}
+.forum-group .table-forum td:nth-child(2),
+.forum-group .table-forum td:nth-child(3) {
+	text-align:center;
+}
+.forum-group .table-forum table {
+	margin-top:-2px;
+}
+.forum-group .table-forum table th:nth-child(1) {
+	width:59%;
+}
+.forum-group .table-forum table th:nth-child(2) {
+	width:9%;
+}
+.forum-group .table-forum table th:nth-child(3) {
+	width:14%;
+}
+.forum-group .table-forum table th:nth-child(4) {
+	width:18%;
+}
+.forum-group .table-forum table td:nth-child(1) a,
+.forum-group .table-forum table td:nth-child(1) span {
+	display:block;
+}
+.forum-group .table-forum table td:nth-child(1) a {
+	font-size:1.05em; font-weight:bold;
+}
+.forum-group .table-forum table td:nth-child(1) span {
+	font-size:.95em;
+}
+.forum-group .table-forum td.empty {
+	font-size:1.15em;
+	text-align:center;
+	padding:14px 0;
+}
+/* 
+	Форумы
+    ===================================== */
+.forum-category .pastic {
+	padding:0;
+}
+.forum-category .table-forum table {
+	width:100%;
+	font-size:.75em;
+	color:#555;
+}
+.forum-category .table-forum th,
+.forum-category .table-forum td {
+	border:2px solid #fff;
+	vertical-align:top;
+}
+.forum-category .table-forum th {
+	background:#ddd;
+	padding:10px 12px;
+	white-space:nowrap;
+	font-size:1.05em;
+}
+.forum-category .table-forum td {
+	background:#f7f7f7;
+	padding:7px 12px;
+	vertical-align:middle;
+}
+.forum-category .table-forum tr:hover td {
+	-webkit-transition:background .35s ease;
+	-moz-transition:background .35s ease;
+	-o-transition:background .35s ease;
+	transition:background .35s ease;
+	background:#fff;
+}
+.forum-category .table-forum td:nth-child(3),
+.forum-category .table-forum td:nth-child(4) {
+	text-align:center;
+}
+.forum-category .table-forum table th:nth-child(1) {
+	width:5%;
+}
+.forum-category .table-forum table th:nth-child(2) {
+	width:54%;
+}
+.forum-category .table-forum table th:nth-child(3) {
+	width:9%;
+}
+.forum-category .table-forum table th:nth-child(4) {
+	width:14%;
+}
+.forum-category .table-forum table th:nth-child(5) {
+	width:18%;
+}
+.forum-category .table-forum table td:nth-child(2) a {
+	font-size:1.05em; font-weight:bold;
+}
+.forum-category .table-forum td.empty {
+	font-size:1.15em;
+	text-align:center;
+	padding:14px 0;
+}
+/* 
+	Темы
+    ===================================== */
+.forum-theme .pastic {
+	padding:14px 22px 20px;
+}
+.forum-theme .pastic h4 {
+	font-family:'OpenSans CondBold', Arial, sans-serif;
+	font-size:1.25em;
+	font-weight:normal;
+	margin:18px 0 18px 17px;
+	color:#555;
+	padding-left:2px;
+}
+/*
+	 Комментарии
+    ===================================== */
+.forum-theme .pastic {
+	padding:0 2px;
+}
+.forum-theme table {
+	width:100%;
+	font-size:.85em;
+	color:#555;
+}
+.forum-theme th,
+.forum-theme td {
+	vertical-align:top;
+}
+.forum-theme th {
+	background:#ddd;
+	padding:12px 12px;
+}
+.forum-theme td {
+	background:#f7f7f7;
+}
+.forum-theme table td:first-child {
+	width:170px;
+}
+.forum-theme table td:last-child {
+	
+}
+.forum-theme .status {
+font-size:11px;
+overflow: hidden;
+background: #e5e5e5;
+padding: 8px 12px 8px 18px;
+}
+.forum-theme .status .time {
+	float:left;
+	color:#777;
+}
+.forum-theme .status .links {
+	float:right;
+}
+.forum-theme .status .links a {
+	padding-left:10px;
+	text-decoration:none;
+}
+.forum-theme .message {
+	font-size:1.25em;
+	padding:14px 18px 4px;
+}
+.forum-theme .update {
+	font-size:0.85em;
+	padding:14px 18px 8px;
+	color: #888;
+}
+.forum-theme .signature {
+	border-top:1px solid #ddd;
+	margin:0 18px 0;
+	padding:8px 0 4px;
+}
+.forum-theme .nickname {
+	background:#e5e5e5;
+	padding:7px 12px 6px 15px;
+}
+.forum-theme .nickname a {
+	font-weight:bold;
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	width:140px;
+	position:relative;
+}
+.forum-theme .nickname a:after {
+	background:url('../images/forum-nick-sh.png') center right no-repeat;
+	content:' ';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.forum-theme .role {
+	font-size:.8em;
+	padding:7px 0 12px 12px;
+}
+.forum-theme .avatar {
+	padding:12px 0 0 12px;
+}
+.forum-theme .avatar img {
+	max-width:100%;
+	height:auto;
+	border:1px solid #ccc;
+	padding:1px;
+}
+/*
+	 Админские ссылки
+    ===================================== */
+.forum-admin-links {
+	list-style:none;
+	font-size:.75em;
+	padding:8px 14px;
+}
+.forum-admin-links li {
+	display:inline-block;
+}
+.forum-admin-links li::after {
+	content:'•';
+	color:#ccc;
+	padding:0 8px;
+}
+.forum-admin-links li:last-child::after {
+	content:'';
+	padding:0;
+}
+.forum-admin-links li:last-child {
+	padding-right:0;
+}
+/*
+	 Кнопки
+    ===================================== */
+.forum-group .forum-button,
+.forum-category .forum-button,
+.forum-theme .forum-button {
+	margin:16px 14px 16px 0;
+	overflow:hidden;
+}
+.forum-group .forum-button a,
+.forum-category .forum-button a,
+.forum-theme .forum-button a {
+	float:right;
+	cursor:pointer;
+	display:inline-block;
+	background-repeat:no-repeat;
+	display:inline-block;
+	padding:8px 12px;
+	margin-left:4px;
+	text-decoration:none;
+	color:#555;
+	font-size:.75em;
+	background-color:#ddd;
+	-webkit-transition:background-color .25s ease, color .20s ease;
+	-moz-transition:background-color .25s ease, color .20s ease;
+	-o-transition:background-color .25s ease, color .20s ease;
+	transition:background-color .25s ease, color .20s ease;
+}
+.forum-group .forum-button a:hover,
+.forum-category .forum-button a:hover,
+.forum-theme .forum-button a:hover {
+	color:#fff;
+	background-color:#FF5B5B;
+}
+/*
+	 Результатирующий текст
+    ===================================== */
+.forum-close,
+.user-message {
+	font-size:1em;
+	color:#333;
+	padding-top:14px;
+}
+
+/*
+	 Виджет мини-новости
+    ===================================== */
+.news-mini p {
+	font-size:.75em;
+	line-height:1.45em;
+	color:#777;
+}
+.news-mini .pastic {
+	padding:10px 15px 2px;
+	overflow:hidden;
+}
+.news-mini .summary {
+	display: none;
+}
+
+
+
+/* ==========================================================================
+	Онлайн
+   ========================================================================== */
+.online .pastic {
+	position:relative;
+	overflow:visible;
+	height:60px;
+	padding:0;
+	font-size:.75em;
+	color:#555;
+}
+
+.online strong,
+.online span {
+	display:inline-block;
+}
+.online span {
+	padding-right:5px;
+}
+
+.online .online-inner {
+	position:absolute;
+	overflow:hidden;
+	z-index:29;
+	width:100%;
+	padding:12px 14px 4px;
+	background-color:#fff;
+	max-height:60px;
+	-webkit-transition:max-height 0.15s ease-out;
+	-moz-transition:max-height 0.15s ease-out;
+	transition:max-height 0.15s ease-out;
+}
+
+.online .online-inner:hover {
+    max-height:500px;
+	-webkit-transition:max-height 0.25s ease-in;
+	-moz-transition:max-height 0.25s ease-in;
+	transition:max-height 0.25s ease-in;
+}
+
+.online .online-allies-list {
+	line-height:16px;
+	padding-top:5px;
+}
+
+.online .online-allies-list a {
+	display:inline-block;
+	padding:2px 4px 4px 0;
+}
+
+.online .online-allies-list a::after {
+	content:', ';
+	display:inline-block;
+}
+
+.online .online-allies-list a:last-child::after {
+	content:'.';
+	display:inline-block;
+}
+
+
+
+
+
+
+
+.icon-point-right {
+	position:relative;
+}
+.icon-point-right::before {
+    display:block;
+    position:absolute;
+    content:' ';
+    top:2px;
+    right:-14px;
+    width:10px;
+    height:10px;
+	background-image:url('../images/arrow_right.png');
+	background-position:left center;
+	background-repeat:no-repeat;
+    z-index:99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------
+	Спойлер форум
+---------------------------------------------------------------------------*/
+.forum-spoiler {
+	margin:6px 0 8px;
+}
+
+.js .forum-spoiler .fs-container {
+	display:none;
+}
+.no-js .forum-spoiler .fs-container {
+	display:block;
+}
+
+.forum-spoiler .fs-container {
+	padding:3px 8px;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+.forum-spoiler::after {
+	display:block;
+	content:' ';
+	border-bottom:1px solid #ccc;
+}
+
+.forum-spoiler .button {
+	display:inline-block;
+	margin-bottom:4px;
+	padding:2px 5px;
+	border:1px solid #e1e1e1;
+	font-size:.725em;
+	color:#555;
+	background-color:#f5f5f5;
+	cursor:pointer;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image:-webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:-o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-image:-moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-repeat:repeat-x;
+	-webkit-transition: border .15s, box-shadow .15s;
+	-moz-transition: border .15s, box-shadow .15s;
+	transition: border .15s, box-shadow .15s;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+.forum-spoiler .button:hover {
+	border:1px solid #eee;
+}
+.forum-spoiler .button:active {
+	background-color:#f5f5f5;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6), to(#ffffff));
+	background-image:-webkit-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:-o-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:linear-gradient(to bottom, #e6e6e6, #ffffff);
+	background-image:-moz-linear-gradient(top, #e6e6e6, #ffffff);
+	background-repeat:repeat-x;
+}
+.fs-container p {
+	margin:5px 0;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цитата форум
+---------------------------------------------------------------------------*/
+.forum-quote {
+	margin:8px 0;
+}
+.forum-quote .fq-data {
+	padding:4px 7px 2px;
+	font-size:.675em;
+	color:#777;
+	background-color:rgba(0, 0, 0, .1);
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+.forum-quote .fq-container {
+	padding:4px 7px;
+	background-color:rgba(0, 0, 0, .025);
+	border:1px solid rgba(0, 0, 0, .1);	
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цитата комментарии
+---------------------------------------------------------------------------*/
+.comment-quote {
+	margin:8px 0;
+}
+.comment-quote .cq-data {
+	padding:4px 7px 2px;
+	font-size:.675em;
+	color:#777;
+	background-color:rgba(0, 0, 0, .1);
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+.comment-quote .cq-container {
+	padding:4px 7px;
+	background-color:rgba(0, 0, 0, .025);
+	border:1px solid rgba(0, 0, 0, .1);		
+}
+
+.mce-content-body {font-size:13px !important;}
+
+
+
+/*---------------------------------------------------------------------------
+	Опросы
+---------------------------------------------------------------------------*/
+.modul.poll .cell {	
+	padding:12px 14px !important;
+	background-color:#fff;
+	font-size:13px;
+}
+
+.modul.poll .title {	
+	background: url('../images/b-title-b.gif') left top repeat-x;
+}
+
+.modul.poll .title h3 {	
+	position:relative;
+	display:inline-block;
+	font-family:'OpenSans ExtraBold', Arial, sans-serif;
+	font-size:.8em;
+	text-transform:uppercase;
+	font-weight:normal;
+	padding:12px 36px 0 20px;
+	margin:0;
+	color:#eee;
+	height:42px;
+	background:url('../images/b-title-c.gif') left top repeat-x;
+}
+.modul.poll .title h3::after {
+	background:url('../images/b-title-l.gif') left center no-repeat;
+	content:' ';
+	position:absolute;
+	top:0;
+	left:0;
+	width:3px;
+	height:42px;
+	z-index:1;
+}
+.modul.poll .title h3::before {
+	background:url('../images/b-title-r.gif') center center no-repeat;
+	content:' ';
+	position:absolute;
+	top:0;
+	right:0;
+	width:21px;
+	height:42px;
+	z-index:1;
+}
+
+.modul.poll .cell ul {
+	margin:0 0 16px;
+	list-style:none;
+}
+
+.modul.poll .cell li {
+	margin:6px 0;
+	line-height:15px;
+	color:#555;
+}
+
+.modul.poll .cell li > span {
+	position:relative;
+	display:block;
+	margin:4px 0 9px 0;
+	height:9px;
+	border:1px solid #999;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+.modul.poll .cell li span span {
+	position:absolute;
+	display:inline-block;
+	height:7px;
+	background-color:#999;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+
+.modul.poll .cell .question {
+	padding:0 0 4px 1px;
+	font-weight:bold;
+	color:#444;
+}
+
+.modul.poll input[type="radio"] {
+	display:none !important;
+}
+
+.modul.poll input[type="radio"] + label {
+	cursor:pointer;
+	-webkit-transition:color .15s;
+	-moz-transition:color .15s;
+	transition:color .15s;
+}
+.modul.poll input[type="radio"] + label:hover {
+	color:#999;
+}
+
+.modul.poll input[type="radio"] + label::before {
+	position:relative;
+	content:'';
+	display:inline-block;
+	top:2px;
+	margin-right:7px;
+	width:12px; height:12px;
+	border:1px solid #777;
+	background-color:#ccc;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	-webkit-box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	-webkit-transition:border .15s;
+	-moz-transition:border .15s;
+	transition:border .15s;
+}
+.modul.poll input[type="radio"] + label:hover::before {
+	border:1px solid #444;
+}
+
+.modul.poll input[type="radio"]:checked + label::before {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAACVBMVEVFRUtFRUtFRUup1b0rAAAAAnRSTlMQwKc1HdkAAAAZSURBVHgBY2BgZGJiBJMgmgkMoBRUEKoEAATCADkK7oLSAAAAAElFTkSuQmCC);
+	background-repeat:no-repeat;
+	background-position:center center;
+	border:1px solid #777;
+}
+
+.modul.poll button {
+	border:none;
+	padding:4px 8px;
+	font-size:13px;
+	color:#ddd;
+	background-color:#555;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+.modul.poll button:hover {
+	color:#fff;
+	background-color:#353535;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Активные темы
+---------------------------------------------------------------------------*/
+.themes-mini .pastic {
+	padding:12px 14px 24px;
+}
+
+.themes-mini .tm-theme {
+	position:relative;
+	padding:0 0 0 50px;
+	margin:0 0 14px;
+}
+.themes-mini .tm-theme:last-child {
+	margin:0;
+}
+
+.themes-mini .tm-avatar {
+	position:absolute;
+	top:2px; left:0;
+}
+
+.themes-mini .tm-avatar img {
+	width:40px; height:40px;
+}
+
+.themes-mini .tm-title {
+	font-size:12px;
+	line-height:15px;
+}
+
+.themes-mini .tm-user-time {
+	overflow:hidden;
+	font-size:10px;
+	padding-top:3px;
+}
+
+.themes-mini .tm-user-time a,
+.themes-mini .tm-user-time span {
+	float:left;
+	display:block;
+    white-space:nowrap;
+}
+
+.themes-mini .tm-user-time a {
+	max-width:94px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.themes-mini span.empty {
+	display:block;
+	text-align:center;
+	font-size:12px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Донат
+---------------------------------------------------------------------------*/
+.modul.donate {
+}
+
+.modul.donate p.ballance {
+	margin:0; padding:0 0 0 1px;
+	font-size:16px;
+	font-weight:bold;
+	color:#777;
+}
+
+.modul.donate input[type="text"] {
+	display:block;
+	margin:8px 0 9px; padding:6px 8px 5px;
+	width:100%;
+	font-size:12px;
+	text-transform:uppercase;
+	font-weight:bold;
+	border:none;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	border:1px solid #ccc;
+	background-color:#eee;
+	color:#999;
+}
+.modul.donate input[type="text"]:focus {
+	border:1px solid #ccc;
+	background-color:#fff;
+	color:#333;
+}
+
+.modul.donate button {
+	display:block;
+	margin:0; padding:8px 12px 8px;
+	border:none;
+	font-size:13px;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:color .1s, background-color .1s;
+	-moz-transition:color .1s, background-color .1s;
+	transition:color .1s, background-color .1s;
+	background-color:#ddd;
+	color:#555;
+}
+.modul.donate button:active {
+	background-color:;
+	color:;
+}
+.modul.donate button:hover {
+	background-color:#FF5B5B;
+	color:#fff;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Новая считалка онлайна
+---------------------------------------------------------------------------*/
+.scrollable-table {
+	background: #f9f9f9;
+    font-size: .7em;
+    color: #444;
+}
+
+.scrollable-table .st-static {
+	float:left;
+}
+
+.scrollable-table .st-static tr {
+	background:#f0f0f0;
+}
+
+.scrollable-table .st-static tr:first-child {
+	background:inherit;
+}
+
+.scrollable-table .st-static td {
+	border:1px solid #fff;
+	padding:3px 4px;
+	width:120px;
+	overflow:hidden;
+}
+
+.scrollable-table .st-scrollable {
+	overflow-x:scroll;
+	cursor:move;
+	-webkit-user-select:none;    
+	-moz-user-select:none;   
+	-ms-user-select:none;   
+	user-select:none;    
+}
+
+.scrollable-table .st-scrollable tr.date-row {
+	background:#f0f0f0;
+}
+
+.scrollable-table .st-scrollable td {
+	border:1px solid #fff;
+	padding:3px 4px;
+	width:120px;
+	overflow:hidden;
+}
+
+.scrollable-table .st-scrollable td:first-child {
+	border-left:0;
+}
+
+.scrollable-table .st-scrollable td:last-child {
+	background:#f0f0f0;
+}
+
+.scrollable-table .st-scrollable td[g] {
+	background:#D3EDD0;
+}
+
+.scrollable-table .st-scrollable td[l] {
+	background:#EDD0D0;
+}
+
+.staff-attnav {
+	list-style:none;
+}
+
+.staff-attnav li {
+	display:inline-block;
+}
+
+.staff-attnav li a {
+	display:block;
+	padding:5px 10px;
+	margin-bottom:5px;
+	background:#ddd;
+	font-size:12px;
+	text-decoration:none;
+	color:#555;
+}
+
+.staff-attnav li a:hover,
+.staff-attnav li.active a {
+	background:#ff5b5b;
+	color:#fff;
+}
+
+
+/*-- --*/
+
+.modul.staff .att-calc {
+	overflow:hidden;
+	margin:0 0 22px;
+	font:bold 13px/1 Arial, sans-serif;
+}
+
+.modul.staff .ac-one,
+.modul.staff .ac-two {
+	display:inline-block;
+	margin-right:40px;
+}
+
+.modul.staff .att-calc p {
+	display:block;
+	margin:16px 0 0;
+	font:normal 11px/1 Arial, sans-serif;
+}
+
+.staff .staff-attnav {
+	list-style:none;
+	margin:0 18px 22px 0;
+}
+
+.modul.staff .att-calc input,
+.modul.staff .att-calc select,
+.modul.staff .att-calc button {
+	display:inline-block;
+	height:24px;
+}
+
+.modul.staff .att-calc input {
+	margin:0 3px; padding:0 5px;
+	width:36px;
+	background:#fff;
+	border:1px solid #999;
+	font:bold 13px/1 Arial, sans-serif;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+
+.modul.staff .att-calc select {
+	margin:0 0 0 3px; padding:0 4px 0 2px;
+	border:1px solid #999;
+	font:normal 12px/1 Arial, sans-serif;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+
+.modul.staff .att-calc select:hover,
+.modul.staff .att-calc input:focus {
+	border:1px solid #09f;
+}
+
+.modul.staff .att-calc button {
+	margin:0 3px; padding:0 8px;
+	border:none;
+	font:normal 12px/1 Arial, sans-serif;
+	color:#fff;
+	background:#FF5B5B;
+	-webkit-transition:background-color .25s ease, color .20s ease;
+	-moz-transition:background-color .25s ease, color .20s ease;
+	-o-transition:background-color .25s ease, color .20s ease;
+	transition:background-color .25s ease, color .20s ease;
+}
+
+.modul.staff .att-calc button:hover {
+	color:#555;
+	background:#ddd;
+}
+
+.modul.staff p {
+	margin:12px 0;
+	font:bold 13px/1 Arial, sans-serif;
+}

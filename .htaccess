@@ -1,0 +1,16 @@
+AddDefaultCharset utf-8
+AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
+RewriteEngine on
+
+
+RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+RewriteRule (.*) http://%1/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^upload/avatar/thumb/([a-z0-9_]+\.(jpg|jpeg|png|gif))$ avatar.php?f=$1 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
+
+php_flag display_errors 0

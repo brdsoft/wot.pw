@@ -1,0 +1,6 @@
+{
+  "name": "wotpw-node",
+  "dependencies": {
+    "mysql": "^2.9.0"
+  }
+}

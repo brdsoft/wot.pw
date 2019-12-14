@@ -1,0 +1,339 @@
+/*  ==========================================================================
+	Сброс стилей
+    ========================================================================== */
+
+/*
+	Отступы
+    ===================================== */
+* {
+	margin:0;
+	padding:0;
+}
+
+/*
+	Расчет ширины и высоты элементов
+    ===================================== */
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+/*
+	Шрифты
+    ===================================== */
+html {
+	font-size:100%;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+	font-family:sans-serif;
+}
+body {
+	font-size:1em;
+	line-height:1.4;
+	-webkit-font-smoothing:antialiased;
+}
+
+/*
+	Изображения
+    ===================================== */
+img {
+	border:0;
+	vertical-align:middle;
+	max-width:100%;
+	height:auto;
+	-ms-interpolation-mode:bicubic;
+}
+p img[align="center"],
+img[align="middle"] {
+	display:block;
+	margin:0 auto;
+}
+p img[align="left"] {
+	float:left;
+}
+p img[align="right"] {
+	float:right;
+}
+
+/*
+	Таблицы
+    ===================================== */
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+/*
+	Гиперссылки, рамки фокуса
+    ===================================== */
+a {
+	text-decoration:underline;
+	color:#08c;
+}
+a:hover {
+	text-decoration:none;
+}
+a:active,
+a:hover {
+	outline:0;
+}
+a:focus,
+:focus {
+	outline:none;
+}
+/*
+::-moz-selection {
+	text-shadow:none;
+}
+::selection {
+	text-shadow:none;
+}
+*/
+
+/*
+	Заголовки
+    ===================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family:inherit;
+	color:inherit;
+	text-rendering:optimizelegibility;
+}
+h1 {
+	font-size:2em;
+	margin:.67em 0;
+}
+h2 {
+	font-size:1.5em;
+	margin:.83em 0;
+}
+h3 {
+	font-size:1.17em;
+	margin:1em 0;
+}
+h4 {
+	font-size:1em;
+	margin:1.33em 0;
+}
+h5 {
+	font-size:.83em;
+	margin:1.67em 0;
+}
+h6 {
+	font-size:.67em;
+	margin:2.33em 0;
+}
+
+/*
+	Формы
+    ===================================== */
+form{
+	margin:0;
+}
+button,
+input,
+select,
+textarea {
+	font-size:100%;
+	margin:0;
+	vertical-align:baseline;
+	*vertical-align:middle;
+}
+button,
+input {
+	line-height:normal;
+}
+button,
+select {
+	text-transform:none;
+}
+select {
+	cursor:pointer;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance:button;
+	cursor:pointer;
+	*overflow:visible;
+}
+button[disabled],
+html input[disabled] {
+	cursor:default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing:border-box;
+	padding:0;
+	*height:13px;
+	*width:13px;
+}
+input[type="search"] {
+	-webkit-appearance:textfield;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	box-sizing:content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance:none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border:0;
+	padding:0;
+}
+textarea {
+	overflow:auto;
+	resize:vertical;
+	vertical-align:top;
+}
+input,
+textarea {
+	outline:none;
+}
+input:active,
+textarea:active {
+	outline:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	background-color:#fff;
+	font-size:.85em;
+	color:#555;
+}
+
+
+
+.layout {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 400px;
+	height: 160px;
+	margin-top: -94px;
+	margin-left: -200px;
+	text-align: center;
+}
+
+
+
+
+.btn {
+	display:inline-block;
+	cursor:pointer;
+	margin-right:6px;
+	padding:6px 12px;
+	font-size:1em;
+	color:#555;
+	text-decoration:none;
+	background-color:#f5f5f5;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image:-webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:-o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-image:-moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-repeat:repeat-x;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #bbb;
+}
+.btn:hover {
+	background-color:#f5f5f5;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6), to(#ffffff));
+	background-image:-webkit-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:-o-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:linear-gradient(to bottom, #e6e6e6, #ffffff);
+	background-image:-moz-linear-gradient(top, #e6e6e6, #ffffff);
+	background-repeat:repeat-x;
+}
+
+
+
+
+
+
+input[type="file"] {
+    display: none;
+}
+
+#csrf {
+	display: none;
+}
+
+.progress {
+	width: 300px;
+	display: inline-block;
+	border: 1px solid hsl(205, 100%, 46%);
+	padding: 1px;
+	display: none;
+	margin: 20px 0 0;
+}
+
+.progress > div {
+	width: 30%;
+	height: 14px;
+	background: hsl(205, 100%, 46%);
+}
+
+.error {
+	color: red;
+	margin: 20px 0 0;
+	display: none;
+}
+
+.comment {
+	margin: 20px 0 0;
+}
+
+.url {
+	margin: 20px 0 0;
+	display: none;
+}
+
+.insert {
+	margin: 3px 0 0;
+	display: none;
+}
+
+.insert a {
+	color: #0088EA;
+}
+
+
+
+#url {
+	width:320px;
+	margin-top:6px;
+	padding:6px 10px;
+}
+

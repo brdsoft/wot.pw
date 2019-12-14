@@ -1,0 +1,506 @@
+.pmsg {
+    position:fixed;
+    right:20px; bottom:20px;
+    z-index:1000;
+    font-size:14px;
+}
+
+.pmsg-main {
+    position:absolute;
+    bottom:0; right:64px;
+}
+
+.pmsg-side {
+    background-color:#e1e7ed;
+    padding:6px;
+    -webkit-border-radius:1px;
+    -moz-border-radius:1px;
+    border-radius:1px;
+}
+
+/* аватарки */
+
+.pmsg-thumb {
+    position:relative;
+    margin-bottom:6px;
+}
+
+.pmsg-thumb > img {
+    max-width:40px; max-height:40px;
+    cursor:pointer;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+}
+
+/* написать */
+
+.pmsg-write {
+    width:40px; height:40px;
+    text-align:center;
+    cursor:pointer;
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAMCAMAAACz+6aNAAAAaVBMVEX///+AmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbWAmbXrXJnEAAAAInRSTlMAAQ4PEBEUFyE5P0hSVXeJi42PnaKmsbO3vczc6/P4/P3+iYmDVQAAAFxJREFUeNpNjFcSgDAIBbHGrrHXqNz/kEIyKvsBvJ03gEAFIAn78TKFNBUSmzQdG+NutHNis/u/UWgpORPsNO9FdCA6yGTyD7SIKwiShjr3kL7Z0yc65tiZHD/qB1U5CdVse9PyAAAAAElFTkSuQmCC);
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+.pmsg-write:hover {
+    background-color:#fff;
+}
+
+/* убрать */
+
+.pmsg-close {
+    position:absolute;
+    top:0; right:0;
+    width:11px; height:11px;
+    cursor:pointer;
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAMAAACecocUAAAAElBMVEUAAAAAAAAAAAAAAAAAAAC5uciKHINOAAAABXRSTlMPc3elpoTKrrYAAAA1SURBVHjaXY0BCgAwCAJt2v+/PCwGMqGUIwwoymIBR08HVLfkRdh6RhjmuHnpx+M+e7I//156dgHapMzXsAAAAABJRU5ErkJggg==);
+    background-repeat:no-repeat;
+    background-position:right top;
+}
+
+.pmsg-close:hover {
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAMAAACecocUAAAAElBMVEUAAAAAAAAAAAAAAAAAAAD////glT+wAAAABXRSTlMPc3elpoTKrrYAAAA1SURBVHjaXY0BCgAwCAJt2v+/PCwGMqGUIwwoymIBR08HVLfkRdh6RhjmuHnpx+M+e7I//156dgHapMzXsAAAAABJRU5ErkJggg==);
+    background-repeat:no-repeat;
+    background-position:right top;
+}
+
+/* есть новое сообщение */
+
+.pmsg-incoming {
+    position:absolute;
+    top:0; left:0;
+    width:11px; height:11px;
+    background-color:red;
+}
+
+/* я онлайн */
+
+.pmsg-online {
+    position:absolute;
+    bottom:0; left:0;
+    width:11px; height:11px;
+    background-color:green;
+}
+
+/* ввод ника */
+
+.pmsg-nick-input input {
+    margin:5px; padding:0 1px 0 22px;
+    border:0;
+    font-size:13px;
+	background:#fff;
+    color:#555;
+    background-image:url(data:image/gif;base64,R0lGODlhDAANANUAAP////7+/v7+//39/f39/vz8/fz8/Pv7+/v7/Pr6++nq6+fo6d3f4NjZ29bY2tbX2dXX2dLU1tHT1dDS1M7Q0s3P0cvNz8fKzMjKzcbIy8PFyMLFyMHDxr7BxL/BxL3Aw7y/wru+wbq9wLm8v7i7vra5vLO2ubK1uLG0t62xtK2wtAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAHAP8ALAAAAAAMAA0AAAZaQIBwSCwCDpFSivQoEBMhFelCUnEGw4nKIehqG0NTqFgSCRMqSzGDGp48xdFoSFExhg4VRGjYqFQdFSAqHwYAfSoXFCcqJhIIhxoqGASVBEQLKZRGQwpYnABBADs=);
+    background-repeat:no-repeat;
+    background-position:3px center;
+}
+
+.pmsg-nick-input {
+	position:relative;
+	background:#fff;
+	border:1px solid #a8a8b7;
+    -webkit-border-radius:1px;
+    -moz-border-radius:1px;
+    border-radius:1px;
+}
+
+.pmsg-nick-input:after,
+.pmsg-nick-input:before {
+	left:100%; top:50%;
+	border:solid transparent;
+	content:" ";
+	height:0; width:;
+	position:absolute;
+	pointer-events:none;
+}
+
+.pmsg-nick-input:after {
+	border-color:rgba(136, 183, 213, 0);
+	border-left-color:#fff;
+	border-width:4px;
+	margin-top:-4px;
+}
+
+.pmsg-nick-input:before {
+	border-color:rgba(194, 225, 245, 0);
+	border-left-color:#a8a8b7;
+	border-width:6px;
+	margin-top:-6px;
+}
+
+/* список ников */
+
+.pmsg-list {
+    background-color:#fff;
+	border-bottom:none;
+    background-color:#eee;
+    -webkit-border-radius:2px 2px 0 0;
+    -moz-border-radius:2px 2px 0 0;
+    border-radius:2px 2px 0 0;
+}
+
+.pmsg-list li {
+    padding:4px 6px 5px;
+    background-color:#fff;
+    font-family:tahoma, arial, verdana, sans-serif, Lucida Sans;
+    font-size:11px;
+    font-weight:bold;
+    color:#45688E;
+    cursor:pointer;
+}
+
+.pmsg-list li:hover {
+    background-color:#ddd;
+}
+
+/*  */
+
+.pmsg-close,
+.pmsg-online,
+.pmsg-incoming,
+.pmsg-hidden {
+    display:none;
+}
+
+.pmsg-thumb:hover .pmsg-close,
+.pmsg-list,
+.pmsg-list > li {
+    display:block;
+}
+
+/* переписка */
+
+.pmsg-talk {
+    width:280px;
+    padding:4px;
+    background-color:#D1DAE3;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+}
+
+.pmsg-content {
+    overflow-y:auto;
+    overflow-x:hidden;
+    max-height:450px;
+    background-color:#F2F5F7;
+}
+
+.pmsg-message {
+    overflow:hidden;
+    padding:5px;
+}
+
+.pmsg-talker > img {
+    max-width:26px; max-height:26px;
+    border:1px solid #D1DAE3;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+}
+
+.pmsg-message .pmsg-talker {
+    float:left;
+}
+
+.pmsg-message.pmsg-mine .pmsg-talker {
+    float:right;
+}
+
+.pmsg-msg-content {
+    padding:4px 6px 6px;
+    border:1px solid #eee;
+    color:#000;
+    font-family:tahoma, arial, verdana, sans-serif, Lucida Sans;
+    font-size:11px;
+	word-wrap:break-word;
+}
+
+.pmsg-message .pmsg-msg-content {
+    border:1px solid #D1DAE3;
+    background-color:#DAE3ED;
+    margin-left:32px;
+    -webkit-border-radius:2px 2px 0 2px;
+    -moz-border-radius:2px 2px 0 2px;
+    border-radius:2px 2px 0 2px;
+}
+
+.pmsg-message.pmsg-mine .pmsg-msg-content {
+    border:1px solid #E1E4E8;
+    background-color:#fff;
+    margin-left:0;
+    margin-right:32px;
+    -webkit-border-radius:2px 2px 2px 0;
+    -moz-border-radius:2px 2px 2px 0;
+    border-radius:2px 2px 2px 0;
+}
+
+.pmsg-msg-time {
+    margin-top:1px;
+    font-family:verdana, sans-serif, Lucida Sans;
+    font-size:9px;
+    color:#999;
+}
+
+.pmsg-message .pmsg-msg-time {
+    float:right;
+}
+
+.pmsg-message.pmsg-mine .pmsg-msg-time {
+    float:left;
+}
+
+.pmsg-memo textarea {
+    width:100%;
+    padding:6px;
+    border:1px solid #D1DAE3;
+    font-size:13px;
+	background:#fff;
+    color:#555;
+    resize:none;
+}
+
+.pmsg-date {
+	padding-bottom:12px;
+    text-align:center;
+    font-family:tahoma, arial, verdana, sans-serif, Lucida Sans;
+    font-size:10px;
+    color:#777;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+.pmsg-clear {
+    clear: both;
+}
+
+.pmsg {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.pmsg-main {
+    position: absolute;
+    bottom: 0;
+    right: 55px;
+    background: #dbffdb;
+}
+
+.pmsg-side {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+}
+
+.pmsg-write {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 2px;
+    cursor: pointer;
+    font-size: 36px;
+}
+
+.pmsg-thumb {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.pmsg-thumb > img {
+    max-width: 40px;
+    max-height: 40px;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+}
+
+.pmsg-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    font-size: 7px;
+    line-height: 10px;
+    text-align: center;
+    background: #ffbcad;
+    cursor: pointer;
+    font-weight: bold;
+    display: none;
+}
+
+.pmsg-close:after {
+    content: 'X'
+}
+
+.pmsg-online {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    font-size: 7px;
+    line-height: 10px;
+    text-align: center;
+    background: #b7e2ff;
+    cursor: default;
+    font-weight: bold;
+    display: none;
+}
+
+.pmsg-incoming {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    font-size: 20px;
+    line-height: 10px;
+    text-align: center;
+    cursor: default;
+    font-weight: bold;
+    color: red;
+    display: none;
+}
+
+.pmsg-incoming:after {
+    content: '●'
+}
+
+.pmsg-online:after {
+    content: 'O'
+}
+
+.pmsg-close:hover {
+    background: red;
+}
+
+.pmsg-thumb:hover .pmsg-close {
+    display: block;
+}
+
+.pmsg-write:hover {
+    background: #cfecff;
+}
+
+.pmsg-write:after {
+    content: '✍';
+}
+
+.pmsg-hidden {
+    display: none;
+}
+
+.pmsg-list {
+    display: block;
+}
+
+.pmsg-list > li {
+    display: block;
+    cursor: pointer;
+}
+
+.pmsg-list > li:hover {
+    background: #ffc4de;
+}
+
+.pmsg-list > li.selected {
+    font-weight: bold;
+}
+
+.pmsg-talker {
+    float: left;
+    width: 100px;
+}
+
+.pmsg-talker > img {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.pmsg-msg-content {
+    float: left;
+    width: 300px;
+}
+
+.pmsg-msg-time {
+    float: left;
+    width: 50px;
+    text-align: right;
+}
+
+.pmsg-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 450px;
+}
+
+.pmsg-messages {
+    width: 470px;
+    padding-right: 20px;
+}
+
+.pmsg-message {
+    margin-top: 5px;
+    background: #fff1d6;
+}
+
+.pmsg-mine {
+    background: #ceeaff;
+}
+
+textarea[name=pmsg_text] {
+    width: 100%;
+}
+
+.pmsg-new {
+    font-weight: bold;
+}
+
+.pmsg-date {
+    text-align: center;
+}
+
+*/
+
+textarea[name=pmsg_text] {
+    padding:0;
+}
+
+ul.pmsg-list li.selected {
+	background-color:#ddd;
+}

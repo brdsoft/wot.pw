@@ -1,0 +1,12 @@
+.layout {
+	width: 1100px;
+}
+.sidebar {
+	width: 240px;
+	display: block;
+	float: left;
+}
+.main {
+	width: 855px;
+	float: right;
+}

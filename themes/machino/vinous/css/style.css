@@ -1,0 +1,1243 @@
+/*------------------------------------------
+	Сброс стилей
+------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: top;
+	background: transparent;
+}
+body {
+	line-height: 1.3;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {max-width: 100%;}
+
+/*------------------------------------------
+	Общие стили
+------------------------------------------*/
+
+body {
+	background: #000 url('../images/bg.jpg') center top no-repeat;
+	font-family: arial;
+	font-size: 12px;
+	color: #979899;
+}
+div, h1, h2, h3, h4, h5, h6 {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+h1 {font-size: 22px;margin-bottom: 10px;}
+h2 {font-size: 18px;margin-bottom: 10px;}
+h3 {font-size: 14px;margin-bottom: 10px;}
+h4 {font-size: 12px;margin-bottom: 10px;}
+h5 {font-size: 12px;margin-bottom: 10px;}
+h6 {font-size: 11px;margin-bottom: 10px;}
+
+a {color: #FF7432;text-decoration: none;}
+a.active {color: #d0d0d0;}
+a:hover {text-decoration: underline;}
+a.active:hover {text-decoration: none;}
+
+.pull-right {float: right;}
+.both {clear: both;}
+
+p {margin-bottom: 10px;}
+p:last-child {margin-bottom: 0;}
+
+hr {
+	height: 0;
+	border: 0;
+	border-bottom: 1px solid #444444;
+	margin: 10px 0;
+}
+.layout {
+	width: 1100px;
+	margin: auto;
+	position: relative;
+}
+.logo1 {
+	position: absolute;
+	left: 10px;
+	font-size: 40px;
+	top: 25px;
+	color: #ddd;
+	font-family: Tenor Sans, arial;
+}
+.logo2 {
+	position: absolute;
+	right: 10px;
+	font-size: 16px;
+	top: 28px;
+	color: #ddd;
+	font-family: Tenor Sans, arial;
+}
+.content {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	background: #000;
+}
+.sidebar {
+	width: 240px;
+	float: left;
+}
+.main {
+	width: 855px;
+	float: right;
+}
+.block {
+	margin-top: 5px;
+	clear: both;
+}
+.block .head {
+	padding: 0 10px;
+	font-size: 16px;
+	line-height: 36px;
+	height: 40px;
+	background: #270909;
+	color: #d0d0d0;
+	border-bottom: 1px solid #000;
+	border-top: 4px solid #874020;
+	font-weight: normal;
+}
+.block .head2 {
+	background: #171718;
+	border-top: 4px solid #444;
+}
+.block .head3 {
+	background: #171718;
+	border-top: 0;
+	border-bottom: 0;
+	padding-top: 10px;
+	color: #979899;
+	line-height: 1;
+	height: auto;
+}
+.block .head3 a {
+	color: #979899;
+	display: block;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.block .head3 a.active {
+	color: #FF7432;
+	background: #252528;
+}
+.block .head4 {
+	padding: 0;
+	height: auto;
+}
+.block .body {
+	padding: 10px;
+	background: #270909;
+}
+.block .body2 {
+	background: #171718;
+}
+.footer {
+	margin-top: 20px;
+	border-top: 1px solid #222;
+	padding: 10px;
+	text-align: center;
+}
+
+/*------------------------------------------
+	Таблицы (список игроков, военкомат и тд)
+------------------------------------------*/
+
+.grid-view {
+}
+.grid-view .items {
+	width: 100%;
+	font-size: 12px;
+}
+.grid-view .items thead {
+}
+.grid-view .items thead th {
+	text-align: left;
+	padding: 5px;
+	background: #270909;
+	border: 1px solid #171718;
+}
+.grid-view .items tbody td, .grid-view .items thead td {
+	text-align: left;
+	padding: 5px;
+	background: #242426;
+	border-bottom: 1px solid #171718;
+	border-right: 1px solid #171718;
+	border-left: 1px solid #171718;
+}
+.grid-view .summary {
+	text-align: right;
+	margin-bottom: 5px;
+}
+.grid-view input, .grid-view select {
+	border: 1px solid #444;
+	background: silver;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+}
+
+/*------------------------------------------
+	Списки (новости и тд)
+------------------------------------------*/
+
+.list-view {
+	background: #171718;
+}
+.list-view .summary {
+	text-align: right;
+	margin-bottom: 5px;
+}
+.list-view .view {
+	margin-bottom: 10px;
+}
+.list-view .view:last-child {
+	margin-bottom: 0;
+}
+
+/*------------------------------------------
+	Подробные описания (информация об игроке и тд)
+------------------------------------------*/
+
+table.detail-view .null {
+
+}
+table.detail-view {
+    width: 100%;
+}
+table.detail-view th, table.detail-view td {
+	vertical-align: top;
+	padding: 5px 15px;
+	background: #242426;
+	border-bottom: 1px solid #171718;
+}
+table.detail-view th {
+	text-align: right;
+	width: 160px;
+	background: #270909;
+	border-right: 1px solid #171718;
+}
+table.detail-view tr.odd {
+}
+table.detail-view tr.even {
+}
+table.detail-view tr.odd th {
+}
+table.detail-view tr.even th {
+}
+
+/*------------------------------------------
+	Постраничная навигация
+------------------------------------------*/
+
+.pager {
+	margin-top: 10px !important;
+	text-align: right;
+	font-size: 12px;
+}
+ul.yiiPager {
+    display: inline;
+}
+ul.yiiPager li {
+    display: inline;
+}
+ul.yiiPager a:link, ul.yiiPager a:visited {
+    border: 1px solid #979899;
+    padding: 1px 6px;
+    text-decoration: none;
+}
+ul.yiiPager .page a {
+    font-weight: normal;
+}
+ul.yiiPager a:hover {
+    border: 1px solid #FF7432;
+}
+ul.yiiPager .selected a {
+    background: none repeat scroll 0 0 #591D1D;
+    color: #979899;
+}
+ul.yiiPager .hidden a {
+    border: 1px solid #979899;
+    color: #979899;
+		cursor: default;
+}
+ul.yiiPager .first, ul.yiiPager .last {
+    display: none;
+}
+
+/*------------------------------------------
+	Формы
+------------------------------------------*/
+
+form {
+	margin: 0;
+}
+div.form
+{
+	border: 1px solid #171718;
+	background: #242426;
+	padding: 10px;
+}
+div.form input,
+div.form textarea,
+div.form select
+{
+	border: 1px solid #444;
+	background: silver;
+	padding: 3px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 200px;
+}
+div.form textarea
+{
+	width: 400px;
+	height: 100px;
+}
+div.form fieldset
+{
+	border: 1px solid #DDD;
+	padding: 10px;
+	margin: 0 0 10px 0;
+    -moz-border-radius:7px;
+}
+div.form label
+{
+	margin: 4px 0 0 0;
+	display: block;
+	width: 180px;
+	float: left;
+}
+div.form .row
+{
+	margin: 10px 0 0 0;
+	clear: both;
+}
+div.form .row:first-child
+{
+	margin: 0;
+}
+div.form .hint
+{
+	color: #999;
+	font-size: 0.9em;
+	margin-top: 2px;
+}
+div.form .note
+{
+	font-style: italic;
+}
+div.form span.required
+{
+	color: red;
+}
+div.form div.error label:first-child,
+div.form label.error,
+div.form span.error
+{
+	color: #C00;
+}
+div.form div.error input,
+div.form div.error textarea,
+div.form div.error select,
+div.form input.error,
+div.form textarea.error,
+div.form select.error
+{
+	background: silver;
+	border: 1px solid #C00;
+}
+div.form div.success input,
+div.form div.success textarea,
+div.form div.success select,
+div.form input.success,
+div.form textarea.success,
+div.form select.success
+{
+	background: #E6EFC2;
+	border-color: #C6D880;
+}
+div.form div.success label
+{
+	color: inherit;
+}
+div.form .errorSummary
+{
+	border: 2px solid #C00;
+	padding: 7px 7px 12px 7px;
+	margin: 0 0 20px 0;
+}
+div.form .errorMessage
+{
+	color: red;
+	font-size: 12px;
+	margin: 3px 0 0 0;
+}
+div.form .errorSummary p
+{
+	margin: 0;
+	padding: 5px;
+}
+div.form .errorSummary ul
+{
+	margin: 0;
+	padding: 0 0 0 20px;
+	list-style: square ;
+}
+div.form .buttons, div.form .hint, div.form .errorMessage {
+	padding-left: 180px;
+}
+div.form .buttons input {
+	width: auto;
+}
+.mce-tinymce.mce-container.mce-panel {
+	float: left !important;
+}
+.form input[type="text"].upload {
+	width: 177px;
+	float: left;
+}
+.form input[type="button"].upload {
+	margin-left: -1px;
+	padding: 0;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	padding: 0;
+}
+
+/*------------------------------------------
+	Основное меню
+------------------------------------------*/
+
+.menu {
+}
+.menu ul {
+	background: url('../images/menu.png') center 70%;
+	height: 40px;
+}
+.menu li a {
+	display: block;
+	padding: 0 10px;
+	float: left;
+	font-size: 16px;
+	line-height: 40px;
+	height: 40px;
+	border-right: 1px solid #000;
+}
+.menu li.pull-right a {
+	border-left: 1px solid #000;
+	border-right: 0;
+}
+.menu li.active a {
+	background: url('../images/menu.png') center center;
+	color: #d0d0d0;
+}
+.menu li a:hover {
+	text-decoration: none;
+	background: url('../images/menu.png') center 30%;
+}
+.menu .sub {
+	display: none;
+}
+
+/*------------------------------------------
+	Боковое меню
+------------------------------------------*/
+
+.block-menu li a {
+	text-decoration: none;
+	display: block;
+	margin: 0 -10px;
+	padding: 3px 10px;
+}
+.block-menu li.active a {
+	background: #441212;
+	color: #d0d0d0;
+}
+.block-menu li a:hover {
+	background: #591D1D;
+}
+.block-menu .sub {
+	display: none;
+}
+
+/*------------------------------------------
+	Новости
+------------------------------------------*/
+
+.news_one {
+	margin-bottom: 10px;
+	background: #272728;
+	padding: 10px;
+}
+.news_one:last-child {
+	margin-bottom: 0;
+}
+.news_one .time {
+	color: #666;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+.news_one .title {
+	margin: 5px 0 0;
+}
+.news_one .text {
+	margin: 5px 0 0;
+	font-size: 12px;
+}
+.news_one .links {
+	margin: 5px 0 0;
+	font-size: 12px;
+	clear: both;
+}
+.news_one .image {
+	width: 250px;
+	float: left;
+	margin: 0 15px 5px 0;
+}
+.news_one.standalone .image {
+	width: 350px;
+	float: left;
+	margin: 0 15px 5px 0;
+}
+.news_one ul {
+	margin-left: 13px;
+	list-style: disc;
+}
+.news_one ol {
+	margin-left: 13px;
+	list-style: decimal;
+}
+
+/*------------------------------------------
+	Админка
+------------------------------------------*/
+
+.admin-link {
+	margin-top: 16px;
+	font-size: 16px;
+}
+.admin-link:first-child {
+	margin-top: 0;
+}
+
+/*------------------------------------------
+	Форум
+------------------------------------------*/
+
+.forum-grid .grid-view .items thead th, .forum-grid .grid-view .items thead td {
+	padding: 0;
+}
+.forum-groups .grid-view .items thead th, .forum-groups .grid-view .items thead td {
+	padding: 5px;
+}
+.forum-themes .grid-view .items thead th, .forum-themes .grid-view .items thead td {
+	padding: 5px;
+}
+.forum-grid .grid-view .items tbody td {
+	padding: 0;
+}
+.forum-groups .grid-view .items tbody td {
+	padding: 5px;
+}
+.forum-themes .grid-view .items tbody td {
+	padding: 5px;
+}
+.forum-grid .grid-view .items .nickname {
+	background: #270909;
+	padding: 5px 10px;
+}
+.forum-grid .grid-view .items .role {
+	padding: 10px;
+}
+.forum-grid .grid-view .items td.empty {
+	padding: 5px 10px;
+}
+.forum-grid .grid-view .items .time {
+	background: #270909;
+	padding: 5px 10px;
+}
+.forum-grid .grid-view .items .time a {
+	display: inline-block;
+	margin-left: 8px;
+}
+.forum-grid .grid-view .items .message {
+	padding: 10px;
+}
+.forum-grid .grid-view .items .update {
+	padding: 10px 10px 0;
+	color: #666;
+}
+.forum-grid .grid-view .items .avatar {
+	margin: 10px 0 0 10px;
+}
+.forum-grid .grid-view .items .avatar img{
+	max-width: 150px !important;
+	max-height: 150px !important;
+}
+.forum-grid .grid-view .items .message img {
+	max-width: 630px !important;
+	height: auto !important;
+}
+
+
+/*------------------------------------------
+	Штаб
+------------------------------------------*/
+
+span.clan-name {
+	font-size: 16px;
+	color: #d0d0d0;
+}
+.company-title {
+	margin: 15px 0 8px 0;
+	font-size: 16px;
+}
+
+
+/*------------------------------------------
+	Комментарии
+------------------------------------------*/
+
+.messages-grid .grid-view .items thead th, .messages-grid .grid-view .items thead td {
+	padding: 0;
+}
+.messages-grid .grid-view .items tbody td {
+	padding: 0;
+}
+.messages-grid .grid-view .items .nickname {
+	background: #270909;
+	padding: 5px 10px;
+}
+.messages-grid .grid-view .items .role {
+	padding: 10px;
+}
+.messages-grid .grid-view .items td.empty {
+	padding: 5px 10px;
+}
+.messages-grid .grid-view .items .time {
+	background: #270909;
+	padding: 5px 10px;
+}
+.messages-grid .grid-view .items .message {
+	padding: 10px;
+}
+.messages-grid .grid-view .items .avatar {
+	margin: 10px 0 0 10px;
+}
+.messages-grid .grid-view .items .avatar img{
+	max-width: 150px !important;
+	max-height: 150px !important;
+}
+.messages-grid .grid-view .items .message img {
+	max-width: 630px !important;
+	height: auto !important;
+}
+
+.signature {
+    margin: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+.signature img {
+    background: none repeat scroll 0 0 #f0f0f0;
+}
+
+/*------------------------------------------
+	Виджет мини-новости
+------------------------------------------*/
+
+.news-mini p {
+	overflow:hidden;
+}
+.news-mini .list-view {
+	background: none;
+}
+.news-mini .summary {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu > ul > li {
+	position:relative;
+}
+
+.menu > ul > li > ul {
+	background:#333;
+	display:none;
+	position:absolute;
+	right:auto;
+	white-space:nowrap;
+	z-index:99;
+}
+
+.menu ul li ul li {
+	background:#333;
+}
+
+.menu > ul > li:hover > ul {
+	display:block;
+}
+.menu > ul > li > ul > li a:hover {
+	background-image:none;
+	background-color:#444;
+}
+
+.menu > ul > li {
+	display:inline-block;
+}
+
+.menu li a {
+	float:none !important;
+}
+
+
+/* ==========================================================================
+    YouTube, Twich, Vimeo
+   ========================================================================== */
+.responsive-video {
+	width:100%;
+	position:relative;
+	padding-bottom:56.25%;
+	height:0;
+	overflow:hidden;
+	background:#000;
+}
+.responsive-video iframe,  
+.responsive-video object,  
+.responsive-video embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+
+
+/* ==========================================================================
+	Онлайн
+   ========================================================================== */
+.online .body {
+	position:relative;
+	overflow:visible;
+	height:58px;
+	padding:0;
+	font-size:12px;
+	color:#999;
+}
+
+.online strong,
+.online span {
+	display:inline-block;
+}
+.online span {
+	padding-right:5px;
+}
+
+.online .online-inner {
+	position:absolute;
+	overflow:hidden;
+	z-index:29;
+	width:100%;
+	padding:11px 14px 5px;
+	background-color:#270909;
+	max-height:58px;
+	-webkit-transition:max-height 0.15s ease-out;
+	-moz-transition:max-height 0.15s ease-out;
+	transition:max-height 0.15s ease-out;
+}
+
+.online .online-inner:hover {
+    max-height:500px;
+	-webkit-transition:max-height 0.25s ease-in;
+	-moz-transition:max-height 0.25s ease-in;
+	transition:max-height 0.25s ease-in;
+}
+
+.online .online-allies-list {
+	line-height:16px;
+	padding-top:5px;
+}
+
+.online .online-allies-list a {
+	display:inline-block;
+	padding:2px 4px 4px 0;
+}
+
+.online .online-allies-list a::after {
+	content:', ';
+	display:inline-block;
+}
+
+.online .online-allies-list a:last-child::after {
+	content:'.';
+	display:inline-block;
+}
+
+/* Звания */
+span.leader {color:#D042F3;}
+span.vice-leader {color:#D042F3;}
+span.personnel-officer {color:#090;}
+span.commander {color:#090;}
+span.diplomat {color:#12A0ED;}
+span.treasurer {color:#3F8E93;}
+span.recruiter {color:#E5ED00;}
+span.junior-officer {color:#090;}
+span.private {}
+span.recruit {color:#f00;}
+span.reservist {color:#D37700;}
+
+/* Рейтинги */
+.very-bad {color:#FF0E00;}
+.bad {color:#FF8800;}
+.normal {color:#EFFF00;}
+.good {color:#00FF00;}
+.very-good {color:#00FFE3;}
+.unique {color:#D200FF;}
+
+
+
+
+
+
+
+.icon-point-right {
+	position:relative;
+}
+.icon-point-right::before {
+    display:block;
+    position:absolute;
+    content:' ';
+    top:2px;
+    right:-14px;
+    width:10px;
+    height:10px;
+	background-image:url('../images/arrow_right.png');
+	background-position:left center;
+	background-repeat:no-repeat;
+    z-index:99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------
+	Спойлер форум
+---------------------------------------------------------------------------*/
+.forum-spoiler {
+	margin:6px 0 8px;
+}
+
+.forum-spoiler .fs-container {
+	display:none;
+}
+.no-js .forum-spoiler .fs-container {
+	display:block;
+}
+
+.forum-spoiler .fs-container {
+	padding:3px 8px;
+	border-top:1px solid #888;
+	border-left:1px solid #888;
+	border-right:1px solid #888;
+}
+.forum-spoiler::after {
+	display:block;
+	content:' ';
+	border-bottom:1px solid #888;
+}
+
+.forum-spoiler .button {
+	display:inline-block;
+	margin-bottom:4px;
+	padding:2px 5px;
+	border:1px solid #e1e1e1;
+	font-size:.95em;
+	color:#555;
+	background-color:#f5f5f5;
+	cursor:pointer;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image:-webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:-o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-image:-moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-repeat:repeat-x;
+	-webkit-transition: border .15s, box-shadow .15s;
+	-moz-transition: border .15s, box-shadow .15s;
+	transition: border .15s, box-shadow .15s;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+.forum-spoiler .button:hover {
+	border:1px solid #eee;
+}
+.forum-spoiler .button:active {
+	background-color:#f5f5f5;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6), to(#ffffff));
+	background-image:-webkit-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:-o-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:linear-gradient(to bottom, #e6e6e6, #ffffff);
+	background-image:-moz-linear-gradient(top, #e6e6e6, #ffffff);
+	background-repeat:repeat-x;
+}
+.fs-container p {
+	margin:5px 0;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цитата форум
+---------------------------------------------------------------------------*/
+.forum-quote {
+	margin:8px 0;
+}
+.forum-quote .fq-data {
+	padding:4px 6px 3px;
+	font-size:.95em;
+	color:#777;
+	background-color:rgba(255, 255, 255, .1);
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+.forum-quote .fq-container {
+	padding:3px 6px;
+	background-color:rgba(255, 255, 255, .025);
+	border:1px solid rgba(255, 255, 255, .1);	
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цитата комментарии
+---------------------------------------------------------------------------*/
+.comment-quote {
+	margin:8px 0;
+}
+.comment-quote .cq-data {
+	padding:4px 6px 3px;
+	font-size:.95em;
+	color:#777;
+	background-color:rgba(255, 255, 255, .1);
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+.comment-quote .cq-container {
+	padding:3px 6px;
+	background-color:rgba(255, 255, 255, .025);
+	border:1px solid rgba(255, 255, 255, .1);		
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Опросы
+---------------------------------------------------------------------------*/
+.modul.poll * {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+.modul.poll .cell {	
+	padding:10px;
+	font-size:13px;
+	background:#270909;
+}
+
+.modul.poll .title h3 {
+  padding:0 10px;
+  font-size:16px;
+  line-height:36px;
+  height:40px;
+  background:#270909;
+  color:#d0d0d0;
+  border-bottom:1px solid #000;
+  border-top:4px solid #874020;
+  font-weight:normal;
+}
+
+.modul.poll .cell ul {
+	margin:0 0 16px;
+	list-style:none;
+}
+
+.modul.poll .cell li {
+	margin:6px 0;
+	line-height:15px;
+	color:#979899;
+}
+
+.modul.poll .cell li > span {
+	position:relative;
+	display:block;
+	margin:4px 0 9px 0;
+	height:9px;
+	border:1px solid #999;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+.modul.poll .cell li span span {
+	position:absolute;
+	display:inline-block;
+	height:7px;
+	background-color:#999;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+
+.modul.poll .cell .question {
+	padding:0 0 4px 1px;
+	font-weight:bold;
+	color:#bbb;
+}
+
+.modul.poll input[type="radio"] {
+	display:none !important;
+}
+
+.modul.poll input[type="radio"] + label {
+	cursor:pointer;
+	-webkit-transition:color .15s;
+	-moz-transition:color .15s;
+	transition:color .15s;
+}
+.modul.poll input[type="radio"] + label:hover {
+	color:#eee;
+}
+
+.modul.poll input[type="radio"] + label::before {
+	position:relative;
+	content:'';
+	display:inline-block;
+	top:0px;
+	margin-right:7px;
+	width:12px; height:12px;
+	border:1px solid #777;
+	background-color:#ccc;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	-webkit-box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	-webkit-transition:border .15s;
+	-moz-transition:border .15s;
+	transition:border .15s;
+}
+.modul.poll input[type="radio"] + label:hover::before {
+	border:1px solid #ccc;
+}
+
+.modul.poll input[type="radio"]:checked + label::before {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAACVBMVEVFRUtFRUtFRUup1b0rAAAAAnRSTlMQwKc1HdkAAAAZSURBVHgBY2BgZGJiBJMgmgkMoBRUEKoEAATCADkK7oLSAAAAAElFTkSuQmCC);
+	background-repeat:no-repeat;
+	background-position:center center;
+	border:1px solid #ccc;
+}
+
+.modul.poll button {
+	border:none;
+	padding:4px 8px;
+	font-size:13px;
+	color:#ddd;
+	background-color:#353535;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+.modul.poll button:hover {
+	color:#fff;
+	background-color:#555;
+}
+
+/*---------------------------------------------------------------------------
+	Активные темы
+---------------------------------------------------------------------------*/
+.themes-mini {
+
+}
+.themes-mini .list-view {
+	background: transparent;
+}
+.themes-mini .items div {
+	margin-bottom: 10px;
+}
+.themes-mini .items div:last-child {
+	margin-bottom: 0;
+}
+.themes-mini .items div span:nth-child(1) a {
+	color: inherit;
+}
+.themes-mini .items div span:nth-child(3) {
+	display: block;
+}
+
+/*---------------------------------------------------------------------------
+	Онлайн
+---------------------------------------------------------------------------*/
+
+.staff-attnav {
+	margin: 20px 0;
+	
+}
+.staff-attnav li.active a {
+	background: #252528;
+	color: #ff7432;
+}
+
+.att-calc {
+	margin-top: 10px;
+}
+.att-calc p {
+	margin: 10px 0;
+	font-size: 11px;
+}
+.att-calc .ac-one {
+	float: left;
+	margin-right: 30px;
+}
+
+.att-calc .ac-one input {
+	width: 30px;
+}
+
+.scrollable-table {
+
+}
+
+.scrollable-table .st-static {
+	float:left;
+}
+
+.scrollable-table .st-static td {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	max-width:120px;
+	padding:3px 10px;
+	text-align:left;
+	background-color:#270909;
+}
+.scrollable-table .st-static td:hover {
+	background-color:#16191b !important;
+}
+
+.scrollable-table .st-scrollable {
+	overflow-x:scroll;
+	cursor:move;
+	-webkit-user-select:none;    
+	-moz-user-select:none;   
+	-ms-user-select:none;   
+	user-select:none;    
+}
+
+.scrollable-table .st-scrollable table {
+	margin-bottom:0;  
+}
+
+.scrollable-table .st-scrollable td {
+	padding:3px 10px;
+}
+.scrollable-table .st-scrollable td:first-child {
+	border-left:0;
+}
+.scrollable-table .st-scrollable tr.date-row {
+	background:#31383D !important;
+}
+.scrollable-table .st-scrollable tr.stat-row td:last-child {
+	background:#270909;
+}
+.scrollable-table .st-scrollable tr.stat-row:hover {
+	background:#270909;
+}
+.scrollable-table .st-scrollable td[g] {
+	color:#26FF93;
+}
+
+.scrollable-table .st-scrollable td[l] {
+	color:#FF4D4D;
+}
+.actual {
+	margin-top: 10px;
+}
+

@@ -1,0 +1,954 @@
+﻿@font-face {
+	font-family:'UniversCondCBold';
+	src:url("../font/universcondcbold-webfont.eot");
+	src:url("../font/universcondcbold-webfont.eot?#iefix") format("embedded-opentype"),
+		url("../font/universcondcbold-webfont.woff") format("woff");
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	background-color:#000;
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	user-select:none;
+}
+
+
+
+
+
+select.map-select {
+	border-radius:1px;
+	-webkit-appearance:none;
+	/* for FF */
+	-moz-appearance:none;
+	text-indent:0.01px; 
+	text-overflow:'';
+	/* for IE */
+	-ms-appearance:none;
+	appearance:none !important;
+	border:1px solid #535349;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAA8CAYAAABmdppWAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAABG1JREFUWMPtl82LJeUVh5/3o6r6ds9MOwQkEnAQRBo7CnHXizBICApxEbIRJdn7T0o2DoHxI1kGIfPBoCTdsWe670dVvec957io7juOOnFhbQL9rm7VW/Xcw6lTv3uf4O7MucJLL173vd0dzBR3J0QnpYAMQmobVJUQAuaBlBKRgIgQ0yUhkHOLqHH//knIv3zpRf768ceMpafWClohGKpKzpnVZiClhFRjsViwWa9xd6IbISfatuXf/znhj396H4BsJvzt7icsz55gZrhWVJW2bXF3RI2cM6KGiFCGnmvXrtGv1zRdx2Kx4NFXX2O1XAC9IDJQZEREMJk2zCqKE0JCakHNcXdSjkgthACOsVydA0atMgHdnZOTE/rNhhghOogI7WKXvu+RUmm6FhEh50wZB0IIXN9dcL4+x8z47zdPCCFMwJQaTk9P6dqWYSi0KQOB1XLNOI5Uc0LKqDoiI1YruUkcHx9T3egWO/R9T9M0E1CKIlIZ+5GUEpuhJ6VEdei6jmDGajkAoKrgiqozimGuFFkzDAMicllhQtVJMaNqLBZ73L17l8+++AfujodAjJEYI6pK1zS88eYhb799m4cP7+MBYNoHiGZQxRhHYRgKZ2dLXn/919y4sY87BBIxZLQ6XddxcHDA0dER9+7dQ9VRdYa+AFMPY62VTb9is9mwXC4Zx55x7HnvvT+wv3+DmGAsPYvdjsPDQ46Ojnjw4AHDMLBarRjHaTq2FcYIfb/GrJJSQFUYx57V+px33v09e3u73Lz5Arduvcxbb/2GBw/vcX7+BBlGzCrL5ZLNZoOZTUBVZRgGlsszREb6YU0/rKl14PHjb3j3nd+xu7vD7du/5csv/8n5+RNUlfVmydnZGWW4mN8LYE45EEIg58R6syI61FqJZcRD5Pj4mL/8+UM+/fwzzJUY4/QGiZDbFvfp/u0cuju1VsowUmREi7Czs4O7oyqE1HDnzh08TP0ZNj05Z5rcYQ5mtq0OIGsNbFY9XdcRQyK1EZG6vaj0I6pKyi2lFNwMKOw0LUUrTZMQEfQiBnMIgZQazIxap2/LOYNWLEAIjnuYkghIsSGlxChC02bUHFXdPuVca2UshRgjtU7Zp6ViqlTVizxMhIsBriaUOgJQByGEQNFKTN/p4enpKTlnzGwC6pQs7r5t9pSl4eK8Pt1LkVKetijsvxD9MvsubzKdPn8feLkc2553d3YXewA8evQ4hLl/UyIzryvgFfAKeAW8Av6/AAPgbQQz8MkSSAmkQoqgNl1kTMcREPtOJQFyBlFQ9ZB/cbOZRSve/+CjebVi+9/GnFm0Ygt0Zxat2AJTYhat2AKlMItWPFPhj2rF3/+FM41SDBAjqELXwBtvvvoDrdgO9nO14nqc5vICqApdBwcHrzxHK7jUCp6vFdemysRgsYDDw9eeqxVb4E9rBexfh1u3fvU/tWILVGUWrXj6UDKzaMUzgz2zVjCLVmyBU1z9fK3YAmtlFq14podzaMUziT1X/Lv7/FrxLTgRtFDc0ij/AAAAAElFTkSuQmCC);
+	background-repeat:no-repeat;
+	background-position:right top;
+	background-color:rgba(88,87,78,0.15);
+	font-size:13px;
+	margin-top:3px; padding:2px;
+	width:218px; height:23px;
+	color:#999;
+	-webkit-box-shadow:inset 0px 0px 4px 1px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow:inset 0px 0px 4px 1px rgba(0, 0, 0, 0.6);
+	box-shadow:inset 0px 0px 4px 1px rgba(0, 0, 0, 0.6);
+}
+
+select.map-select:hover {
+	background-position:right bottom;
+	color:#ccc;
+}
+ 
+select.map-select::-ms-expand {
+	display:none;
+}
+
+select.map-select option {
+	background-color:#282822;
+}
+
+.room-form input[type="text"] {
+	border-radius:1px;
+	border:1px solid #535349;
+	background-color:rgba(88,87,78,0.15);
+	font-size:13px;
+	margin-top:3px; padding:2px 6px;
+	width:218px; height:23px;
+	color:#999;
+	-webkit-box-shadow:inset 0px 0px 4px 1px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow:inset 0px 0px 4px 1px rgba(0, 0, 0, 0.6);
+	box-shadow:inset 0px 0px 4px 1px rgba(0, 0, 0, 0.6);
+
+}
+
+
+
+
+
+.title {
+	margin-bottom:12px;
+	padding:10px 0 0 1px;
+	font-family:'UniversCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:18px;
+	color:#C8CAB5;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Сетка
+---------------------------------------------------------------------------*/
+.wg-client .map-case {
+	background-position:-4px -27px;
+}
+.map-case {
+	overflow:hidden;
+	width:1008px; height:632px;
+	background-color:#181712;
+	background-image:url('../images/tactic/map-bg.jpg');
+	background-position:left top;
+	background-repeat:repeat;
+}
+.map-case .nav,
+.map-case .room-form,
+.map-case .board {
+	overflow:hidden;
+	float:left;
+}
+.map-case .nav {
+	width:100%; height:27px;
+}
+.map-case .room-form {
+	width:259px; height:605px;
+}
+.map-case .board {
+	width:749px; height:605px;
+}
+
+/*---  ---*/
+.map-case.room .board {
+	position:relative;
+	overflow:hidden;
+	width:749px;
+}
+.map-case.room.admin .board-map,
+.map-case.room.admin .board-button,
+.map-case.room.admin .layer-thumbs,
+.map-case.room.writer .board-map,
+.map-case.room.writer .board-button,
+.map-case.room.writer .layer-thumbs {
+	float:left;
+}
+
+/*--- Список комнат ---*/
+.room-list {
+	padding:0 18px 0 14px;
+	height:100%;
+}
+
+.room-list ul {
+	position:relative;
+	list-style:none;
+	width:100%; height:540px;
+}
+.room-list li {
+	overflow:hidden;
+	padding:11px 0 11px 1px;
+	width:717px;
+	border-top:1px solid rgba(255, 255, 255, .04);
+	border-bottom:1px solid rgba(0, 0, 0, .3);
+	font-size:12px;
+	color:#949688;
+}
+.room-list li a {
+	color:#949688;
+}
+.room-list li:first-child {
+	padding:0 0 16px;
+	border-top:none;
+	font-family:'UniversCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:16px;
+	color:#949688;
+}
+.room-list li:last-child {
+	border-bottom:none;
+}
+.room-list li span {
+	display:block;
+	float:left;
+}
+.room-list li img {
+	width:60px; height:60px;
+}
+.room-list li span:nth-child(1) {
+	position:relative;
+}
+.room-list li span:nth-child(1)::before {
+	position:absolute;
+	display:block;
+	background:url('../images/tactic/prev2.png') center center no-repeat;
+	content:'';
+	top:0; left:0;
+	width:100%; height:100%;
+	z-index:1;
+}
+.room-list li span:nth-child(1) {
+	width:60px;
+}
+.room-list li span:nth-child(2) {
+	width:220px;
+	padding:20px 0 0 22px;
+}
+.room-list li span:nth-child(3) {
+	width:290px;
+	padding:20px 0 0 0;
+}
+.room-list li span:nth-child(4) {
+	width:146px;
+	padding:20px 0 0 0;
+}
+.room-list li:first-child span:nth-child(1) {
+	width:280px;
+}
+.room-list li:first-child span:nth-child(1)::before {
+	background:none;
+}
+.room-list li:first-child span:nth-child(2) {
+	width:290px;
+	padding:0;
+}
+.room-list li:first-child span:nth-child(3) {
+	width:90px;
+	padding:0;
+}
+.room-list li:first-child span:nth-child(4) {
+	width:26px;
+	padding:0;
+}
+
+/*--- Карта ---*/
+.map-case.room .board-map {
+	position:relative;
+	width:593px; height:580px;
+	padding-top:10px;
+	padding-left:8px;
+}
+
+/*--- Кнопки ---*/
+.map-case.room .board-button {
+	display:none;
+	width:54px;
+	padding-top:10px;
+	padding-left:8px;
+}
+.map-case.room.admin .board-button,
+.map-case.room.writer .board-button {
+	display:block;
+}
+
+.board-button button {
+	display:block;
+	width:38px;
+	margin-bottom:8px;
+}
+
+/*--- Превью ---*/
+.map-case.room .layer-thumbs {
+	display:none;
+	width:102px;
+	list-style:none;
+	padding-top:10px;
+	padding-left:5px;
+}
+.map-case.room.admin .layer-thumbs,
+.map-case.room.writer .layer-thumbs {
+	display:block;
+}
+
+.map-case.room .layer-thumbs li {
+	position:relative;
+	margin-bottom:8px;
+	width:82px; height:82px;
+	cursor:pointer;
+}
+.map-case.room .layer-thumbs li img {
+	-webkit-transition:opacity .20s;
+	-moz-transition:opacity .20s;
+	transition:opacity .20s;
+	opacity:.65;
+}
+.map-case.room .layer-thumbs li::before {
+	position:absolute;
+	display:block;
+	background:url('../images/tactic/prev.png') center center no-repeat;
+	content:'';
+	top:0; left:0;
+	width:100%; height:100%;
+	z-index:1;
+}
+.map-case.room .layer-thumbs li:hover img,
+.map-case.room .layer-thumbs li.active img {
+	opacity:1;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Админ-бар
+---------------------------------------------------------------------------*/
+.map-case.room.admin .admin-bar {
+	display:block;
+}
+
+.admin-bar {
+	display:none;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Системные сообщения (подключение к серверу и т. п.)
+---------------------------------------------------------------------------*/
+.map-case.connecting {
+	position:relative;
+}
+.map-case.connecting .title {
+	position:absolute;
+	margin:auto;
+	width:100%; height:30px;
+	top:0; right:0; bottom:0; left:0;
+	text-align:center;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Заголовок планшета + кнопка выход
+---------------------------------------------------------------------------*/
+/*--- Заголовок планшета ---*/
+.map-case .nav .title {
+	float:left;
+	color:#E1E1D8;
+	margin:0;
+	padding:1px 0 0 8px;
+	font-size:18px;
+	text-shadow:0 -1px 2px rgba(0, 0, 0, 0.75);
+}
+.map-case .nav .exit {
+	float:right;
+}
+.wg-client .exit {
+	display:none;
+}
+/*--- Кнопка выход ---*/
+.nav .exit a {
+	display:block;
+	margin:5px 6px 0 0;
+	width:17px; height:17px;
+	background-image:url('../images/tactic/replay_close_btn.png');
+	background-position:left top;
+	background-repeat:repeat;
+	cursor:pointer;
+}
+.nav .exit a:hover {
+	background-position:left bottom;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Форма
+---------------------------------------------------------------------------*/
+/*--- Форма ---*/
+.map-case .room-form {
+	padding:0 4px 5px 4px;
+}
+.map-case .room-form-inner {
+	overflow:hidden;
+	padding:0 6px 0 16px;
+	height:600px;
+	background-color:rgba(0, 0, 0, .16);
+	border-right:1px solid rgba(56, 56, 48, .24);
+	-webkit-box-shadow:2px 0px 4px 0px rgba(0, 0, 0, .65);
+	-moz-box-shadow:2px 0px 4px 0px rgba(0, 0, 0, .65);
+	box-shadow:2px 0px 4px 0px rgba(0, 0, 0, .65);
+}
+/*--- Кто видит комнату ---*/
+.see-room {
+	overflow:hidden;
+	margin:8px 0 9px;
+	font-size:12px;
+	color:#949688;
+}
+
+.tactic-text {
+	font-size:12px;
+	color:#949688;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Список пользователей
+---------------------------------------------------------------------------*/
+.map-case.room.admin .board-users {
+	position:relative;
+	margin-top:24px;
+	height:434px;
+}
+.map-case.room .board-users {
+	position:relative;
+	margin-top:12px;
+	height:540px;
+}
+
+.map-case.room .list-users {
+	height:320px;
+	font-family:'UniversCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:14px;
+	color:#999;
+}
+.map-case.room .list-users div {
+	position:relative;
+	list-style-type:none;
+	height:14px;
+	white-space:nowrap;
+	margin-bottom:8px;
+}
+.map-case.room.admin .list-users div span.del,
+.map-case.room.admin .list-users div input,
+.map-case.room.admin .list-users div label {
+	position:absolute;
+	display:block;
+}
+.map-case.room .list-users div span.del,
+.map-case.room .list-users div input {
+	display:none;
+}
+
+.map-case.room .list-users span.del {
+	top:1px;
+	left:2px;
+	background-image:url('../images/tactic/button.png');
+	background-repeat:no-repeat;
+	background-position:0 -851px;
+	width:12px;
+	height:12px;
+	cursor:pointer;
+}
+
+.map-case.room .list-users label {
+	line-height:11px;
+	left:20px;
+	cursor:pointer;
+}
+
+.map-case.room .list-users .commander {
+	color:#DF5E5E;
+}
+.map-case.room .list-users .subcommander {
+	color:#62C177;
+}
+
+.map-case.room .list-users .commander span.del {
+	visibility:hidden;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Кнопки
+---------------------------------------------------------------------------*/
+.board-button .btn {
+	display:block;
+	width:38px;
+	margin-bottom:8px;
+}
+
+.btn {
+	padding:0 12px;
+	color:#d5d5d5;
+	text-shadow:0 -1px 2px #000;
+}
+.btn:hover {
+	color:#eee;
+}
+.btn.active,
+.btn:active {
+	color:#ccc;
+}
+.btn span {
+	position:relative;
+	top:-1px;
+	z-index:9;
+	font-family:'UniversCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:12px;
+	text-transform:uppercase;
+	margin:0 !important;
+}
+
+.btn {
+	position:relative;
+	border:0;
+	height:29px;
+	background-image:url('../images/tactic/button.png');
+	background-position:left -87px;
+	background-repeat:repeat-x;
+	z-index:1;
+}
+.btn::before {
+	position:absolute;
+	display:block;
+	content:'';
+	width:28px;
+	height:29px;
+	top:0;
+	left:0;
+	background-image:url('../images/tactic/button.png');
+	background-position:left 0;
+	background-repeat:no-repeat;
+}
+.btn::after {
+	position:absolute;
+	display:block;
+	content:'';
+	width:28px;
+	height:29px;
+	top:0;
+	right:0;
+	background-image:url('../images/tactic/button.png');
+	background-position:right 0;
+	background-repeat:no-repeat;
+}
+.btn:hover {
+	background-position:left -116px;
+}
+.btn:hover::before {
+	position:absolute;
+	display:block;
+	content:'';
+	width:28px;
+	height:29px;
+	top:0;
+	left:0;
+	background-image:url('../images/tactic/button.png');
+	background-position:left -29px;
+	background-repeat:no-repeat;
+}
+.btn:hover::after {
+	position:absolute;
+	display:block;
+	content:'';
+	width:28px;
+	height:29px;
+	top:0;
+	right:0;
+	background-image:url('../images/tactic/button.png');
+	background-position:right -29px;
+	background-repeat:no-repeat;
+}
+
+.btn.active,
+.btn:active {
+	background-position:left -145px;
+}
+.btn.active::before,
+.btn:active::before {
+	position:absolute;
+	display:block;
+	content:'';
+	width:28px;
+	height:29px;
+	top:0;
+	left:0;
+	background-image:url('../images/tactic/button.png');
+	background-position:left -58px;
+	background-repeat:no-repeat;
+}
+.btn.active::after,
+.btn:active::after {
+	position:absolute;
+	display:block;
+	content:'';
+	width:28px;
+	height:29px;
+	top:0;
+	right:0;
+	background-image:url('../images/tactic/button.png');
+	background-position:right -58px;
+	background-repeat:no-repeat;
+}
+
+.lt-a span,
+.lt-e span,
+.mt-a span,
+.mt-e span,
+.ht-a span,
+.ht-e span,
+.td-a span,
+.td-e span,
+.spg-a span,
+.spg-e span,
+.test span,
+.arrow-one span,
+.clear span {
+	display:block;
+	top:2px;
+	height:17px;
+	background-image:url('../images/tactic/button.png');
+	background-repeat:no-repeat;
+}
+
+.lt-a span {
+	background-position:center -514px;
+}
+.lt-a.active span {
+	background-position:center -547px;
+}
+.lt-e span {
+	background-position:center -481px;
+}
+.lt-e.active span {
+	background-position:center -547px;
+}
+
+.mt-a span {
+	background-position:center -217px;
+}
+.mt-a.active span {
+	background-position:center -250px;
+}
+.mt-e span {
+	background-position:center -184px;
+}
+.mt-e.active span {
+	background-position:center -250px;
+}
+
+.ht-a span {
+	background-position:center -316px;
+}
+.ht-a.active span {
+	background-position:center -349px;
+}
+.ht-e span {
+	background-position:center -283px;
+}
+.ht-e.active span {
+	background-position:center -349px;
+}
+
+.td-a span {
+	background-position:center -414px;
+}
+.td-a.active span {
+	background-position:center -447px;
+}
+.td-e span {
+	background-position:center -381px;
+}
+.td-e.active span {
+	background-position:center -447px;
+}
+
+.spg-a span {
+	background-position:center -613px;
+}
+.spg-a.active span {
+	background-position:center -646px;
+}
+.spg-e span {
+	background-position:center -580px;
+}
+.spg-e.active span {
+	background-position:center -646px;
+}
+.test span {
+	background-position:center -693px;
+	left:-4px;
+	width:23px;
+	opacity:.75;
+}
+.test.active span {
+	background-position:center -693px;
+	opacity:1;
+}
+.arrow-one span {
+	background-position:center -735px;
+	opacity:.75;
+}
+.arrow-one.active span {
+	background-position:center -735px;
+	opacity:1;
+}
+.clear span {
+	background-position:center -776px;
+	top:1px;
+	left:-3px;
+	width:20px;
+	height:20px !important;
+}
+.clear.active span {
+	background-position:center -776px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Селект
+---------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------
+	Чекбоксы и радиобуттоны
+---------------------------------------------------------------------------*/
+.list-users input[type="checkbox"],
+.see-room input[type="radio"] {
+    display:none !important;
+}
+.list-users input[type="checkbox"] + label,
+.see-room input[type="radio"] + label {
+	cursor:pointer;
+}
+.admin .list-users input[type="checkbox"] + label::before,
+.see-room input[type="radio"] + label::before {
+	position:relative;
+	content:'';
+	display:inline-block;
+	width:12px; height:12px;
+	background-image:url('../images/tactic/button.png');
+	background-repeat:no-repeat;
+}
+.list-users input[type="checkbox"] + label::before {
+	position:relative;
+	content:'';
+	display:inline-block;
+	width:1px;
+	background-image:none;
+}
+
+.admin .list-users input[type="checkbox"] + label::before {
+	margin:0 7px 0 0;
+	top:1px;
+}
+.see-room input[type="radio"] + label::before {
+	margin:0 4px 0 6px;
+	top:2px;
+}
+
+.list-users input[type="checkbox"] + label::before {
+	background-position:0 -827px;
+}
+.see-room input[type="radio"] + label::before {
+    background-position:0 -839px;
+}
+.list-users input[type="checkbox"]:checked + label::before {
+	background-position:-12px -827px;
+}
+.see-room input[type="radio"]:checked + label::before {
+    background-position:-12px -839px;
+}
+
+.list-users input[type="checkbox"]:disabled + label::before {
+    background-position:0 -863px;
+}
+.list-users input[type="checkbox"]:checked:disabled + label::before {
+    background-position:0 -863px;
+}
+.see-room input[type="radio"]:disabled + label::before {
+    background-position:0 -863px;
+}
+.see-room input[type="radio"]:checked:disabled + label::before {
+    background-position:0 -863px;
+}​
+
+
+
+/*---------------------------------------------------------------------------
+	Скроллбар
+---------------------------------------------------------------------------*/
+.scrollable {
+	position:relative;
+}
+.scrollable:focus {
+	outline:0;
+}
+.scrollable .viewport {
+	position:relative;
+	overflow:hidden;
+}
+.scrollable .viewport .overview {
+	position:absolute;
+}
+.scrollable .scroll-bar {
+	display:none;
+}
+.scrollable .scroll-bar.vertical {
+	position:absolute;
+	right:0;
+	height:100%;
+}
+.scrollable .scroll-bar.horizontal {
+	position:relative;
+	width:100%;
+}
+.scrollable .scroll-bar .thumb {
+	position:absolute;
+}
+.scrollable .scroll-bar.vertical .thumb {
+	width:100%;
+	min-height:10px;
+}
+.scrollable .scroll-bar.horizontal .thumb {
+	height:100%;
+	min-width:10px;
+	left:0;
+}
+.not-selectable {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+/*---  ---*/
+.scrollable.gray-skin {
+	padding-right:17px;
+}
+.scrollable.gray-skin .scroll-bar {
+	background-color:none;
+}
+.scrollable.gray-skin .scroll-bar .thumb {
+	background-color:#434238;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	cursor:pointer;
+}
+/*.scrollable.gray-skin .scroll-bar:hover .thumb {
+	background-color:#535042;
+}*/
+.scrollable.gray-skin .scroll-bar.vertical {
+	width:7px;
+}
+.scrollable.gray-skin .scroll-bar.horizontal {
+	height:10px;
+	margin-top:2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* КАРТА
+*******************************************************************************/
+
+
+.tactic-display {
+    width:580px; height:580px;
+    overflow:hidden;
+}
+
+.tactic-tool {
+    cursor:default;
+}
+
+.global-move {
+    cursor:move !important;
+}
+
+.figure-handle:hover {
+    fill:green;
+}
+
+.figure-handle.active {
+
+
+    fill:yellow;
+}
+
+.draggable {
+    cursor:move;
+}
+
+
+
+
+
+
+
+
+.wrapper-tactic {
+    overflow-y: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Спиннер
+**************************************************************************
+.map-spinner {
+	position:absolute;
+	width:593px; height:580px;
+	top:0; right:0; bottom:0; left:0;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAV1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////+ORg7oAAAAHHRSTlMAECAwP0BPUF9gb3B/gI+Qn6CvsL/Az9Df4O/wQqu59AAAAWxJREFUeAGV1fGSoyAMBvAvsR6i0l7rVkV5/+e84w+DigL7m9kZxvUbYoIVEWqeP7P7b/7pG0IGtaM7GNtUhp+LiyxPxo1+cUNXs0/WZthFelypRqsJAWkbCmNEtNXxtVU20dH/BkKMQmGnhO5wrbtOKI07WhIKopJ1KrFwuIaUt/RKCkLatCUMPDAjrToVVSPnfdiCGDksW5APIG/YD4ORp6JG5cihIqmosCYFAv3pH7mY2fVJLf7xFZLqLfCVqVRls5ulugFJboNFooUBWZX11ZYGQuXW/eqpa3ydLJOUL2pVh5GkUW1q2r+yA0oQSM46Ck3hXOXx/qfqjTzyf3LWGTnkA3iVb8HweM3MTlR0ejvG3CSiRv1FSierUJTGPcUQyuUTWl1/BVpcazVwnfgQYvTRiQ9gg7PGKkR4cpu5IQTUzBPjilmd+PQPBsCP9uNWgxv8ChGxvhj3SE/uYOoIGaTM1/p77deo+O5/Lb4+7W3UhRgAAAAASUVORK5CYII=);
+	background-repeat:no-repeat;
+	background-position:center center;
+	-webkit-animation:spin 1s infinite linear;
+	-moz-animation:spin 1s infinite linear;
+	-ms-animation:spin 1s infinite linear;
+	-o-animation:spin 1s infinite linear;
+	animation:spin 1s infinite linear;
+	z-index:-1;
+}
+
+@-webkit-keyframes spin {
+	to {
+		-webkit-transform:rotate(360deg)
+	}
+}
+@-moz-keyframes spin {
+	to {
+		-moz-transform:rotate(360deg)
+	}
+}
+@-ms-keyframes spin {
+	to {
+		-ms-transform:rotate(360deg)
+	}
+}
+@-o-keyframes spin {
+	to {
+		-o-transform:rotate(360deg)
+	}
+}
+@keyframes spin {
+	to {
+		transform:rotate(360deg)
+	}
+}
+
+
+*****/
+
+
+

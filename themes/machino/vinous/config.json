@@ -1,0 +1,28 @@
+{
+	"ru": {
+		"pages": {
+			"textonmain": {
+				"text1": "Добро пожаловать на наш сайт",
+				"text2": "<img src=\"/images/new/1.jpg\" style=\"margin-right: 20px;\" align=\"left\"><p>Приветствуем тебя на сайте нашего клана!</p>\r\n<p>Клан состоит из очень сильных бойцов, и тебе у нас точно понравится.</p>\r\n<p>Клан имеет богатую историю побед и серьёзный опыт ведения боевых действий на ГК а также обширные дипломатические связи.</p><p><a href=\"/recruitment/add\">Вступить в наши ряды</a></p>"
+			}
+		},
+		"html_header": "<div class=\"logo1\">\n\t{SITE_NAME}\n</div>\n<div class=\"logo2\">\n\t{SLOGAN}\n</div>",
+		"html_footer": "<p style=\"float:left;\"><a href=\"http://worldoftanks.ru/\">World of Tanks.ru</a> &nbsp;&nbsp; <a href=\"http://ru.wargaming.net/support/\">Wargaming.net центр поддержки</a></p>\n<p style=\"float:right;\"><a href=\"http://wot.pw\">Конструктор клановых сайтов</a></p>",
+		"html_sidebar": "{ADMIN_MENU}\n{MENU_BLOCK}\n{NEWS ids=2 type=mini cnt=4 title=\"Новости WG\"}\n{VK}",
+		"html_index": "{STATIC name=textonmain}\n{NEWS ids=1,2}",
+		"html_news": "{NEWS ids=1,2}"
+	},
+	"en": {
+		"pages": {
+			"textonmain": {
+				"text1": "Welcome to our site",
+				"text2": "<img src=\"/images/new/1.jpg\" style=\"margin-right: 20px;\" align=\"left\"><p>We welcome you to the website of our clan!</p>\r\n<p>Clan consists of a very strong fighters, and you have exactly like.</p>\r\n<p>The clan has a long history of victories and serious experience of warfare on the Global Map and extensive diplomatic ties.</p><p><a href=\"/recruitment/add\">Join our ranks</a></p>"
+			}
+		},
+		"html_header": "<div class=\"logo1\">\n\t{SITE_NAME}\n</div>\n<div class=\"logo2\">\n\t{SLOGAN}\n</div>",
+		"html_footer": "<p style=\"float:left;\"><a href=\"http://worldoftanks.eu/\">World of Tanks.eu</a> &nbsp;&nbsp; <a href=\"http://eu.wargaming.net/support/\">Wargaming.net Customer Service</a></p>\n<p style=\"float:right;\"><a href=\"http://wot.pw\">Clansite constructor</a></p>",
+		"html_sidebar": "{ADMIN_MENU}\n{MENU_BLOCK}\n{NEWS ids=3 type=mini cnt=4 title=\"WG news\"}",
+		"html_index": "{STATIC name=textonmain}\n{NEWS ids=1,3}",
+		"html_news": "{NEWS ids=1,3}"
+	}
+}

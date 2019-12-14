@@ -1,0 +1,257 @@
+[
+	{
+		"name_ru": "Карелия",
+		"name_en": "Karelia",
+		"layers": ["01_karelia.jpg"]
+	},
+	{
+		"name_ru": "Малиновка",
+		"name_en": "Malinovka",
+		"layers": ["02_malinovka.jpg"]
+	},
+	{
+		"name_ru": "Провинция",
+		"name_en": "Province",
+		"layers": ["03_campania.jpg"]
+	},
+	{
+		"name_ru": "Химмельсдорф",
+		"name_en": "Himmelsdorf",
+		"layers": ["04_himmelsdorf.jpg"]
+	},
+	{
+		"name_ru": "Прохоровка",
+		"name_en": "Prokhorovka",
+		"layers": ["05_prohorovka.jpg"]
+	},
+	{
+		"name_ru": "Энск",
+		"name_en": "Ensk",
+		"layers": ["06_ensk.jpg"]
+	},
+	{
+		"name_ru": "Ласвилль",
+		"name_en": "Lakeville",
+		"layers": ["07_lakeville.jpg"]
+	},
+	{
+		"name_ru": "Руинберг",
+		"name_en": "Ruinberg",
+		"layers": ["08_ruinberg.jpg"]
+	},
+	{
+		"name_ru": "Рудники",
+		"name_en": "Mines",
+		"layers": ["10_hills.jpg"]
+	},
+	{
+		"name_ru": "Мурованка",
+		"name_en": "Murovanka",
+		"layers": ["11_murovanka.jpg"]
+	},
+	{
+		"name_ru": "Эрленберг",
+		"name_en": "Erlenberg",
+		"layers": ["13_erlenberg.jpg"]
+	},
+	{
+		"name_ru": "Линия Зигфрида",
+		"name_en": "Siegfried Line",
+		"layers": ["14_siegfried_line.jpg"]
+	},
+	{
+		"name_ru": "Комарин",
+		"name_en": "Komarin",
+		"layers": ["15_komarin.jpg"]
+	},
+	{
+		"name_ru": "Уайдпарк",
+		"name_en": "Widepark",
+		"layers": ["17_munchen.jpg"]
+	},
+	{
+		"name_ru": "Утёс",
+		"name_en": "Cliff",
+		"layers": ["18_cliff.jpg"]
+	},
+	{
+		"name_ru": "Монастырь",
+		"name_en": "Abbey",
+		"layers": ["19_monastery.jpg"]
+	},
+	{
+		"name_ru": "Топь",
+		"name_en": "Swamp",
+		"layers": ["22_slough.jpg"]
+	},
+	{
+		"name_ru": "Вестфилд",
+		"name_en": "Westfield",
+		"layers": ["23_westfeld.jpg", "23_westfeld_1.jpg", "23_westfeld_2.jpg", "23_westfeld_3.jpg", "23_westfeld_4.jpg"]
+	},
+	{
+		"name_ru": "Песчаная река",
+		"name_en": "Sand River",
+		"layers": ["28_desert.jpg"]
+	},
+	{
+		"name_ru": "Эль-Халлуф",
+		"name_en": "El Halluf",
+		"layers": ["29_el_hallouf.jpg"]
+	},
+	{
+		"name_ru": "Аэродром",
+		"name_en": "Airfield",
+		"layers": ["31_airfield.jpg", "31_airfield_1.jpg", "31_airfield_2.jpg", "31_airfield_3.jpg", "31_airfield_4.jpg"]
+	},
+	{
+		"name_ru": "Фьорды",
+		"name_en": "Fjords",
+		"layers": ["33_fjord.jpg"]
+	},
+	{
+		"name_ru": "Редшир",
+		"name_en": "Redshire",
+		"layers": ["34_redshire.jpg"]
+	},
+	{
+		"name_ru": "Степи",
+		"name_en": "Steppes",
+		"layers": ["35_steppes.jpg"]
+	},
+	{
+		"name_ru": "Рыбацкая бухта",
+		"name_en": "Fisherman's Bay",
+		"layers": ["36_fishing_bay.jpg"]
+	},
+	{
+		"name_ru": "Перевал",
+		"name_en": "Mountain Pass",
+		"layers": ["37_caucasus.jpg"]
+	},
+	{
+		"name_ru": "Заполярье",
+		"name_en": "Arctic Region",
+		"layers": ["38_mannerheim_line.jpg"]
+	},
+	{
+		"name_ru": "Южный берег",
+		"name_en": "South Coast",
+		"layers": ["39_crimea.jpg"]
+	},
+	{
+		"name_ru": "Порт",
+		"name_en": "Port",
+		"layers": ["42_north_america.jpg"]
+	},
+	{
+		"name_ru": "Северо-Запад",
+		"name_en": "Northwest",
+		"layers": ["43_north_america.jpg"]
+	},
+	{
+		"name_ru": "Лайв Окс",
+		"name_en": "Live Oaks",
+		"layers": ["44_north_america.jpg"]
+	},
+	{
+		"name_ru": "Хайвей",
+		"name_en": "Highway",
+		"layers": ["45_north_america.jpg"]
+	},
+	{
+		"name_ru": "Тихий берег",
+		"name_en": "Serene Coast",
+		"layers": ["47_canada_a.jpg"]
+	},
+	{
+		"name_ru": "Хребет дракона",
+		"name_en": "Dragon ridge",
+		"layers": ["51_asia.jpg"]
+	},
+	{
+		"name_ru": "Скрытая деревня",
+		"name_en": "Hidden Village",
+		"layers": ["53_japan.jpg"]
+	},
+	{
+		"name_ru": "Жемчужная река",
+		"name_en": "Pearl River",
+		"layers": ["60_asia_miao.jpg"]
+	},
+	{
+		"name_ru": "Тундра",
+		"name_en": "Tundra",
+		"layers": ["63_tundra.jpg"]
+	},
+	{
+		"name_ru": "Священная долина",
+		"name_en": "Sacred Valley",
+		"layers": ["73_asia_korea.jpg"]
+	},
+	{
+		"name_ru": "Харьков",
+		"name_en": "Kharkov",
+		"layers": ["83_kharkiv.jpg"]
+	},
+	{
+		"name_ru": "Виндсторм",
+		"name_en": "Windstorm",
+		"layers": ["84_winter.jpg"]
+	},
+	{
+		"name_ru": "Северогорск",
+		"name_en": "Severogorsk",
+		"layers": ["85_winter.jpg"]
+	},
+	{
+		"name_ru": "Зимний Химмельсдорф",
+		"name_en": "Winter Himmelsdorf",
+		"layers": ["86_himmelsdorf_winter.jpg"]
+	},
+	{
+		"name_ru": "Руинберг в огне",
+		"name_en": "Ruinberg in fire",
+		"layers": ["87_ruinberg_in_fire.jpg"]
+	},
+	{
+		"name_ru": "Сталинград",
+		"name_en": "Stalingrad",
+		"layers": ["92_stalingrad.jpg"]
+	},
+	{
+		"name_ru": "Затерянный город",
+		"name_en": "Ghost Town",
+		"layers": ["95_lost_city.jpg"]
+	},
+	{
+		"name_ru": "Огненная дуга",
+		"name_en": "Fiery Salient",
+		"layers": ["96_prohorovka_defense.jpg"]
+	},
+	{
+		"name_ru": "Миттенгард",
+		"name_en": "Mittengard",
+		"layers": ["100_the_pit.jpg"]
+	},
+	{
+		"name_ru": "Оверлорд",
+		"name_en": "Overlord",
+		"layers": ["101_dday.jpg"]
+	},
+	{
+		"name_ru": "Винтерберг",
+		"name_en": "Winterberg",
+		"layers": ["103_ruinberg_winter.jpg"]
+	},
+	{
+		"name_ru": "Батлсити",
+		"name_en": "Battlecity",
+		"layers": ["109_battlecity_ny.jpg"]
+	},
+	{
+		"name_ru": "Париж",
+		"name_en": "Paris",
+		"layers": ["111_paris.jpg"]
+	}
+]

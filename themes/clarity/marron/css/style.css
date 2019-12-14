@@ -1,0 +1,3051 @@
+/*---------------------------------------------------------------------------
+	© Ganta for «WoT.pw» 2015
+	«Marron» theme
+---------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------
+	Шрифты
+---------------------------------------------------------------------------*/
+@font-face {
+	font-family:'WarHeliosCondC';
+	src:url('/font/warhelioscondc-webfont.eot');
+	src:url('/font/warhelioscondc-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/font/warhelioscondc-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'WarHeliosCondCBold';
+	src:url('/font/warhelioscondcbold-webfont.eot');
+	src:url('/font/warhelioscondcbold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/font/warhelioscondcbold-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'FontAwesome';
+	src:url('/font/fontawesome-webfont.eot?v=4.4.0');
+	src:url('/font/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),
+		url('/font/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),
+		url('/font/fontawesome-webfont.woff?v=4.4.0') format('woff'),
+		url('/font/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),
+		url('/font/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Фон страницы
+---------------------------------------------------------------------------*/
+body {
+	background-image:url('/upload/5e/f4/5ef4474ecb1ece1030e4a472a9e0544a.jpg');
+	background-color:#0f0f0f;
+	background-position:center -40px;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	color:#b2b2b2;
+}
+
+a {
+	color:#ffe7ba;
+}
+a:hover {
+	color:#f39c12;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Сетка
+---------------------------------------------------------------------------*/
+.wrapper {
+	position:relative;
+	padding:28px 20px 0;
+}
+
+.content-wrapper {
+	margin:0 auto;
+	max-width:1360px;
+}
+
+.content {
+	display:table;
+	width:100%;
+	min-width:1160px;
+	padding:9px 10px 0;
+	background-color:rgba(0, 0, 0, .6);
+}
+
+.content-inner {
+	display:table-row;
+	overflow:hidden;
+	background:url('/upload/2a/0a/2a0a6735fa9fd2535c15baf11956d94e.png') left top repeat;
+}
+
+.content main.column {
+	display:table-cell;
+	padding:19px 0 0 20px;
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+}
+
+.content main.column p {
+	font-size:.85em;
+	margin:0 2px .75em;
+}
+.content main.column p:last-of-type {
+	font-size:13px;
+	margin:0 2px 0;
+}
+
+.content aside.column {
+	display:table-cell;
+	width:300px;
+	padding:19px 20px 0 20px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Логотип
+---------------------------------------------------------------------------*/
+header.header {
+	height:260px;
+	max-width:1360px;
+	min-width:1160px;
+	margin:0 auto;
+	padding:0 20px;
+}
+header.header .logotip {
+	background-image:url('/upload/2c/05/2c0517d11dcb9d502e5c0b679b3488ef.png');
+	background-position:6px 63px;
+	background-repeat:no-repeat;
+	padding:89px 0 40px 150px;
+}
+header.header .logotip a,
+header.header .logotip span {
+	line-height:1.1em;
+	text-shadow:0 0 1px rgba(0, 0, 0, .5),
+				0 0 2px rgba(0, 0, 0, .5),
+				0 0 3px rgba(0, 0, 0, .5),
+				1px 1px 3px rgba(0, 0, 0, .5),
+				0 0 4px rgba(0, 0, 0, .5),
+				0 0 5px rgba(0, 0, 0, .5);
+}
+header.header .logotip a {
+	display:inline-block;
+	font-size:2.95em;
+	font-family:'UniversCondCBold', 'Arial Narrow', Arial, sans-serif;
+	text-decoration:none;
+	color:#fff;
+}
+header.header .logotip span {
+	display:block;
+	font-size:.85em;
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#fff;
+	padding-left:2px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Заголовки
+---------------------------------------------------------------------------*/
+.modul .title {
+	position:relative;
+	margin:0 0 20px;
+	padding:5px 0;
+	text-align:center;
+	border-left:12px solid transparent;
+	border-right:12px solid transparent;
+	background-image:url('/upload/ac/8f/ac8f02a5eeadc531b162e6ffe196e799.png');
+	background-position:left top;
+	background-repeat:repeat;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+.modul .title::after {
+	position:absolute;
+	display:inline-block;
+	content:' ';
+	left:0;
+	top:16px;
+	height:6px;
+	width:100%;
+	background-image:url('/upload/72/9b/729b8eebe619fdb7eb32758d83a8e38d.png');
+	background-position:center center;
+	background-repeat:repeat-x;
+}
+
+.modul .title h3 {
+	position:relative;
+	display:inline-block;
+	z-index:1;
+	margin:0;
+	font-family:'UniversCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.25em;
+	font-weight:normal;
+	text-transform:uppercase;
+	color:#ccc;
+	background-image:url('/upload/ac/8f/ac8f02a5eeadc531b162e6ffe196e799.png');
+	background-position:left top;
+	background-repeat:repeat
+}
+.modul .title h3::after {
+	content:' ';
+	display:inline-block;
+	width:12px;
+	height:12px;
+	color:#2e2e2e;
+}
+.modul .title h3::before {
+	content:' ';
+	display:inline-block;
+	width:12px;
+	height:12px;
+	color:#2e2e2e;
+}
+
+.modul .cell {
+	overflow:hidden;
+	margin:0 0 20px;
+}
+
+.content main.column .modul .cell {
+	padding:0;
+}
+.content aside.column .modul .cell {
+	padding:0;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Главное меню
+---------------------------------------------------------------------------*/
+nav.navigation ul:before,
+nav.navigation ul:after {
+	content:' ';
+	display:table;
+}
+nav.navigation ul:after {
+	clear:both;
+}
+nav.navigation ul {
+	*zoom:1;
+	list-style-type:none;
+}
+
+nav.navigation > ul > li {
+	float:left;
+	position:relative;
+}
+
+nav.navigation ul li a {
+	white-space:nowrap;
+}
+
+nav.navigation > ul > li > a {
+	display:inline-block;
+}
+
+nav.navigation ul li ul {
+	position:absolute;
+	z-index:9;
+}
+
+nav.navigation ul li ul li {
+	display:none;
+}
+
+nav.navigation ul li:hover ul li {
+	display:block;
+}
+
+/*--- Навигация оформление ---*/
+nav.navigation {
+	max-width:1360px;
+	min-width:1160px;
+	margin:0 auto;
+	background-color:rgba(0, 0, 0, .6);
+	padding:10px 10px 0 10px;
+	-moz-border-radius-topleft:4px;
+	-webkit-border-top-left-radius:4px;
+	border-top-left-radius:4px;
+	-moz-border-radius-topright:4px;
+	-webkit-border-top-right-radius:4px;
+	border-top-right-radius:4px;
+}
+
+nav.navigation .navigation-inner {
+	position:relative;
+	height:43px;
+	background-image:url('/upload/bd/1b/bd1bdcfea7e40de5be625bad758a1dc7.gif');
+	background-position:left top;
+	background-repeat:repeat;
+}
+nav.navigation .navigation-inner::before {
+	position:absolute;
+	display:block;
+	content:'';
+	top:0; left:0;
+	width:2px; height:43px;
+	background-image:url('/upload/8f/49/8f49a54350149253e5e17515a9c1faf7.gif');
+	background-position:left top;
+	background-repeat:no-repeat;
+}
+nav.navigation .navigation-inner::after {
+	position:absolute;
+	display:block;
+	content:'';
+	top:0; right:0;
+	width:2px; height:43px;
+	background-image:url('/upload/33/62/3362797ff30dfa903dd848199f081004.gif');
+	background-position:right top;
+	background-repeat:no-repeat;
+}
+
+nav.navigation ul {
+	position:relative;
+	z-index:9;
+}
+nav.navigation ul.nav-menu {
+	float:left;
+}
+nav.navigation ul.nav-login {
+	float:right;
+}
+nav.navigation li {
+	float:left;
+	height:43px;
+}
+
+nav.navigation ul.nav-menu li a {
+	border-left:1px solid rgba(255, 255, 255, .07);
+	border-right:1px solid rgba(0, 0, 0, .4);
+}
+nav.navigation ul.nav-menu {
+	border-right:1px solid rgba(255, 255, 255, .07);
+}
+nav.navigation ul.nav-menu li:first-child a {
+	border-left:none;
+	margin-left:1px;
+}
+
+nav.navigation ul.nav-login li a {
+	border-left:1px solid rgba(255, 255, 255, .07);
+	border-right:1px solid rgba(0, 0, 0, .4);
+}
+nav.navigation ul.nav-login {
+	border-left:1px solid rgba(0, 0, 0, .4);
+}
+nav.navigation ul.nav-login li:last-child a {
+	border-right:none;
+	margin-right:1px;
+}
+
+nav.navigation li a {
+	font-family:'WarHeliosCondC';
+	text-transform:uppercase;
+	font-size:18px;
+	display:block;
+	height:43px;
+	padding:10px 14px 0;
+	color:#ccc;
+	text-decoration:none;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, .75), 0 -1px 1px rgba(0, 0, 0, .35);
+	-webkit-transition:background-color .15s;
+	-moz-transition:background-color .15s;
+	transition:background-color .15s;
+}
+nav.navigation li.active a,
+nav.navigation li:hover a {
+	background-color:rgba(255, 82, 0, .25);
+}
+nav.navigation li ul li a {
+	background:none !important;
+}
+nav.navigation li ul li a:hover {
+	color:#f90;
+}
+
+nav.navigation ul ul {
+	border-top:2px solid transparent;
+	background-image:url('/upload/e7/8c/e78c611d4e7aea73b399b26534b4153e.png');
+	background-position:left top;
+	background-repeat:repeat-x;
+	-webkit-box-shadow:0 15px 20px #000;
+	-moz-box-shadow:0 15px 20px #000;
+	box-shadow:0 15px 20px #000;
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-right-radius:5px;
+	border-bottom-right-radius:5px;
+	-moz-border-radius-bottomleft:5px;
+	-webkit-border-bottom-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+nav.navigation ul ul li {
+	height:34px !important;
+	float:none;
+	border-top:1px solid #333;
+	border-bottom:1px solid #111;
+}
+nav.navigation ul ul li:last-child {
+	border-bottom:none;
+}
+
+nav.navigation ul.nav-menu ul li a {
+	padding:5px 14px 0;
+	text-transform:none;
+	font-size:16px;
+	border-left:none;
+	border-right:none;
+	-webkit-transition:color .15s;
+	-moz-transition:color .15s;
+	transition:color .15s;
+}
+
+nav.navigation ul.nav-menu ul {
+	border-right:none;
+}
+nav.navigation ul.nav-menu ul li:first-child a {
+	border-left:none;
+	margin-left:0;
+}
+
+ul.nav-login li.login a,
+ul.nav-login li.logout a {
+	display:inline-block;
+}
+ul.nav-login li.login a::before,
+ul.nav-login li.logout a::before {
+	display:inline-block;
+	padding-right:7px;
+	font-family:'FontAwesome';
+}
+ul.nav-login li.login a::before {
+	content:'\f090';
+}
+ul.nav-login li.logout a::before {
+	content:'\f08b';
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Субнавигация
+---------------------------------------------------------------------------*/
+nav.subnav ul:before,
+nav.subnav ul:after {
+	content:' ';
+	display:table;
+}
+nav.subnav ul:after {
+	clear:both;
+}
+nav.subnav ul {
+	*zoom:1;
+	list-style-type:none;
+}
+
+nav.subnav > ul > li {
+	float:left;
+	position:relative;
+}
+
+nav.subnav ul li a {
+	white-space:nowrap;
+}
+
+nav.subnav > ul > li > a {
+	display:inline-block;
+}
+
+nav.subnav ul li ul {
+	position:absolute;
+	z-index:9;
+}
+
+nav.subnav ul li ul li {
+	display:none;
+}
+
+nav.subnav ul li:hover ul li {
+	display:block;
+}
+
+/*--- Субнавигация оформление ---*/
+nav.modul.subnav {
+	position:absolute;
+	width:100%;
+	height:28px;
+	padding:0 30px;
+	top:0;
+	left:0;
+	background-color:rgba(0, 0, 0, .75);
+	border-bottom:1px solid #2b2b2b;
+}
+
+nav.modul.subnav .title {
+	display:none;
+}
+
+nav.modul.subnav a {
+	text-decoration:none;
+	font-size:.725em;
+	color:#999;
+	-webkit-transition:color .1s;
+	-moz-transition:color .1s;
+	transition:color .1s;
+}
+nav.modul.subnav a:hover {
+	color:#eee;
+}
+
+nav.modul.subnav > ul {
+	max-width:1360px;
+	min-width:1160px;
+	margin:0 auto;
+}
+
+nav.modul.subnav li {
+	margin:0 15px 0 0;
+	padding:1px 0 10px 0;
+}
+
+.modul.subnav ul a.dropd {
+	padding-right:11px;
+}
+.modul.subnav ul a.dropd::before {
+	position:absolute;
+	top:9px;
+	right:0;
+	display:block;
+	font-family:'FontAwesome';
+	font-size:.5em;
+	font-weight:normal;
+	text-align:right;
+}
+.modul.subnav ul a.dropd::before {
+  content: '\f078';
+}
+
+/*--- Выпадайка ---*/
+.modul.subnav ul ul {
+	left:-12px;
+	padding-top:5px;
+}
+.modul.subnav ul ul li {
+	padding:0 12px 0;
+	background-color: rgba(0, 0, 0, .75);
+}
+.modul.subnav ul ul li:first-child {
+	padding:4px 12px 0;
+}
+.modul.subnav ul ul li:last-child {
+	padding:0 12px 6px;
+	-moz-border-radius-bottomright:4px;
+	-webkit-border-bottom-right-radius:4px;
+	border-bottom-right-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	-webkit-border-bottom-left-radius:4px;
+	border-bottom-left-radius:4px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Новости
+---------------------------------------------------------------------------*/
+.modul.news {
+    max-width:66.5625em; /* 960 px */ /* 1065px   66.5625em */
+    margin:0 auto;
+}
+
+.modul.news .cell {
+	width:103.125%; /* 990px */ /* 1095px  114.0625% */
+	overflow:hidden;
+	margin-top:20px;
+	margin-left:-1% !important; /* 15px */
+}
+
+.news-segment {
+	width:47.5%;
+	float:left;
+	margin:0 1% 1.3125em;
+	background-image:url('/upload/ac/8f/ac8f02a5eeadc531b162e6ffe196e799.png');
+	background-position:left top;
+	background-repeat:repeat;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+ 
+/*--- Заголовок ---*/
+.modul.news .title {
+	margin:0 0 11px !important;
+}
+.modul.news .cell {
+	padding-top:10px;
+}
+
+.modul.news .news-title {
+	padding:10px 15px 11px;
+}
+.modul.news .news-title h4 {
+	margin:0;
+	padding:0;	
+}
+.modul.news .news-title h4 a {
+	font-family:'UniversCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-weight:normal;
+	font-size:1.35em;
+	line-height:1.25em;
+	color:#ffe7ba;
+	text-decoration:none;
+	-webkit-transition:color .15s;
+	-moz-transition:color .15s;
+	transition:color .15s;
+}
+.modul.news .news-title h4 a:hover {
+	color:#f39c12;
+}
+
+/*--- Контент ---*/
+.modul.news .news-content {
+	font-size:.8em;
+	line-height:1.55em;
+}
+.modul.news .news-image {
+	padding:0 15px 11px;
+}
+
+.modul.news .news-image a {
+	display:block;
+	overflow:hidden;
+	background-color:#252629;
+}
+.modul.news .news-image a img {
+	width:100%;
+	-webkit-transition:opacity 0.85s, -webkit-transform 0.85s;
+	transition:opacity 0.85s, transform 0.85s;
+	-webkit-transform:scale(1);
+	transform:scale(1);
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+.modul.news .news-image a:hover img {
+	-webkit-transform:scale(1.1);
+	transform:scale(1.1);
+}
+
+.modul.news .news-data {
+	padding:0 16px 11px;
+}
+
+/*--- Дата и ссылки ---*/
+.modul.news .news-link {
+	position:relative;
+	overflow:hidden;
+	padding:0 15px 8px;
+}
+
+.modul.news .news-link a {
+	display:inline-block;
+	margin:0 6px 6px 0;
+	padding:3px 7px;
+	font-size:.8em;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	text-decoration:none;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:color .1s, background-color .1s, border .1s;
+	-moz-transition:color .1s, background-color .1s, border .1s;
+	transition:color .1s, background-color .1s, border .1s;
+}
+.modul.news .news-link a:hover {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}
+
+.modul.news .news-link .date {
+	position:absolute;
+	bottom:18px;
+	right:15px;
+	font-size:.7em;
+	color:#888;
+}
+
+/*--- Кнопки ---*/
+.modul.news .news-link .more {
+	display:none;
+}
+
+.modul.news .news-link .comment a {
+	display:inline-block;
+}
+
+.modul.news .news-link .edit a {
+	position:relative;
+	display:block;
+	overflow:hidden;
+	text-indent:100px;
+	width:28px;	
+}
+.modul.news .news-link .edit a::before {
+  content:'\f044';
+}
+.modul.news .news-link .edit a::before {
+  position:absolute;
+  display:block;
+  font-family:'FontAwesome';
+  font-weight:normal;
+  font-size:1.2em;
+  top:2px;
+  left:8px;
+	text-indent:0;
+}
+
+.modul.news .news-link .delet a {
+	position:relative;
+	display:block;
+	overflow:hidden;
+	text-indent:100px;
+	width:28px;	
+}
+.modul.news .news-link .delet a::before {
+	content:'\f014';
+}
+.modul.news .news-link .delet a::before {
+	position:absolute;
+	display:block;
+	font-family:'FontAwesome';
+	font-weight:normal;
+	font-size:1.2em;
+	top:1px; left:8px;
+	text-indent:0;
+}
+
+.modul.news .news-link .comment,
+.modul.news .news-link .edit,
+.modul.news .news-link .delet {
+	float:left;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Мини-блок новостей
+---------------------------------------------------------------------------*/
+.modul.news-mini p {
+	margin:0 0 6px;
+}
+.modul.news-mini p:last-child {
+	margin:0;	
+}
+
+aside.column .modul.news-mini .cell {
+	
+}
+
+.modul.news-mini a {
+	display:inline-block;
+	padding:1px 4px;
+	font-size:.75em;
+	-webkit-transition:color .155s, border .75s;
+	-moz-transition:color .15s, border .75s;
+	transition:color .15s, border .75s;
+}
+.modul.news-mini a:hover {
+	text-decoration:none;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Пагинация
+---------------------------------------------------------------------------*/
+.pager {
+	overflow:hidden;
+}
+
+.pager ul {
+	/*float:right;*/
+	overflow:hidden;
+	list-style:none;
+	/*margin-right:17px;*/
+	margin:0 0 0 11px !important;
+}
+
+.pager li {
+	float:left;
+	margin-right:5px;
+}
+
+.pager a {
+	display:block;
+	width:28px;
+	height:34px;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	text-decoration:none;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:color .1s, background-color .1s, border .1s;
+	-moz-transition:color .1s, background-color .1s, border .1s;
+	transition:color .1s, background-color .1s, border .1s;
+}
+.pager a:hover,
+.pager .selected a {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}
+
+.pager li.page a {
+	display:block;
+	text-align:center;
+	padding-top:6px;
+}
+.pager li.first a,
+.pager li.last a,
+.pager li.previous a,
+.pager li.next a {
+	position:relative;
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-indent:150px;
+}
+.pager li.first a::before,
+.pager li.last a::before,
+.pager li.previous a::before,
+.pager li.next a::before {
+	position:absolute;
+	display:block;
+	font-family:'FontAwesome';
+	font-weight:normal;
+	font-size:1.3em;
+	text-indent:0;
+}
+.pager li.first a::before {
+	content: '\f100';
+	top:1px;
+	left:7px;
+}
+.pager li.last a::before {
+	content: '\f101';
+	top:1px;
+	left:8px;
+}
+.pager li.previous a::before {
+	content: '\f104';
+	top:1px;
+	left:9px;
+}
+.pager li.next a::before {
+	content: '\f105';
+	top:1px;
+	left:11px;
+}
+
+.pager li.hidden {
+	display:none;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Футер
+---------------------------------------------------------------------------*/
+footer.footer {
+	max-width:1400px;
+	min-width:1200px;
+	margin:0 auto 20px;
+	padding:0 20px;
+}
+
+.footer-inner {
+	overflow:hidden;
+	padding:20px 24px;
+	background:url('/upload/2a/0a/2a0a6735fa9fd2535c15baf11956d94e.png') left top repeat;
+	border:10px solid rgba(0, 0, 0, .8);
+	-moz-border-radius-bottomright:4px;
+	-webkit-border-bottom-right-radius:4px;
+	border-bottom-right-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	-webkit-border-bottom-left-radius:4px;
+	border-bottom-left-radius:4px;
+}
+
+footer.footer p.copy-wg {
+	overflow:hidden;
+	float:left;
+}
+footer.footer p.copy-pw {
+	overflow:hidden;
+	float:right;
+}
+footer.footer a.wgnet,
+footer.footer a.wotru,
+footer.footer a.wotpw {
+	display:block;
+	float:left;
+	height:30px;
+	font-size:0;
+	opacity:.4;
+	-webkit-transition:opacity .2s;
+	-moz-transition:opacity .2s;
+	transition:opacity .2s;
+}
+footer.footer a.wgnet {
+	background-image:url('/upload/73/8b/738b58fb2ec018aca4e8ea448730e024.png');
+	background-position:left top;
+	background-repeat:no-repeat;
+	width:125px;
+	margin-right:30px;
+}
+footer.footer a.wotru {
+	background-image:url('/upload/cb/c5/cbc53a48ce11cacd7b27fbc895f1e850.png');
+	background-position:left top;
+	background-repeat:no-repeat;
+	width:133px;
+}
+footer.footer a.wotpw {
+	background-image:url('/upload/bd/b9/bdb97fe1ce75cb71a2db1e305f77c64d.png');
+	background-position:left top;
+	background-repeat:no-repeat;
+	width:120px;
+}
+footer.footer a:hover.wgnet,
+footer.footer a:hover.wotru,
+footer.footer a:hover.wotpw {
+	opacity:1;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Выпиливаем для форума сайдбар
+---------------------------------------------------------------------------*/
+body.body-forum .content aside.column {
+	display:block;
+	width:0;
+	padding:0;
+	visibility:hidden;
+}
+body.body-forum .content aside.column .modul.subnav {
+	visibility:visible !important;
+}
+body.body-forum .content aside.column .title {
+	display:none;
+}
+body.body-forum .content aside.column .cell {
+	display:none;
+}
+body.body-forum .content main.column {
+	padding:19px 20px 0;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Форум общие настройки
+---------------------------------------------------------------------------*/
+.modul.forum .title {
+	display:none;
+}
+
+.modul.forum table {	
+	width:100%;
+	font-size:.85em;
+}
+
+.modul.forum thead {
+	font-size:1.2em;
+}
+
+.modul.forum tbody {
+	font-size:1em;
+}
+
+.modul.forum thead th {
+	padding:10px 0;
+	color:#bbb;
+	font-size:.8em;
+	background-image:url('/upload/68/cf/68cf19de9c6805a99dcdb24dae5f210f.jpg');
+	background-position:left top;
+	background-repeat:repeat;
+}
+
+.modul.forum .forum-button {
+	float:right;
+	padding:0 0 22px 0;
+}
+.modul.forum .forum-button:last-child {
+	padding:0;
+}
+
+.modul.forum .forum-button a {
+	position:relative;
+	display:inline-block;
+	margin:0 0 0 14px;
+	padding:7px 11px 6px 32px;
+	font-size:.9em;
+	text-decoration:none;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	text-decoration:none;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:color .1s, background-color .1s, border .1s;
+	-moz-transition:color .1s, background-color .1s, border .1s;
+	transition:color .1s, background-color .1s, border .1s;
+}
+
+.modul.forum .forum-button a:hover {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}
+
+.modul.forum .forum-button a::before {
+	position:absolute;
+	left:0;
+	display:block;
+	font-family:'FontAwesome';
+	font-weight:normal;
+}
+.modul.forum .forum-button a.create-theme::before {
+	content:'\f067';
+	font-size:14px;
+	top:7px;
+	padding-left:12px;
+}
+.modul.forum .forum-button a.close-theme::before {
+	content:'\f023';
+	font-size:16px;
+	top:5px;
+	padding-left:12px;
+}
+.modul.forum .forum-button a.open-theme::before {
+	content:'\f13e';
+	font-size:16px;
+	top:5px;
+	padding-left:12px;
+}
+.modul.forum .forum-button a.fixed-theme::before {
+	content:'\f08d';
+	font-size:14px;
+	top:7px;
+	padding-left:13px;
+}
+.modul.forum .forum-button a.unfixed-theme::before {
+	content:'\f08d';
+	font-size:14px;
+	top:7px;
+	padding-left:13px;
+}
+
+.modul.forum table span.theme-fixed,
+.modul.forum table span.theme-closed {
+	position:relative;
+	display:inline-block;	
+}
+
+.modul.forum table span.theme-fixed::before,
+.modul.forum table span.theme-closed::before {
+	position:absolute;
+	display:block;
+	font-family:'FontAwesome';
+	font-weight:normal;
+	font-size:1.45em;
+	text-align:center;
+}
+
+.modul.forum table span.theme-fixed::before {
+	content:'\f08d';
+	top:-17px;
+	left:14px;
+	color:red;
+}
+.modul.forum table span.theme-closed::before {
+	content:'\f023';
+	top:-18px;
+	left:14px;
+}
+
+.modul.forum .forum-nav {
+	overflow:hidden;
+	padding:10px 0;
+}
+.modul.forum .forum-nav .pager {
+	float:left;
+	margin-top:4px;
+}
+.modul.forum .forum-nav .pager a {
+	width:19px;
+	height:23px;
+	padding-top:3px;
+	font-size:.8em;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+}
+.modul.forum .forum-nav .pager a:hover {
+	color:#222;
+	background-color:#fff;
+}
+.modul.forum .forum-nav .pager .selected a {
+	color:#222;
+	background-color:#fff;
+}
+.modul.forum .forum-nav .pager ul {
+	margin-left:0 !important;
+}
+
+.modul.forum .forum-nav .pager li.first a::before {
+	top:0;
+	left:4px;
+}
+.modul.forum .forum-nav .pager li.last a::before {
+	top:0;
+	left:5px;
+}
+.modul.forum .forum-nav .pager li.previous a::before {
+	top:0;
+	left:6px;
+}
+.modul.forum .forum-nav .pager li.next a::before {
+	top:0;
+	left:7px;
+}
+
+.modul.forum .forum-nav .forum-button {
+	float:right;
+}
+
+.modul.forum a.last-post {
+	position:relative;
+	text-decoration:none;
+}
+
+.modul.forum a.last-post::before {
+	position:absolute;
+	display:block;
+	padding-left:6px;
+	font-family:'FontAwesome';
+	font-weight:normal;
+	font-size:12px;
+	content:'\f0a9';
+	top:-4px;
+	left:0;
+}
+
+.modul.forum.forum-index p.no-forum {
+	padding:32px 0;
+	text-align:center;
+	font-size:.9em;
+}
+
+.modul.forum .form {
+	margin:28px 0 0;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Форум forum-index
+---------------------------------------------------------------------------*/
+.modul.forum.forum-index tbody td {
+	padding:10px 15px;
+	background-color:rgba(80, 80, 80, .2);
+	-webkit-transition:background-color .25s;
+	-moz-transition:background-color .25s;
+	transition:background-color .25s;
+}
+
+.modul.forum.forum-index tbody tr:hover td {
+	background-color:rgba(80, 80, 80, .35);
+}
+
+.modul.forum.forum-index th,
+.modul.forum.forum-index td {
+	border:2px solid #252525;
+}
+
+.modul.forum.forum-index th {
+	border-top:none;
+	border-bottom:none;
+}
+
+.modul.forum.forum-index td:first-child,
+.modul.forum.forum-index th:first-child {
+	border-left:none;
+}
+.modul.forum.forum-index td:last-child,
+.modul.forum.forum-index th:last-child {
+	border-right:none
+}
+
+.modul.forum.forum-index tr:first-child td {
+	border-top:none;
+}
+.modul.forum.forum-index tr:last-child td {
+	border-bottom:none;
+}
+
+.modul.forum.forum-index th:nth-child(1),
+.modul.forum.forum-index td:nth-child(1) {
+	width:65%;
+}
+.modul.forum.forum-index th:nth-child(2),
+.modul.forum.forum-index td:nth-child(2) {
+	width:10%;
+	text-align:center;
+}
+.modul.forum.forum-index th:nth-child(3),
+.modul.forum.forum-index td:nth-child(3) {
+	width:10%;
+	text-align:center;
+}
+.modul.forum.forum-index th:nth-child(4),
+.modul.forum.forum-index td:nth-child(4) {
+	width:15%;
+}
+
+.modul.forum.forum-index td:nth-child(4) {
+	font-size:.9em;
+}
+
+.modul.forum.forum-index td:nth-child(1) a {
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	display:inline-block;
+	font-size:1.35em;
+	text-decoration:none;
+	-webkit-transition:color .25s;
+	-moz-transition:color .25s;
+	transition:color .25s;
+}
+
+.modul.forum.forum-index td:nth-child(1) a:hover {
+	text-decoration:underline;
+}
+
+.modul.forum.forum-index td:nth-child(1) span {
+	display:block;
+	color:#a5a5a5;
+	font-size:.9em;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Форум category
+---------------------------------------------------------------------------*/
+.modul.forum.category tbody td {
+	padding:10px 15px;
+	background-color: rgba(80, 80, 80, .2);
+	-webkit-transition:background-color .25s;
+	-moz-transition:background-color .25s;
+	transition:background-color .25s;
+}
+
+.modul.forum.category tbody tr:hover td {
+	background-color: rgba(80, 80, 80, .35);
+}
+
+.modul.forum.category tr th,
+.modul.forum.category tr td {
+	border:2px solid #252525;
+}
+
+.modul.forum.category tr th {
+	border-top:none;
+	border-bottom:none;
+}
+.modul.forum.category tr td {
+	border-top:none;
+}
+.modul.forum.category tr:last-child td {
+	border-bottom:none;
+}
+.modul.forum.category tr th:last-child,
+.modul.forum.category tr td:last-child {
+	border-right:none;
+}
+.modul.forum.category tr th:first-child,
+.modul.forum.category tr td:first-child {
+	border-left:none;
+}
+
+.modul.forum.category th:nth-child(1),
+.modul.forum.category td:nth-child(1) {
+	width:5%;
+}
+.modul.forum.category th:nth-child(2),
+.modul.forum.category td:nth-child(2) {
+	width:55%;
+}
+.modul.forum.category th:nth-child(3),
+.modul.forum.category td:nth-child(3) {
+	width:15%;
+	text-align:center;
+}
+.modul.forum.category th:nth-child(4),
+.modul.forum.category td:nth-child(4) {
+	width:10%;
+	text-align:center;
+}
+.modul.forum.category th:nth-child(5),
+.modul.forum.category td:nth-child(5) {
+	width:15%;
+}
+
+.modul.forum.category td:nth-child(5) {
+	font-size:.9em;
+}
+
+.modul.forum.category td:nth-child(2) a {
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	display:inline-block;
+	font-size:1.35em;
+	text-decoration:none;
+	-webkit-transition:color .25s;
+	-moz-transition:color .25s;
+	transition:color .25s;
+}
+.modul.forum.category td:nth-child(2) a:hover {
+	text-decoration:underline;
+}
+
+.modul.forum.category h3.category-title {
+	margin:0;
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.6em;
+	font-weight:normal;
+}
+.modul.forum.category h3.category-title a {
+	text-decoration:none;
+}
+.modul.forum.category h3.category-title a:hover {
+	text-decoration:underline;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Форум theme
+---------------------------------------------------------------------------*/
+
+.modul.forum.theme table tr:nth-child(odd) td {
+	background-color:rgba(255, 255, 255, .075);
+}
+.modul.forum.theme table tr:nth-child(even) td {
+	background-color:rgba(255, 255, 255, .05);
+}
+
+.modul.forum.theme td:nth-child(1) {
+	width:15%;
+	padding:10px 34px 10px 14px;
+}
+.modul.forum.theme td:nth-child(2) {
+	width:85%;
+}
+
+.modul.forum.theme table tr td {
+	vertical-align:top;
+	border-bottom:6px solid #222;
+}
+.modul.forum.theme table tr:last-child td {
+	border-bottom:none;
+}
+
+.modul.forum.theme table .nickname {
+	position:relative;
+	overflow:hidden;
+	width:150px;
+	white-space:nowrap;
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.5em;
+	text-overflow:ellipsis;
+}
+
+.modul.forum.theme table .nickname a {
+	text-decoration:none;
+}
+.modul.forum.theme table .nickname a:hover {
+	text-decoration:underline;
+	color:#ff5732;
+}
+.modul.forum.theme table .avatar a.user {
+	display:block;
+	overflow:hidden;
+	width:150px;
+}
+.modul.forum.theme table .avatar img {
+	max-width:150px;
+	max-height:150px;
+	padding:1px;
+	border:1px solid #999;
+}
+.modul.forum.theme table .role {
+	font-size:.85em;
+	margin-bottom:8px;
+}
+
+.modul.forum.theme table .role:last-child { /* фикс для форума саппорта */
+	margin-top:10px !important;
+}
+
+.modul.forum.theme table .clan {
+	margin:4px 0;
+}
+.modul.forum.theme table .clan a {
+	display:block;
+	font-size:1em;
+	padding-left:28px;
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.modul.forum.theme table .messages {
+	margin:8px 0;
+	font-size:.85em;
+	font-weight:bold;
+}
+
+.modul.forum.theme table div.status {
+	overflow:hidden;
+	padding:10px 14px;
+	font-size:.8em;
+}
+.modul.forum.theme table div.status a {
+	padding-left:12px;
+	text-decoration:none;
+}
+.modul.forum.theme table div.status a:hover {
+	text-decoration:underline;
+}
+.modul.forum.theme table div.status .time {
+	float:left;	
+	color:#888;
+}
+.modul.forum.theme table div.status .links {
+	float:right;	
+}
+
+.modul.forum.theme table div.message {
+	padding:9px 14px 20px;
+}
+
+.modul.forum.theme table .update {
+	padding:8px 14px 14px;
+	font-size:.9em;
+	font-style:italic;
+}
+.modul.forum.theme table .signature {
+	margin:10px 14px 20px;
+	padding:12px 1px 0;
+	font-size:.9em;
+	border-top:1px solid #ccc;
+}
+
+.modul.forum.theme h3.category-title {
+	margin:0;
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.6em;
+	font-weight:normal;
+}
+.modul.forum.theme h3.category-title a {
+	text-decoration:none;
+}
+.modul.forum.theme h3.category-title a:hover {
+	text-decoration:underline;
+}
+
+.modul.forum.theme h3.category-title span {
+	display:block;
+}
+.modul.forum.theme h3.category-title span.small {
+	padding-top:4px;
+	font-family:Arial, sans-serif;
+	font-size:.5em;
+}
+.modul.forum.theme h3.category-title span.small a {
+	text-decoration:underline;
+}
+.modul.forum.theme h3.category-title span.small a:hover {
+	text-decoration:none;
+}
+
+.modul.forum.theme .user-message,
+.modul.forum.theme .theme-close {
+	position:relative;
+	padding-bottom:60px;
+	padding-top:20px;
+	font-size:.85em;
+	text-align:center;
+	font-weight:bold;
+}
+
+.modul.forum.theme .user-message::before,
+.modul.forum.theme .theme-close::before {
+	position:absolute;
+	width:100%;
+	display:block;
+	top:50px;
+	font-family:'FontAwesome';
+	font-weight:normal;
+	font-size:2em;
+	text-align:center;
+}
+
+.modul.forum.theme .theme-close::before {
+	content:'\f023';
+}
+
+.modul.forum.theme .user-message::before {
+	content:'\f06a';
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Форум прочее
+---------------------------------------------------------------------------*/
+.modul.forum.addtheme .form {
+	margin:0 !important;
+}
+
+.modul.forum.addtheme h3.category-title {
+	margin:0;
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.6em;
+	font-weight:normal;
+	color:#54656d;
+}
+
+.modul.forum .user-post,
+.modul.forum .theme-author {
+	position:relative;
+	display:inline-block;
+	max-width:118px;
+	overflow:hidden;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Спойлер форум
+---------------------------------------------------------------------------*/
+.forum-spoiler {
+	margin:6px 0 8px;
+}
+
+.js .forum-spoiler .fs-container {
+	display:none;
+}
+.no-js .forum-spoiler .fs-container {
+	display:block;
+}
+
+.forum-spoiler .fs-container {
+	padding:3px 8px;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+.forum-spoiler::after {
+	display:block;
+	content:' ';
+	border-bottom:1px solid #ccc;
+}
+
+.forum-spoiler .button {
+	display:inline-block;
+	margin-bottom:4px;
+	padding:2px 5px;
+	border:1px solid #e7e7e7;
+	font-size:.775em;
+	color:#333;
+	background-color:#f5f5f5;
+	cursor:pointer;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image:-webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:-o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-image:-moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-repeat:repeat-x;
+	-webkit-transition: border .15s, box-shadow .15s;
+	-moz-transition: border .15s, box-shadow .15s;
+	transition: border .15s, box-shadow .15s;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+.forum-spoiler .button:hover {
+	border:1px solid #ccc;
+}
+.forum-spoiler .button:active {
+	background-color:#f5f5f5;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6), to(#ffffff));
+	background-image:-webkit-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:-o-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:linear-gradient(to bottom, #e6e6e6, #ffffff);
+	background-image:-moz-linear-gradient(top, #e6e6e6, #ffffff);
+	background-repeat:repeat-x;
+}
+.fs-container p {
+	margin:5px 0;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цитата форум
+---------------------------------------------------------------------------*/
+.forum-quote {
+	margin:8px 0;
+}
+.forum-quote .fq-data {
+	padding:5px 7px 3px;
+	font-size:.825em;
+	color:#888;
+	background-color:rgba(0, 0, 0, .05);
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+.forum-quote .fq-container {
+	color:#a3a7af;
+	padding:3px 6px;
+	font-size:.925em;
+	border:1px solid rgba(0, 0, 0, .05);
+	background-color:rgba(0, 0, 0, .01);
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цитата комментарии
+---------------------------------------------------------------------------*/
+.comment-quote {
+	margin:8px 0;
+}
+.comment-quote .cq-data {
+	padding:5px 7px 3px;
+	font-size:.825em;
+	color:#888;
+	background-color:rgba(0, 0, 0, .05);
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+.comment-quote .cq-container {
+	color:#a3a7af;
+	padding:3px 6px;
+	font-size:.925em;
+	border:1px solid rgba(0, 0, 0, .05);
+	background-color:rgba(0, 0, 0, .01);
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Формы
+---------------------------------------------------------------------------*/
+.form {
+	margin-top:32px;
+	color:#b2b2b2;
+}
+.form .row {
+	overflow:hidden;
+	margin:12px 0;
+	font-size:.8em;
+}
+.form .row:last-child {
+	margin:12px 0 0;	
+}
+.form input[type="text"],
+.form select {
+	width:220px;
+	display:block;
+	float:left;
+}
+.form .row label {
+	display:block;
+	float:left;
+	width:200px;
+	padding:0 0 6px 0;
+	font-weight:bold;
+}
+.form label:last-child {
+	padding:11px 0 0 14px;
+}
+.form textarea {
+	height:120px;
+	width:100%;
+}
+.form input[type="text"],
+.form select,
+.form textarea {
+	border:1px solid #cbd3dc;
+	padding:11px 14px;
+	background-color:#f7f9fa;
+	color:#777;
+	display:block;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:border .25s, background-color .25s;
+	-moz-transition:border .25s, background-color .25s;
+	transition:border .25s, background-color .25s;
+}
+.form input:focus,
+.form textarea:focus {
+	border:1px solid #80a8e6;
+	background-color:#fff;
+}
+.form input[type="submit"],
+.form input[type="button"] {
+	display:inline-block;
+	cursor:pointer;
+	border:none;
+	padding:7px 11px;
+	font-size:1.2em;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	text-decoration:none;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:color .1s, background-color .1s, border .1s;
+	-moz-transition:color .1s, background-color .1s, border .1s;
+	transition:color .1s, background-color .1s, border .1s;
+}
+
+.form input[type="submit"]:hover,
+.form input[type="button"]:hover {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}
+
+.form .row.input,
+.form .row.buttons {
+	padding-left:2px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Модуль штаб
+---------------------------------------------------------------------------*/
+.modul.staff .staff-legend {
+	margin-bottom:30px;
+	margin-left:3px;
+	font-size:.9em;
+	color:#b2b2b2;
+}
+
+.modul.staff p.errorSummary {
+	font-size:.85em;
+	background-color:#333;
+	margin:22px 0;
+	padding:16px 22px;
+	border:3px solid #ff5732;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+.modul.staff p {
+	font-size:.75em;
+	margin-top:16px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Таблицы штаба и военкомата
+---------------------------------------------------------------------------*/
+/*--- Таблица ---*/
+.modul.recruitment table,
+.modul.staff table {
+	width:100%;
+	margin-bottom:18px;
+}
+
+.modul.recruitment th,
+.modul.staff th {
+	padding:7px 3px;
+	color:#ccc;
+	background-color:rgba(0, 0, 0, .33);
+	text-align:left;
+}
+.modul.recruitment th a,
+.modul.staff th a {
+	color:#ccc;
+	text-decoration:none;
+}
+.modul.recruitment th a:hover,
+.modul.staff th a:hover {
+	color:#f39c12;
+}
+
+.modul.recruitment td,
+.modul.staff td {
+	padding:6px 6px;
+	color:#bbb;
+	background-color:rgba(0, 0, 0, .12);
+	border-top:1px solid #111;
+	border-bottom:1px solid #111;
+	text-align:left;
+	-webkit-transition:color .1s, background-color .1s;
+	-moz-transition:color .1s, background-color .1s;
+	transition:color .1s, background-color .1s;
+}
+
+.modul.recruitment tr:hover td,
+.modul.staff tr:hover td {
+	color:#fff;
+	background-color:rgba(0, 0, 0, 0);
+}
+
+.modul.recruitment th,
+.modul.recruitment td,
+.modul.staff th,
+.modul.staff td {
+	text-align:center;
+}
+.modul.recruitment td {
+	text-align:left;
+}
+.modul.recruitment th,
+.modul.staff th {
+	font-size:12px;
+}
+.modul.recruitment td,
+.modul.staff td {
+	font-size:12px;
+}
+
+.modul.recruitment tr:first-child td,
+.modul.staff tr:first-child td {
+	border-top:none;
+}
+.modul.recruitment tr:last-child td,
+.modul.staff tr:last-child td {
+	border-bottom:none;
+}
+.modul.recruitment td:first-child,
+.modul.staff td:first-child {
+	border-left:none;
+}
+.modul.recruitment td:last-child,
+.modul.staff td:last-child {
+	border-right:none;
+}
+/*--- Сортировка в таблице ---*/
+.modul.recruitment thead a,
+.modul.staff thead a {
+	position:relative;
+	overflow:hidden;
+	padding-left:12px;
+}
+.modul.recruitment thead a.sort-link::before,
+.modul.recruitment thead a.sort-link.desc::before,
+.modul.recruitment thead a.sort-link.asc::before,
+.modul.staff thead a.sort-link::before,
+.modul.staff thead a.sort-link.desc::before,
+.modul.staff thead a.sort-link.asc::before {
+	position:absolute;
+	display:block;
+	font-family:'FontAwesome';
+	font-weight:normal;
+}
+
+.modul.recruitment thead a.sort-link::before,
+.modul.staff thead a.sort-link::before {
+	content: '\f0dc';
+	top:0px;
+	left:0;
+	color:#999;
+	font-size:10px;
+}
+.modul.recruitment thead a.sort-link.desc::before,
+.modul.staff thead a.sort-link.desc::before {
+	content: '\f0dd';
+	top:0px;
+	left:0;
+	color:#f39c12;
+	font-size:10px;
+}
+.modul.recruitment thead a.sort-link.asc::before,
+.modul.staff thead a.sort-link.asc::before {
+	content: '\f0de';
+	top:0px;
+	left:0;
+	color:#f39c12;
+	font-size:10px;
+}
+
+.modul.staff td.nickname,
+.modul.staff td.role,
+.modul.staff td.region {
+	text-align:left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.modul.staff td.nickname {
+    max-width:110px;
+}
+.modul.staff td.role {
+    max-width:110px;
+}
+.modul.staff td.region {
+    max-width:100px;
+}
+
+.modul.staff .company-title {
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.25em;
+	font-weight:normal;
+	color:#ccc;
+	padding:0 0 8px 1px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Модуль штаб навигация
+---------------------------------------------------------------------------*/
+.modul.staff ul.staff-nav {
+	list-style:none;
+	overflow:hidden;
+	margin-bottom:24px;
+}
+.modul.staff ul.staff-nav li {
+	float:left;
+	margin-right:8px;
+}
+.modul.staff ul.staff-nav li a {
+	position:relative;
+	display:block;
+	padding:8px 12px 8px 32px;
+	font-size:.9em;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	text-decoration:none;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:color .1s, background-color .1s, border .1s;
+	-moz-transition:color .1s, background-color .1s, border .1s;
+	transition:color .1s, background-color .1s, border .1s;
+}
+.modul.staff ul.staff-nav li.active a,
+.modul.staff ul.staff-nav li a:hover {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}
+
+.modul.staff ul.staff-nav li a::before {
+	position:absolute;
+	left:0;
+	display:block;
+	font-family:'FontAwesome';
+	font-weight:normal;
+	padding-left:10px;
+	font-size:.9em;
+}
+.modul.staff li a.members::before {
+	content:'\f183';
+	top:8px;
+	padding-left:13px !important;
+}
+.modul.staff li a.online::before {
+	content:'\f080';
+	top:8px;
+}
+.modul.staff li a.companies::before {
+	content:'\f0c0';
+	top:8px;
+}
+.modul.staff li a.battles::before {
+	content:'\f1e2';
+	top:8px;
+}
+.modul.staff li a.provinces::before {
+	content:'\f024';
+	top:9px;
+}
+.modul.staff li a.history::before {
+	content:'\f1da';
+	top:8px;
+	padding-left:12px !important;
+}
+.modul.staff li a.famepoints::before {
+	content:'\e9d8';
+	top:8px;
+}
+.modul.staff li a.tactic::before {
+	content:'\f044';
+	top:8px;
+}
+
+.modul.staff ul.staff-clannav {
+	overflow:hidden;
+	margin:0 0 24px;
+}
+.modul.staff ul.staff-clannav li {
+	float:left;
+	margin-right:22px;
+}
+.modul.staff ul.staff-clannav a {
+	display:block;
+	background-repeat:no-repeat;
+	padding:1px 4px 1px 30px;
+	text-decoration:none;
+}
+.modul.staff ul.staff-clannav a:hover {
+	text-decoration:underline;
+	color:#fff;
+}
+.modul.staff ul.staff-clannav li.active a {
+	color:#ff5732;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Модуль военкомат
+---------------------------------------------------------------------------*/
+.modul.recruitment ul.recruitment-nav {
+	list-style:none;
+	overflow:hidden;
+	margin-bottom:24px;
+}
+.modul.recruitment ul.recruitment-nav li {
+	float:left;
+	margin-right:8px;
+}
+
+.modul.recruitment ul.recruitment-nav li a {
+	position:relative;
+	display:block;
+	padding:8px 12px 8px 32px;
+	font-size:.9em;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	text-decoration:none;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:color .1s, background-color .1s, border .1s;
+	-moz-transition:color .1s, background-color .1s, border .1s;
+	transition:color .1s, background-color .1s, border .1s;
+}
+.modul.recruitment ul.recruitment-nav li.active a,
+.modul.recruitment ul.recruitment-nav li a:hover {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}
+
+.modul.recruitment ul.recruitment-nav li a::before {
+	position:absolute;
+	left:0;
+	display:block;
+	font-family:'FontAwesome';
+	font-weight:normal;
+	padding-left:10px;
+	font-size:.9em;
+}
+
+.modul.recruitment li a.recr-index::before {
+	content:'\f1e5';
+	top:9px;
+}
+.modul.recruitment li a.recr-add::before {
+	content:'\f14b';
+	top:9px;
+	padding-left:11px !important;
+}
+.modul.recruitment li a.recr-cand::before {
+	content:'\f046';
+	top:9px;
+	padding-left:11px !important;
+}
+.modul.recruitment li a.recr-stat::before {
+	content:'\f201';
+	top:9px;
+}
+
+.modul.recruitment table {
+	width:100%;
+	margin-top:22px;
+	font-size:.75em;
+}
+
+.modul.recruitment table td {
+	border-top:1px solid #0d0F11;
+	border-bottom:1px solid #0d0F11
+}
+
+.modul.recruitment table th {
+	text-align:left;
+	white-space:nowrap;
+}
+
+.modul.recruitment table td,
+.modul.recruitment table th {
+	padding:6px 8px;
+}
+
+.modul.recruitment p {
+	font-size:.75em;
+	margin-top:16px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цвета для рейтингов, званий и событий
+---------------------------------------------------------------------------*/
+/* Рейтинги */
+.very-bad {color:#FE0E00;}
+.bad {color:#FE7903;}
+.normal {color:#D7CA2B;}
+.good {color:#A0C419;}
+.very-good {color:#02C9B3;}
+.unique {color:#D042F3;}
+
+/* Звания */
+span.leader {color:#D93DF9;}
+span.vice-leader {color:#D93DF9;}
+span.personnel-officer {color:#489928;}
+
+span.commander {color:#489928;}
+span.diplomat {color:#D7CA2B;}
+span.treasurer {color:#D7CA2B;}
+span.recruiter {color:#FF7D00;}
+span.junior-officer {color:#FF7D00;}
+span.private {color:#FE0E01;}
+span.recruit {color:#FE0E01;}
+span.reservist {color:#FE0E01;}
+
+/* События */
+.joined-clan {color:#009900;}
+.left-clan {color:#FF0000;}
+
+
+
+/*---------------------------------------------------------------------------
+	Онлайн
+---------------------------------------------------------------------------*/
+.online .cell {
+	position:relative;
+	overflow:visible;
+	height:85px;
+	padding:4px 0 0 !important;
+	font-size:.75em;
+	color:#b2b2b2;
+}
+
+.online strong,
+.online span {
+	display:inline-block;
+}
+.online span {
+	padding-right:5px;
+}
+
+.online .online-inner {
+	position:absolute;
+	overflow:hidden;
+	z-index:29;
+	width:100%;
+	padding:8px 12px 4px;
+	max-height:70px;
+	background-color:transparent;
+	-webkit-transition:max-height 0.15s ease-out, background-color 0.15s ease-out;
+	-moz-transition:max-height 0.15s ease-out, background-color 0.15s ease-out;
+	transition:max-height 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+.online .online-inner:hover {
+    max-height:500px;
+	background-color:#171919;
+	-webkit-transition:max-height 0.25s ease-in, background-color 0.15s ease-in;
+	-moz-transition:max-height 0.25s ease-in, background-color 0.15s ease-in;
+	transition:max-height 0.25s ease-in, background-color 0.15s ease-in;
+}
+
+.online .online-allies-list {
+	line-height:16px;
+	padding-top:5px;
+}
+
+.online .online-allies-list a {
+	display:inline-block;
+	padding:2px 4px 4px 0;
+}
+
+.online .online-allies-list a::after {
+	content:', ';
+	display:inline-block;
+}
+
+.online .online-allies-list a:last-child::after {
+	content:'.';
+	display:inline-block;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Новость подробно
+---------------------------------------------------------------------------*/
+.modul.detail-news h4.detail-news-title {
+	margin:0;
+	font-family:'WarHeliosCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-weight:normal;
+	font-size:1.45em;
+}
+
+.modul.detail-news .date {
+	font-size:.7em;
+	color:#999;
+}
+
+.modul.detail-news .detail-news-content {
+	margin:16px 0;
+	font-size:.85em;
+}
+
+.modul.detail-news .detail-news-links {
+	font-size:.8em;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Комментарии к новостям
+---------------------------------------------------------------------------*/
+.modul.news-comment .title {
+	margin-bottom:2px;
+}
+
+.modul.news-comment span.empty {
+	display:block;
+	width:100%;
+	padding-top:14px;
+	white-space:nowrap;
+	text-align:center;
+}
+.modul.news-comment table {
+	border-collapse:separate;
+}
+
+.modul.news-comment td {
+	border-top:1px solid #333;
+	border-bottom:1px solid #111;
+}
+.modul.news-comment tr:first-child td {
+	border-top:none;
+}
+.modul.news-comment tr:last-child td {
+	border-bottom:none;
+}
+
+.modul.news-comment td {
+	vertical-align:top;
+}
+.modul.news-comment td:nth-child(1) {
+	width:12%;
+	padding:25px 30px 20px 0;
+}
+.modul.news-comment td:nth-child(2) {
+	width:87%;
+	padding:23px 15px 20px 0;
+}
+
+.modul.news-comment .nickname {
+	margin:0 auto;	
+}
+
+.modul.news-comment .avatar {
+	margin:0 auto;
+	width:90px;
+	height:90px;
+}
+.modul.news-comment .avatar img {
+	max-width:90px;
+	max-height:90px;
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	border-radius:7px;
+}
+
+.modul.news-comment .time {
+	margin-top:7px;
+	font-size:.7em;
+	color:#999;
+}
+.modul.news-comment .time span {
+	display:block;
+	text-align:center;
+}
+
+.modul.news-comment .status {
+	position:relative;
+	overflow:hidden;
+	padding:8px 0;
+}
+.modul.news-comment .nickname {
+	font-size:1.35em;
+}
+.modul.news-comment .nickname a {
+	text-decoration:none;
+}
+.modul.news-comment .nickname a:hover {
+	text-decoration:underline;
+	color:#fff;
+}
+.modul.news-comment .role {
+	font-size:.7em;
+}
+.modul.news-comment .links {
+	position:absolute;
+	top:0;
+	right:0;
+	font-size:.7em;
+}
+
+.modul.news-comment .message {
+	font-size:.85em;
+	color:#b2b2b2;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Активные темы
+---------------------------------------------------------------------------*/
+.themes-mini {
+	color:#a5a6a7;
+}
+.themes-mini a {
+	color:#969798;
+}
+
+.themes-mini .tm-theme {
+	position:relative;
+	padding:0 0 0 50px;
+	min-height:40px;
+	margin-bottom:12px;
+}
+.themes-mini .tm-theme:last-child {
+	margin:0;
+}
+
+.themes-mini .tm-avatar {
+	position:absolute;
+	top:1px; left:0;
+}
+
+.themes-mini .tm-avatar img {
+	width:40px; height:40px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+}
+
+.themes-mini .tm-title {
+	font-size:12px;
+	line-height:15px;
+}
+
+.themes-mini .tm-user-time {
+	overflow:hidden;
+	font-size:10px;
+	padding-top:3px;
+}
+
+.themes-mini .tm-user-time a,
+.themes-mini .tm-user-time span {
+	float:left;
+	display:block;
+    white-space:nowrap;
+}
+
+.themes-mini .tm-user-time a {
+	max-width:94px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.themes-mini span.empty {
+	display:block;
+	text-align:center;
+	font-size:12px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Чат
+---------------------------------------------------------------------------*/
+.chat .pastic {
+	padding:10px !important;
+}
+.chat .tabs {
+	overflow:hidden;
+}
+.chat .tabs div {
+	margin-right:10px;
+	cursor:pointer;
+	font-size:13px;
+	position:relative;
+	color:#a5a6a7;
+	background-color:#393a3d;
+	padding:4px 6px 3px 12px;
+	float:left;
+	text-decoration:none;
+	-webkit-border-radius:1px 0 0 0;
+	-moz-border-radius:1px 0 0 0;
+	border-radius:1px 0 0 0;
+	z-index:1;
+}
+.chat .tabs div::after {
+	content:' ';
+	position:absolute;
+	top:0;
+	right:-9px;  
+	bottom:0;
+	width:17px;
+	background-color:#393a3d;
+	-webkit-transform:skew(30deg);
+	-moz-transform:skew(30deg);
+	-ms-transform:skew(30deg);
+	-o-transform:skew(30deg);
+	transform:skew(30deg);
+	-webkit-border-radius:0 1px 0 0;
+	-moz-border-radius:0 1px 0 0;
+	border-radius:0 1px 0 0;
+	z-index:-1;
+}
+
+.chat .tabs div:hover,
+.chat .tabs div:hover::after {
+	background:#d3d4d4;
+	color:#333 !important;
+}
+
+#tabs #current a,
+#tabs #current a::after{
+	background-color:#fff;
+	z-index:3;
+}
+
+.chat .tabs div.active {
+	background-color:#333;
+	color:#ddd !important;
+	z-index:9;
+}
+.chat .tabs div.active::after {
+	background-color:#333;
+}
+
+.chat .tabs div:hover {
+	text-decoration:none;
+}
+.chat .tabs div.active {
+	color:#555;	
+	text-decoration:none;
+}
+
+.chat .window {
+	clear:both;
+	border:1px solid #444;
+	color:#bbb;
+	background-color:rgba(0, 0, 0, .1);
+	display:none;
+	overflow-y:auto;
+	overflow-x:hidden;
+	font-size:12px;
+	padding:4px 6px;
+	word-wrap:break-word;
+	-webkit-border-radius:0 1px 1px 1px;
+	-moz-border-radius:0 1px 1px 1px;
+	border-radius:0 1px 1px 1px;
+}
+.chat .window a {
+	color:#b1b1b1;
+}
+
+.chat .window.active {
+	display:block;
+}
+.chat .message {
+	width:100%;
+	display:block;
+}
+
+.chat-message {
+	margin:2px 0;
+	padding:2px 0;
+}
+
+.chat-message .msg {
+	padding-left:6px;
+}
+
+.chat-message .nick {
+	float:left;
+	margin-right:5px;
+	font-weight:bold;
+	cursor:pointer;
+	padding-left:6px;
+}
+.chat-message .nick:hover {
+	text-decoration:underline;
+}
+.chat-message .nick:after {
+	content:':'
+}
+.chat-message .time {
+	float:right;
+	margin-left:5px;
+	font-style:italic;
+	padding-right:6px;
+}
+.chat-message.to-me {
+	background:#393a3d;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+
+.chat textarea {
+	width:100%;
+	height:28px;
+	margin:8px 0;
+	padding:6px 7px;
+	color:#ddd;
+	background-color:rgba(0, 0, 0, .1);
+	border:1px solid #777;
+	font-size:12px;
+	resize:none;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:border .25s, background-color .25s;
+	-moz-transition:border .25s, background-color .25s;
+	transition:border .25s, background-color .25s;
+}
+.chat textarea:focus {
+	border:1px solid #777;
+	background-color:rgba(0, 0, 0, .3);
+}
+
+.chat button {
+	cursor:pointer;
+	padding:5px 9px 6px 9px;
+	font-size:13px;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:color .1s, background-color .1s, border .1s;
+	-moz-transition:color .1s, background-color .1s, border .1s;
+	transition:color .1s, background-color .1s, border .1s;
+}
+.chat button:hover {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}
+
+.chat .admin.chat-message .nick {
+	color:red;
+}
+
+.chat .moderator.chat-message .nick {
+	color:green;
+}
+
+.chat .controls {
+	margin-top:6px;
+}
+
+.chat .controls span {
+	font-size:.85em;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Опросы
+---------------------------------------------------------------------------*/
+.modul.poll .cell {
+	font-size:13px;
+	padding:0 1px 4px !important;
+}
+
+.modul.poll .cell ul {
+	margin:0 0 16px;
+	list-style:none;
+}
+
+.modul.poll .cell li {
+	margin:6px 0;
+	line-height:15px;
+}
+
+.modul.poll .cell li > span {
+	position:relative;
+	display:block;
+	margin:4px 0 9px 0;
+	height:9px;
+	border:1px solid #444;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+.modul.poll .cell li span span {
+	position:absolute;
+	display:inline-block;
+	height:7px;
+	background-color:#777;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+
+.modul.poll .cell .question {
+	padding:0 0 4px 1px;
+	font-weight:bold;
+	color:#ccc;
+}
+
+.modul.poll input[type="radio"] {
+	display:none !important;
+}
+
+.modul.poll input[type="radio"] + label {
+	cursor:pointer;
+	-webkit-transition:color .15s;
+	-moz-transition:color .15s;
+	transition:color .15s;
+}
+.modul.poll input[type="radio"] + label:hover {
+	color:#ccc;
+}
+
+.modul.poll input[type="radio"] + label::before {
+	position:relative;
+	content:'';
+	display:inline-block;
+	top:2px;
+	margin-right:7px;
+	width:12px; height:12px;
+	border:1px solid #777;
+	background-color:#555;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	-webkit-box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	-webkit-transition:border .15s;
+	-moz-transition:border .15s;
+	transition:border .15s;
+}
+.modul.poll input[type="radio"] + label:hover::before {
+	border:1px solid #b1b1b1;
+}
+
+.modul.poll input[type="radio"]:checked + label::before {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAACVBMVEXu7u7u7u7u7u4da4BQAAAAAnRSTlMQwKc1HdkAAAAZSURBVHgBY2BgZGJiBJMgmgkMoBRUEKoEAATCADkK7oLSAAAAAElFTkSuQmCC);
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+.modul.poll button {
+	border:none;
+	padding:5px 9px 6px 9px;
+	font-size:13px;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+.modul.poll button:hover {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Мой аккаунт
+---------------------------------------------------------------------------*/
+.modul.myaccount table {
+	width:100%;
+	margin-top:0;
+	font-size:.75em;
+}
+
+.modul.myaccount table td {
+	background-color:rgba(0, 0, 0, .12);
+	border-bottom:1px solid rgba(0, 0, 0, .32);
+}
+.modul.myaccount table tr:last-child td {
+	border-bottom:none;
+}
+
+.modul.myaccount th {
+	background-color:rgba(0, 0, 0, .33);
+	text-align:right;
+}
+
+.modul.myaccount table td,
+.modul.myaccount table th {
+	padding:6px 8px;
+}
+
+.modul.myaccount .cell .form {
+	margin-top:0;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Помочь сайту
+---------------------------------------------------------------------------*/
+.modul.donate {
+}
+
+.modul.donate p.ballance {
+	margin:0; padding:0 0 0 1px;
+	font-size:15px;
+	font-weight:bold;
+	color:#ccc;
+}
+
+.modul.donate input[type="text"] {
+	display:block;
+	margin:14px 0 9px; padding:6px 8px 5px;
+	width:100%;
+	font-size:13px;
+	text-transform:uppercase;
+	font-weight:bold;
+	border:none;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	border:1px solid #777;
+	background-color:rgba(255, 255, 255, 0.06);
+	color:#999;
+}
+.modul.donate input[type="text"]:focus {
+	border:1px solid #eee;
+	background-color:#eee;
+	color:#333;
+}
+
+.modul.donate button {
+	display:block;
+	margin:0; padding:5px 8px 5px;
+	border:none;
+	font-size:13px;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:color .1s, background-color .1s;
+	-moz-transition:color .1s, background-color .1s;
+	transition:color .1s, background-color .1s;
+	border:1px solid #6a6a6a;
+	background-color:rgba(255, 255, 255, .09);
+	color:#fff;
+}
+.modul.donate button:active {
+	background-color:;
+	color:;
+}
+.modul.donate button:hover {
+	border:1px solid #fff;
+	background-color:#fff;
+	color:#222;
+}
+
+
+
+.body-site.body-index .modul.static .responsive-video {
+	margin:0 !important;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Форматирование текста
+---------------------------------------------------------------------------*/
+.statik-edit {
+	font-size:12px;
+	border-top:1px solid rgba(75,75,75,0.5);
+	margin-top:18px; padding-top:8px;
+}
+.detail-news-content ul,
+.news-content ul,
+.modul.static .cell ul,
+.modul.forum.theme .message ul {
+	font-size:13px;
+	margin:0 25px 10px;
+}
+.detail-news-content ol,
+.news-content ol,
+.modul.static .cell ol,
+.modul.forum.theme .message ol {
+	font-size:13px;
+	margin:0 28px 10px;
+}
+.detail-news-content p,
+.news-content p,
+.modul.static .cell p,
+.modul.forum.theme .message p {
+	font-size:13px;
+	margin:0 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------
+	Новая считалка онлайна
+---------------------------------------------------------------------------*/
+.scrollable-table {
+	margin-bottom:16px;
+}
+
+.scrollable-table .st-static {
+	float:left;
+}
+
+.scrollable-table .st-static td {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	max-width:120px;
+	padding:6px 11px;
+	text-align:left;
+	background-color:#16191b;
+}
+.scrollable-table .st-static td:hover {
+	background-color:#16191b !important;
+}
+
+.scrollable-table .st-scrollable {
+	overflow-x:scroll;
+	cursor:move;
+	width:898px;
+	-webkit-user-select:none;    
+	-moz-user-select:none;   
+	-ms-user-select:none;   
+	user-select:none;    
+}
+
+@media screen and (max-width: 1422px) {
+	.scrollable-table .st-scrollable {
+		width:698px;
+	}
+}
+
+.scrollable-table .st-scrollable table {
+	margin-bottom:0;  
+}
+
+.scrollable-table .st-scrollable td:first-child {
+	border-left:0;
+}
+.scrollable-table .st-scrollable tr.date-row {
+	background:#16191b !important;
+}
+.scrollable-table .st-scrollable td:last-child {
+	background:#16191b;
+}
+
+.staff-attnav {
+	margin:0 0 14px !important;
+	list-style:none;
+}
+
+.staff-attnav li {
+	display:inline-block;
+}
+
+.staff-attnav li a {
+	position:relative;
+	display:inline-block;
+	margin:0 0 9px 5px; padding:5px 12px;
+	font-size:.9em;
+	color:#fff;
+	background-color:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	text-decoration:none;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:color .1s, background-color .1s, border .1s;
+	-moz-transition:color .1s, background-color .1s, border .1s;
+	transition:color .1s, background-color .1s, border .1s;
+}
+
+.staff-attnav li a:hover,
+.staff-attnav li.active a {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}
+
+/*-- --*/
+
+.scrollable-table .st-scrollable td[g] {
+	color:#26FF93;
+}
+
+.scrollable-table .st-scrollable td[l] {
+	color:#FF4D4D;
+}
+
+/*-- --*/
+
+.modul.staff .att-calc {
+	overflow:hidden;
+	margin:12px 0 22px;
+	font:bold 13px/1 Arial, sans-serif;
+}
+
+.modul.staff .ac-one,
+.modul.staff .ac-two {
+	display:inline-block;
+	margin-right:40px;
+}
+
+.modul.staff .att-calc p {
+	display:block;
+	margin:11px 0 0 !important;
+	font:normal 11px/1 Arial, sans-serif !important;
+}
+
+.staff .staff-attnav {
+	list-style:none;
+	margin:0 18px 22px 0;
+}
+
+.modul.staff p {
+	margin:12px 0;
+	font:bold 13px/1 Arial, sans-serif;
+}
+
+.modul.staff .att-calc input[type="text"],
+.modul.staff .att-calc select {
+	width:50px;
+	border:1px solid #cbd3dc;
+	background-color:#f7f9fa;
+	color:#444;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:border .25s, background-color .25s;
+	-moz-transition:border .25s, background-color .25s;
+	transition:border .25s, background-color .25s;
+}
+
+.modul.staff .att-calc input[type="text"] {
+	margin:0 5px; padding:5px 8px;
+}
+
+.modul.staff .att-calc select {
+	margin:0 0 0 5px; padding:5px 4px;
+}
+
+.modul.staff .att-calc input:focus {
+	border:1px solid #80a8e6;
+	background-color:#fff;
+}
+
+.modul.staff .att-calc button {
+	position:relative;
+	display:inline-block;
+	margin:0 0 9px 5px; padding:7px 12px;
+	font-size:.9em;
+	color:#fff;
+	background:rgba(255, 255, 255, .09);
+	border:1px solid #6a6a6a;
+	text-decoration:none;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:color .1s, background-color .1s, border .1s;
+	-moz-transition:color .1s, background-color .1s, border .1s;
+	transition:color .1s, background-color .1s, border .1s;
+}
+
+.modul.staff .att-calc input[type="submit"]:hover,
+.modul.staff .att-calc button:hover {
+	color:#222;
+	border:1px solid #fff;
+	background-color:#fff;
+}

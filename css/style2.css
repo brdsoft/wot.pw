@@ -1,0 +1,263 @@
+@import url(http://fonts.googleapis.com/css?family=Tenor+Sans&subset=latin,cyrillic);
+body {
+	background: #000 url('../images/bg.jpg') center top no-repeat;
+	font-family: arial;
+	font-size: 14px;
+	color: #979899;
+}
+div, h1, h2 {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+a {
+	color: #FF7432;
+	text-decoration: none;
+}
+a.active {
+	color: #d0d0d0;
+}
+a:hover {
+	text-decoration: underline;
+}
+a.active:hover {
+	text-decoration: none;
+}
+
+.pull-right {
+	float: right;
+}
+.both {
+	clear: both;
+}
+div.error {
+	padding: 10px;
+	background: #171718;
+}
+
+p {
+	margin-bottom: 10px;
+}
+p:last-child {
+	margin-bottom: 0;
+}
+
+hr {
+	height: 0;
+	border: 0;
+	border-bottom: 1px solid #444444;
+	margin: 10px 0;
+}
+
+.layout {
+	width: 1000px;
+	margin: auto;
+	position: relative;
+}
+.logo1 {
+	position: absolute;
+	left: 10px;
+	font-size: 40px;
+	top: 25px;
+	color: #ddd;
+	font-family: Tenor Sans, arial;
+}
+.logo2 {
+	position: absolute;
+	right: 10px;
+	font-size: 16px;
+	top: 28px;
+	color: #ddd;
+	font-family: Tenor Sans, arial;
+}
+.content {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	background: #000;
+}
+.menu {
+}
+
+.menu ul {
+	background: url('../images/menu.png') center 70%;
+	height: 40px;
+}
+
+.menu li a {
+	display: block;
+	padding: 0 10px;
+	float: left;
+	font-size: 16px;
+	line-height: 40px;
+	height: 40px;
+	border-right: 1px solid #000;
+}
+
+.menu li.pull-right a {
+	border-left: 1px solid #000;
+	border-right: 0;
+}
+
+.menu li.active a {
+	background: url('../images/menu.png') center center;
+	color: #d0d0d0;
+}
+
+.menu li a:hover {
+	text-decoration: none;
+	background: url('../images/menu.png') center 30%;
+}
+
+.menu .sub {
+	display: none;
+}
+
+.block-menu li a {
+	text-decoration: none;
+	display: block;
+	margin: 0 -10px;
+	padding: 3px 10px;
+}
+
+.block-menu li.active a {
+	background: #441212;
+	color: #d0d0d0;
+}
+
+.block-menu li a:hover {
+	background: #591D1D;
+}
+
+.block-menu .sub {
+	display: none;
+}
+
+
+.left {
+	width: 215px;
+	float: left;
+}
+
+.right {
+	width: 780px;
+	float: right;
+}
+
+.block {
+	margin-top: 5px;
+}
+
+.block .head, h2, h1 {
+	padding: 0 10px;
+	font-size: 16px;
+	line-height: 36px;
+	height: 40px;
+	background: #270909;
+	color: #d0d0d0;
+	border-bottom: 1px solid #000;
+	border-top: 4px solid #874020;
+	font-weight: normal;
+}
+
+.block .head2, h2, h1 {
+	background: #171718;
+	border-top: 4px solid #444;
+}
+
+h2, h1 {
+	margin-top: 15px;
+}
+
+.block .head3 {
+	background: #171718;
+	border-top: 0;
+	color: #979899;
+	line-height: 1;
+	height: auto;
+}
+
+.block .head3 a {
+	color: #979899;
+	display: block;
+	float: left;
+	padding: 10px;
+}
+
+.block .head3 a.active {
+	color: #FF7432;
+	background: #252528;
+}
+
+.block .head4 {
+	padding: 0;
+	height: auto;
+}
+
+.block .body {
+	padding: 10px;
+	background: #270909;
+}
+
+.block .body2 {
+	background: #171718;
+}
+
+.footer {
+	margin-top: 20px;
+	border-top: 1px solid #222;
+	padding: 10px;
+	text-align: center;
+}
+
+.recruitment-grid {
+	
+}
+
+div.block2 {
+	margin-top: 10px;
+	background: #242426;
+	padding: 10px;
+}
+
+.page td {
+	padding: 10px;
+}
+
+.news_one {
+	margin-bottom: 10px;
+	background: #272728;
+	padding: 10px;
+}
+.news_one:last-child {
+	margin-bottom: 0;
+}
+.news_one .time {
+	color: #666;
+	margin-right: 10px;
+}
+.news_one .title {
+	margin: 5px 0 0;
+}
+.news_one .text {
+	margin: 5px 0 0;
+	font-size: 12px;
+}
+.news_one .links {
+	margin: 5px 0 0;
+	font-size: 12px;
+}
+
+.admin-link {
+	margin-top: 16px;
+	font-size: 16px;
+}
+.admin-link:first-child {
+	margin-top: 0;
+}
+
+
+
+
+

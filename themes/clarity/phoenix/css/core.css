@@ -1,0 +1,266 @@
+/* ==========================================================================
+    YouTube, Twich, Vimeo
+   ========================================================================== */
+.responsive-video {
+	width:100%;
+	position:relative;
+	margin:16px 0;
+	padding-bottom:56.25%;
+	height:0;
+	overflow:hidden;
+	background:#000;
+}
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border:none;
+}
+
+
+
+/* ==========================================================================
+	Всплывающее уведомление
+   ========================================================================== */
+.notice{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.65);z-index:9999999}.notice-flex{width:100%;height:100%;position:fixed;top:0;left:0;display:flex;align-items:center;justify-content:center;overflow:auto}.notice-container{max-width:450px;background-color:#fff;padding:18px 22px 16px;-webkit-box-shadow:0 0 25px 0 rgba(0,0,0,0.85);-moz-box-shadow:0 0 25px 0 rgba(0,0,0,0.85);box-shadow:0 0 25px 0 rgba(0,0,0,0.85);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.notice .buttons{overflow:hidden;padding:5px 0;margin:12px 0 4px;text-align:center}.notice .buttons button{width:110px;margin:0 auto;display:inline-block;padding:7px 12px;margin:0 3px;font-size:.85em;color:#555;text-decoration:none;background-color:#f5f5f5;background-image:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));background-image:-webkit-linear-gradient(top,#fff,#e6e6e6);background-image:-o-linear-gradient(top,#fff,#e6e6e6);background-image:linear-gradient(to bottom,#fff,#e6e6e6);background-image:-moz-linear-gradient(top,#fff,#e6e6e6);background-repeat:repeat-x;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;border:1px solid #bbb;-webkit-box-shadow:0 0 5px 0 rgba(0,0,0,0.1);-moz-box-shadow:0 0 5px 0 rgba(0,0,0,0.1);box-shadow:0 0 5px 0 rgba(0,0,0,0.1);-webkit-transition:border .2s,box-shadow .2s;-moz-transition:border .2s,box-shadow .2s;transition:border .2s,box-shadow .2s}.notice .buttons button:hover{border:1px solid #7fccff;-webkit-box-shadow:0 0 7px 0 rgba(0,153,255,0.5);-moz-box-shadow:0 0 7px 0 rgba(0,153,255,0.5);box-shadow:0 0 7px 0 rgba(0,153,255,0.5)}.notice .buttons button:active{background-color:#f5f5f5;background-image:-webkit-gradient(linear,0 0,0 100%,from(#e6e6e6),to(#fff));background-image:-webkit-linear-gradient(top,#e6e6e6,#fff);background-image:-o-linear-gradient(top,#e6e6e6,#fff);background-image:linear-gradient(to bottom,#e6e6e6,#fff);background-image:-moz-linear-gradient(top,#e6e6e6,#fff);background-repeat:repeat-x;border:1px solid #73B8EE}.notice .text{font-size:14px;color:#333}.notice .text a{color:#06f}
+
+
+
+/* ==========================================================================
+	Фикс проблемы с img max-width в FF и IE
+   ========================================================================== */
+.modul.news-comment table,
+.modul.forum.theme table,
+.modul.news-comment table {
+	width:100%;
+	table-layout:fixed;
+}
+
+
+/* ==========================================================================
+	Админ-бар
+   ========================================================================== */
+.admin-bar ul::after,.admin-bar a{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAADrCAMAAABTjTa0AAAAxlBMVEUAAAABAQECAgIDAwMEBAQFBQX///+JiYnNzc3///+JiYnNzc3///+JiYnNzc3///+JiYnNzc3///+JiYnNzc3///+JiYnNzc3///+JiYnNzc3///+JiYn///+JiYnNzc3///+JiYn///+JiYn///+JiYnNzc3///+JiYnNzc3///+JiYn///+JiYn///+JiYnNzc3///+JiYnNzc3////Nzc2JiYnNzc3///+JiYnNzc3///+JiYnNzc3///+JiYnNzc3///97LjyGAAAAP3RSTlMAAAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwf3+AgICQkJ+foKCgsLCwv7/AwM/Pz9DQ0N/g4ODv7+/w8PAc8F/zAAAEOElEQVR4AdXWfV8TSRLA8V89tIAPKN5dLne7i+j6sK4CgoioSGfe/5vaqp4ZwmTwb7TMZ9J8qequSUwF7lFQ5+1q9RYw9B73tCC6/XW1+rptFJMg337A7odVxIc9f7CdpK9XN+I1QXv9+vPn/nkv6P+5+LgLux9z9SyILNx1Crtjof07qlDwErV7ScRmn4ACSR7krRCQ68JnraVdH5r777qJT5/WTTBt1ZPihvY+Ds31N4QD299Xq+/bUDyzVAV4GzXgQNAsfg46rRtxTJ1FkFVKhXwY2ojqw88VaHRLoWjF2jUe3qiQZH1x+VGh1qLmIFSERm3lABXl9sLZDZ0yv+1fiuoksKSCCaWQUY0kJcMBNPKSWJf5QGZOARFVJlmalw2SojYWSqOSF5lkGRT3CeUVBnKkoICNfW28Rfs/8WvvLvDoywKEouJBAFvval2gBkpmIYsvtTYDkmBRW5zTXsbM2mo59a/7FEcIuv+uySWKERp02ZctFMAhaNFyFpf97pakYYfKv+qiqFEsSHxxfl/y3N/BaaQYBZP/1T/HvkJUAV6lJakxhL6qx1utVXAf/qschgVhiNLP2q3TepwE5gYU0K3Txd28adRh/KjXWtZktWrJ1UhFg0x8pNMYdhru5KpRpURGP6GoPRk1s2g0Fp7SKFeNPLcJMvMbJ2oWinKD8DwMu0nkbHQm3eeZbcORtB0mJQ4aCcntCZKRnEZ6Y3tXHV+hO5tfx9czx5AgpU4iyO1wk2BGhefzrP0ZyWJGjHR6uL94stXo/PLw+f6TRw5QCFK/fHQ9rLSR6JPz2fbQkhwTxZJKdLFfCkCugvoBOxnI/e9U1MU8Vr/U99BZtxEndLMgH9ApXaGToo2kk1DpisdCkm4t1Kz0Vo/eIDQ3U35U6J0Nk64TytjEMOc6/PbC+Q2d/ep/KXSTcEtaf90jXSFJAaWFRV4S6zIGEoTi5JOPdJ3Q6aTQAco8q0yyKCYu08LcioFMKGXS18ZbdPATv/YFdR5/W47Do5HozvuuW6q1Ww8SWH7rurB+eARhy67FBS2CbKfldH8/TFALevi+ydUwPAi66suW42QNWrac5dWy4BQIIuwI/hNdoHjfxPIid152f6h4n4UjOPpb91LxJLGCKaBvupdDX4BCQeVNd7KThAz/inMUFuRAgGKwc9adBKnQl4KHLe/mTcvJY8Qlp4s3ymlRgswtViNpJiBB1ugshp22wlw1GiZcVzQnVk9IJ0meT2PhGUFKrhp5/JRZtA1HgjjWiQ61UbbUDpPsZE2d5RlrGiam6I3uhfFYW2eR2zNubwOhEvnX5J5ZJemu5teJUFQcxApBpt0kgpSjTUJuoRcz4mCetZwRI50dHSyf7jS6uDp6cfD08fA9k2RXj6+HFapJPL2Y7QXjJxZ3CzKPLg76T2yugmgTEKcAY2H+TlHcJbP+AVXYaVr10UA4AAAAAElFTkSuQmCC)}.admin-bar{position:fixed;top:0;left:-144px;z-index:9999;-webkit-transition:left .15s;-moz-transition:left .15s;transition:left .15s}.admin-bar:hover{left:0}.admin-bar a{display:inline-block;padding-left:30px;font-size:14px;color:#b3b3b3;text-decoration:none}.admin-bar a:hover{color:#fff}.admin-bar ul{position:relative;width:138px;padding:9px 21px 11px 17px;background-color:#171717;border-right:1px solid #2b2b2b;border-bottom:1px solid #2b2b2b;-moz-border-radius-bottomright:1px;-webkit-border-bottom-right-radius:1px;border-bottom-right-radius:1px;-webkit-box-shadow:1px 1px 5px 0 rgba(0,0,0,.45);-moz-box-shadow:1px 1px 5px 0 rgba(0,0,0,.45);box-shadow:1px 1px 5px 0 rgba(0,0,0,.45)}.admin-bar li{list-style-type:none;line-height:26px}.admin-bar ul::before{position:absolute;display:block;content:'';width:36px;height:27px;background-color:#171717;top:0;right:-37px;border-right:1px solid #2b2b2b;border-bottom:1px solid #2b2b2b;-moz-border-radius-bottomright:1px;-webkit-border-bottom-right-radius:1px;border-bottom-right-radius:1px;-webkit-box-shadow:1px 1px 5px 0 rgba(0,0,0,.45);-moz-box-shadow:1px 1px 5px 0 rgba(0,0,0,.45);box-shadow:1px 1px 5px 0 rgba(0,0,0,.45)}.admin-bar:hover ul::before{width:30px;right:-31px}.admin-bar ul::after{position:absolute;display:block;content:'';width:16px;height:16px;top:6px;right:-30px;background-position:center top;background-repeat:no-repeat;-webkit-animation:spin 2s infinite linear;-moz-animation:spin 2s infinite linear;-ms-animation:spin 2s infinite linear;-o-animation:spin 2s infinite linear;animation:spin 2s infinite linear}.admin-bar:hover ul::after{opacity:.2;right:-24px}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@-moz-keyframes spin{to{-moz-transform:rotate(360deg)}}@-ms-keyframes spin{to{-ms-transform:rotate(360deg)}}@-o-keyframes spin{to{-o-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}.admin-bar a{background-repeat:no-repeat}.admin-bar li:nth-child(1) a{background-position:0 -17px}.admin-bar li:nth-child(2) a{background-position:0 -39px}.admin-bar li:nth-child(3) a{background-position:0 -61px}.admin-bar li:nth-child(4) a{background-position:0 -83px}.admin-bar li:nth-child(5) a{background-position:0 -104px}.admin-bar li:nth-child(1) a:hover{background-position:0 -127px}.admin-bar li:nth-child(2) a:hover{background-position:0 -149px}.admin-bar li:nth-child(3) a:hover{background-position:0 -171px}.admin-bar li:nth-child(4) a:hover{background-position:0 -193px}.admin-bar li:nth-child(5) a:hover{background-position:0 -214px}
+
+
+
+/* ==========================================================================
+	Допил TinyMCE
+   ========================================================================== */
+.mce-tinymce {
+	clear:both;
+}
+.mce-statusbar {
+	display:none !important;
+}
+.mce-caret {
+	border-top:4px solid #eeeeee !important;
+}
+.mce-container > div > div:first-child {
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+}
+.mce-container > div > div:last-child {
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+.mce-container iframe,
+div.mce-edit-area {
+	-webkit-border-radius:0 3px 3px 3px;
+	-moz-border-radius:0 3px 3px 3px;
+	border-radius:0 3px 3px 3px;
+}
+
+
+
+/* ==========================================================================
+	Задел fancy для форума
+   ========================================================================== */
+
+
+/*.modul.forum.theme .message img {
+	max-width:260px;
+	height:auto;
+	cursor:pointer;
+}*/
+
+
+
+/* ==========================================================================
+	Костылем скрываем админнав в сайдбаре, пока одна известная личность не соизволит сделать конфиг для тем
+   ========================================================================== */
+.modul.adminnav {
+	display:none;
+}
+
+
+
+/* ==========================================================================
+	Тултип
+   ========================================================================== */
+.tooltipster-base {
+	padding: 0;
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9999999;
+	pointer-events: none;
+	width: auto;
+	overflow: visible;
+}
+.tooltipster-base .tooltipster-content {
+	overflow: hidden;
+}
+
+/* стрелка у тултипа */
+.tooltipster-arrow {
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.tooltipster-arrow span, .tooltipster-arrow-border {
+	display: block;
+	width: 0; 
+	height: 0;
+	position: absolute;
+}
+.tooltipster-arrow-bottom span, .tooltipster-arrow-bottom-right span, .tooltipster-arrow-bottom-left span {
+	border-left: 8px solid transparent !important;
+	border-right: 8px solid transparent !important;
+	border-bottom: 8px solid;
+	top: -7px;
+}
+.tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border {
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+/* анимация появления тултипа */
+.tooltipster-fade-show {
+	opacity: 1;
+}
+.tooltipster-grow {
+	-webkit-transform: scale(0,0);
+	-moz-transform: scale(0,0);
+	-o-transform: scale(0,0);
+	-ms-transform: scale(0,0);
+	transform: scale(0,0);
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	-ms-transition-property: -ms-transform;
+	transition-property: transform;
+	-webkit-backface-visibility: hidden;
+}
+.tooltipster-grow-show {
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-o-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	transform: scale(1,1);
+	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
+	-moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
+	-ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
+	-o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15); 
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+}
+.tooltipster-content-changing {
+	opacity:0.5;
+	-webkit-transform:scale(1.1, 1.1);
+	-moz-transform:scale(1.1, 1.1);
+	-o-transform:scale(1.1, 1.1);
+	-ms-transform:scale(1.1, 1.1);
+	transform:scale(1.1, 1.1);
+}
+
+/* оформление тултипа */
+.tooltipster-theme {
+	background:#3a3e43;
+	color:#eee;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+.tooltipster-theme .tooltipster-content {
+	max-width:240px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:16px;
+	padding:8px 12px;
+}
+
+.tooltipster-base ul {
+	margin-left: 20px;
+}
+
+
+
+
+
+
+/* ==========================================================================
+	Спиннер для статки ивана
+   ========================================================================== */
+.ivanerr-reload {
+	position:relative;
+	color:rgba(0, 0, 0, 0) !important;
+}
+
+.ivanerr-reload::after {
+	position:absolute;
+	left:0; right:0;
+	margin:0 auto;
+	content:'';
+	color:#000;
+	width:16px;
+	height:16px;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAARVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADc6ur3AAAAFnRSTlMAECAwP0BQX2Bwf4CQn6Cwv8DQ4O/wL0+BsAAAAGtJREFUGBkFwQECgiAQALABkiiagnb/f2obUPf7PtcEUO54xoh4G/B5R4X2xAn5PQBpxobrApB+b5YjA9Dj0AYASgy9A0CE3gFgTvULAAkPAGT0DYCckGYBSBWksQLlA9CufVnWVgGQawX8AY6XA8QLQgryAAAAAElFTkSuQmCC);
+	background-repeat:no-repeat;
+	background-position:center center;
+	-webkit-animation:spin 1s infinite linear;
+	-moz-animation:spin 1s infinite linear;
+	-ms-animation:spin 1s infinite linear;
+	-o-animation:spin 1s infinite linear;
+	animation:spin 1s infinite linear
+}
+
+@-webkit-keyframes spin {
+	to {
+		-webkit-transform:rotate(360deg)
+	}
+}
+@-moz-keyframes spin {
+	to {
+		-moz-transform:rotate(360deg)
+	}
+}
+@-ms-keyframes spin {
+	to {
+		-ms-transform:rotate(360deg)
+	}
+}
+@-o-keyframes spin {
+	to {
+		-o-transform:rotate(360deg)
+	}
+}
+@keyframes spin {
+	to {
+		transform:rotate(360deg)
+	}
+}

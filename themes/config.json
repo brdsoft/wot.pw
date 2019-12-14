@@ -1,0 +1,448 @@
+{
+	"ru": {
+		"config": {
+			"site_name": {
+				"description": "Название клана (альянса)",
+				"value": "Мой танковый клан",
+				"category": "Общие",
+				"type": "text",
+				"items": ""
+			},
+			"site_slogan": {
+				"description": "Девиз клана (альянса)",
+				"value": "Пришел, увидел, победил",
+				"category": "Общие",
+				"type": "textarea",
+				"items": ""
+			},
+			"staff_members_title": {
+				"description": "Заголовок окна со списком игроков",
+				"value": "Список игроков нашего альянса",
+				"category": "Штаб",
+				"type": "text",
+				"items": ""
+			},
+			"staff_members_columns": {
+				"description": "Отображение колонок в таблице игроков",
+				"value": "role,region,since,battles,wins,re,wn8,bs,ivanerr_power,tanks10,visited_at,battle_at,teamspeak_at,online_all,online_company,online_clan,online_team",
+				"category": "Штаб",
+				"type": "checkbox",
+				"items": "role:Должность в клане,region:Регион,since:Дата вступления в клан,battles:Количество боев,wins:Процент побед,re:Рейтинг эффективности,wn8:Рейтинг WN8,bs:Рейтинг Бронесайта,ivanerr_power:Сила по Иванерру,tanks10:Количество ТОП техники,visited_at:Дата посещения сайта,battle_at:Дата последнего боя,teamspeak_at:Дата посещения TeamSpeak,online_all:Количество боев за последние 30 дней,online_company:Количество ротных боев за последние 30 дней,online_clan:Количество боев на ГК за последние 30 дней,online_team:Количество командных боев за последние 30 дней"
+			},
+			"staff_battles_title": {
+				"description": "Заголовок окна с боями",
+				"value": "Бои нашего альянса",
+				"category": "Штаб",
+				"type": "text",
+				"items": ""
+			},
+			"staff_provinces_title": {
+				"description": "Заголовок окна с провинциями",
+				"value": "Провинции нашего альянса",
+				"category": "Штаб",
+				"type": "text",
+				"items": ""
+			},
+			"staff_stat_show": {
+				"description": "Кто видит РЭ, WN8 и БС игроков в штабе",
+				"value": "guest",
+				"category": "Штаб",
+				"type": "checkbox",
+				"items": "commander: Командующий,executive_officer: Заместитель командующего,personnel_officer: Офицер штаба,combat_officer: Командир подразделения,intelligence_officer: Офицер разведки,quartermaster: Офицер снабжения,recruitment_officer: Офицер по кадрам,junior_officer: Младший офицер,private: Боец,recruit: Новобранец,reservist: Резервист,user: Авторизованный посетитель,guest: Любой посетитель"
+			},
+			"staff_stat_clans": {
+				"description": "Видимость РЭ, WN8 и БС для кланов альянса",
+				"value": "alliance",
+				"category": "Штаб",
+				"type": "radio",
+				"items": "clan: Игроки видят РЭ/WN8/БС только своего клана, alliance: Игроки видят РЭ/WN8/БС всего альянса"
+			},
+			"staff_ivanerr_show": {
+				"description": "Кто видит силу игроков по Иванерру в штабе",
+				"value": "guest",
+				"category": "Штаб",
+				"type": "checkbox",
+				"items": "commander: Командующий,executive_officer: Заместитель командующего,personnel_officer: Офицер штаба,combat_officer: Командир подразделения,intelligence_officer: Офицер разведки,quartermaster: Офицер снабжения,recruitment_officer: Офицер по кадрам,junior_officer: Младший офицер,private: Боец,recruit: Новобранец,reservist: Резервист,user: Авторизованный посетитель,guest: Любой посетитель"
+			},
+			"staff_ivanerr_clans": {
+				"description": "Видимость силы игроков по Иванерру для кланов альянса",
+				"value": "alliance",
+				"category": "Штаб",
+				"type": "radio",
+				"items": "clan: Игроки видят силу только своего клана, alliance: Игроки видят силу всего альянса"
+			},
+			"recruitment_title": {
+				"description": "Заголовок окна военкомата",
+				"value": "Военкомат нашего альянса",
+				"category": "Военкомат",
+				"type": "text",
+				"items": ""
+			},
+			"recruitment_access": {
+				"description": "Кто может подавать заявки в военкомате",
+				"value": "all",
+				"category": "Военкомат",
+				"type": "radio",
+				"items": "all: Все игроки, noclan: Игроки не состоящие в клане"
+			},
+			"teamspeak_address": {
+				"description": "Адрес TeamSpeak сервера (пример: example.com:9987 или 123.12.234.23:9987)",
+				"value": "",
+				"category": "TeamSpeak",
+				"type": "text",
+				"items": ""
+			},
+			"teamspeak_queryport": {
+				"description": "ServerQuery порт TeamSpeak сервера (не путать с портом из предыдущей настройки, обычно ServerQuery порт = 10011)",
+				"value": "10011",
+				"category": "TeamSpeak",
+				"type": "text",
+				"items": ""
+			},
+			"teamspeak_querylogin": {
+				"description": "ServerQuery логин (задать логин может администратор сервера через TeamSpeak-клиент в меню Дополнительно->Вход в ServerQuery)",
+				"value": "",
+				"category": "TeamSpeak",
+				"type": "text",
+				"items": ""
+			},
+			"teamspeak_querypassword": {
+				"description": "ServerQuery пароль (задается аналогично логину)",
+				"value": "",
+				"category": "TeamSpeak",
+				"type": "text",
+				"items": ""
+			}
+		},
+		"menu_top": [
+			{
+				"label": "Главная",
+				"url": "/",
+				"order": "0",
+				"highlight": ""
+			},
+			{
+				"label": "Новости",
+				"url": "/news",
+				"order": "10",
+				"highlight": ""
+			},
+			{
+				"label": "Штаб",
+				"url": "/staff/members",
+				"order": "20",
+				"highlight": "/staff/battles Бои\n/staff/provinces Провинции"
+			},
+			{
+				"label": "Военкомат",
+				"url": "/recruitment",
+				"order": "30",
+				"highlight": ""
+			},
+			{
+				"label": "Форум",
+				"url": "/forum",
+				"order": "40",
+				"highlight": ""
+			}
+		],
+		"menu_left": [
+			{
+				"label": "Новости",
+				"url": "/news",
+				"order": "0",
+				"highlight": ""
+			},
+			{
+				"label": "Штаб",
+				"url": "/staff/members",
+				"order": "10",
+				"highlight": ""
+			},
+			{
+				"label": "История клана",
+				"url": "/page/history",
+				"order": "20",
+				"highlight": ""
+			},
+			{
+				"label": "Военкомат",
+				"url": "/recruitment",
+				"order": "30",
+				"highlight": ""
+			},
+			{
+				"label": "TeamSpeak",
+				"url": "/page/teamspeak",
+				"order": "40",
+				"highlight": ""
+			},
+			{
+				"label": "Спонсорам",
+				"url": "/page/sponsor",
+				"order": "50",
+				"highlight": ""
+			},
+			{
+				"label": "Дипломатам",
+				"url": "/page/diplomat",
+				"order": "60",
+				"highlight": ""
+			}
+		],
+		"pages": {
+			"diplomat": {
+				"text1": "Дипломатам",
+				"text2": "<p>Информация дипломатического характера. Обращение к союзникам и врагам.</p>"
+			},
+			"history": {
+				"text1": "История клана",
+				"text2": "<p>История клана</p>"
+			},
+			"requirements": {
+				"text1": "Требования к кандидатам на вступление в наши ряды",
+				"text2": "<p>Информация о необходимых навыках для вступления в клан</p>"
+			},
+			"sponsor": {
+				"text1": "Спонсорам",
+				"text2": "<p>Информация для спонсоров</p>"
+			},
+			"teamspeak": {
+				"text1": "О нашем сервере TeamSpeak",
+				"text2": "<p>Информация о сервере TeamSpeak</p>"
+			},
+			"textonmain": {
+				"text1": "Добро пожаловать на наш сайт",
+				"text2": "<img src=\"/images/new/1.jpg\" style=\"margin-right: 20px;\" align=\"left\"><p>Приветствуем тебя на сайте нашего клана!</p>\r\n<p>Клан состоит из очень сильных бойцов, и тебе у нас точно понравится.</p>\r\n<p>Клан имеет богатую историю побед и серьёзный опыт ведения боевых действий на ГК а также обширные дипломатические связи.</p><p><a href=\"/recruitment/add\">Вступить в наши ряды</a></p>"
+			}
+		},
+		"html_header": "",
+		"html_footer": "",
+		"html_sidebar": "",
+		"html_index": "",
+		"html_news": ""
+	},
+	"en": {
+		"config": {
+			"site_name": {
+				"description": "Clan name (alliance name)",
+				"value": "My legendary clan",
+				"category": "General",
+				"type": "text",
+				"items": ""
+			},
+			"site_slogan": {
+				"description": "Clan motto (alliance motto)",
+				"value": "Veni, vidi, vici\n© Julius Caesar",
+				"category": "General",
+				"type": "textarea",
+				"items": ""
+			},
+			"staff_members_title": {
+				"description": "Clan members - page title",
+				"value": "Clan members",
+				"category": "HQ",
+				"type": "text",
+				"items": ""
+			},
+			"staff_members_columns": {
+				"description": "Сolumns Visibility in Clan members table",
+				"value": "role,region,since,battles,wins,re,wn8,bs,ivanerr_power,tanks10,visited_at,battle_at,teamspeak_at,online_all,online_company,online_clan,online_team",
+				"category": "HQ",
+				"type": "checkbox",
+				"items": "role:Position in clan,region:Region,since:Clan since,battles:Battles count,wins:Winning percentage,re:Efficiency (RE),wn8:WN8 rating,bs:Bronesait rating (BS),ivanerr_power:Ivanerr power,tanks10:10-lvl tanks count,visited_at:Date of visit site,battle_at:Date of last battle,teamspeak_at:Date of visit TeamSpeak,online_all:Battles in the last 30 days,online_company:Company battles in the last 30 days,online_clan:Clan battles in the last 30 days,online_team:Team battles in the last 30 days"
+			},
+			"staff_battles_title": {
+				"description": "Battles - page title",
+				"value": "Our battles",
+				"category": "HQ",
+				"type": "text",
+				"items": ""
+			},
+			"staff_provinces_title": {
+				"description": "Provinces - page title",
+				"value": "Our provinces",
+				"category": "HQ",
+				"type": "text",
+				"items": ""
+			},
+			"staff_stat_show": {
+				"description": "Who can see RE, WN8 and BS ratings in the HQ",
+				"value": "guest",
+				"category": "HQ",
+				"type": "checkbox",
+				"items": "commander: Commander,executive_officer: Executive Officer,personnel_officer: Personnel officer,combat_officer: Combat officer,intelligence_officer: Intelligence officer,quartermaster: Quartermaster,recruitment_officer: Recruitment officer,junior_officer: Junior officer,private: Private,recruit: Recruit,reservist: Reservist,user: Authorized user,guest: Guest"
+			},
+			"staff_stat_clans": {
+				"description": "RE, WN8 and BS visibility for clan/alliance",
+				"value": "alliance",
+				"category": "HQ",
+				"type": "radio",
+				"items": "clan: Players have access to RE/WN8/BS only their clan, alliance: Players have access to RE/WN8/BS all clans"
+			},
+			"staff_ivanerr_show": {
+				"description": "Who can see the Ivanerr rating in the HQ",
+				"value": "guest",
+				"category": "HQ",
+				"type": "checkbox",
+				"items": "commander: Commander,executive_officer: Executive Officer,personnel_officer: Personnel officer,combat_officer: Combat officer,intelligence_officer: Intelligence officer,quartermaster: Quartermaster,recruitment_officer: Recruitment officer,junior_officer: Junior officer,private: Private,recruit: Recruit,reservist: Reservist,user: Authorized user,guest: Guest"
+			},
+			"staff_ivanerr_clans": {
+				"description": "Ivanerr rating visibility for clan/alliance",
+				"value": "alliance",
+				"category": "HQ",
+				"type": "radio",
+				"items": "clan: Players have access to Ivanerr rating only their clan, alliance: Players have access to Ivanerr rating all clans"
+			},
+			"recruitment_title": {
+				"description": "Recruitment - page title",
+				"value": "Recruitment",
+				"category": "Recruitment",
+				"type": "text",
+				"items": ""
+			},
+			"recruitment_access": {
+				"description": "Who can apply to recruitment center",
+				"value": "all",
+				"category": "Recruitment",
+				"type": "radio",
+				"items": "all: All players, noclan: Players without a clan"
+			},
+			"teamspeak_address": {
+				"description": "TeamSpeak server address (format: example.com:9987 or 123.12.234.23:9987)",
+				"value": "",
+				"category": "TeamSpeak",
+				"type": "text",
+				"items": ""
+			},
+			"teamspeak_queryport": {
+				"description": "TeamSpeak ServerQuery port (not to be confused with the port from the previous setting, usually ServerQuery port = 10011)",
+				"value": "10011",
+				"category": "TeamSpeak",
+				"type": "text",
+				"items": ""
+			},
+			"teamspeak_querylogin": {
+				"description": "ServerQuery login (TeamSpeak administrator can get login in TeamSpeak-client by means of menu Additional->ServerQuery profile)",
+				"value": "",
+				"category": "TeamSpeak",
+				"type": "text",
+				"items": ""
+			},
+			"teamspeak_querypassword": {
+				"description": "ServerQuery password (similarly as login)",
+				"value": "",
+				"category": "TeamSpeak",
+				"type": "text",
+				"items": ""
+			}
+		},
+		"menu_top": [
+			{
+				"label": "Home",
+				"url": "/",
+				"order": "0",
+				"highlight": ""
+			},
+			{
+				"label": "News",
+				"url": "/news",
+				"order": "10",
+				"highlight": ""
+			},
+			{
+				"label": "HQ",
+				"url": "/staff/members",
+				"order": "20",
+				"highlight": "/staff/battles Battles\n/staff/provinces Provinces"
+			},
+			{
+				"label": "Recruitment",
+				"url": "/recruitment",
+				"order": "30",
+				"highlight": ""
+			},
+			{
+				"label": "Forum",
+				"url": "/forum",
+				"order": "40",
+				"highlight": ""
+			}
+		],
+		"menu_left": [
+			{
+				"label": "News",
+				"url": "/news",
+				"order": "0",
+				"highlight": ""
+			},
+			{
+				"label": "HQ",
+				"url": "/staff/members",
+				"order": "10",
+				"highlight": ""
+			},
+			{
+				"label": "Clan history",
+				"url": "/page/history",
+				"order": "20",
+				"highlight": ""
+			},
+			{
+				"label": "Recruitment",
+				"url": "/recruitment",
+				"order": "30",
+				"highlight": ""
+			},
+			{
+				"label": "TeamSpeak",
+				"url": "/page/teamspeak",
+				"order": "40",
+				"highlight": ""
+			},
+			{
+				"label": "Sponsorship",
+				"url": "/page/sponsor",
+				"order": "50",
+				"highlight": ""
+			},
+			{
+				"label": "Diplomacy",
+				"url": "/page/diplomat",
+				"order": "60",
+				"highlight": ""
+			}
+		],
+		"pages": {
+			"diplomat": {
+				"text1": "For diplomats",
+				"text2": "<p>Diplomatic information. Appeal to allies and enemies.</p>"
+			},
+			"history": {
+				"text1": "Clan history",
+				"text2": "<p>Clan history information</p>"
+			},
+			"requirements": {
+				"text1": "Requirements for candidates to join our clans",
+				"text2": "<p>Requirements for candidates to join our clans</p>"
+			},
+			"sponsor": {
+				"text1": "For sponsors",
+				"text2": "<p>For sponsors</p>"
+			},
+			"teamspeak": {
+				"text1": "About our TeamSpeak",
+				"text2": "<p>About our TeamSpeak server</p>"
+			},
+			"textonmain": {
+				"text1": "Welcome to our site",
+				"text2": "<img src=\"/images/new/1.jpg\" style=\"margin-right: 20px;\" align=\"left\"><p>Welcome to our Website!</p>\r\n<p>We are a strong Clan with skilled players that you will really like.</p>\r\n<p>The clan has a long history of victories, experience on the Global Map and extensive diplomatic relations.</p><p><a href=\"/recruitment/add\">Join us!</a></p>"
+			}
+		},
+		"html_header": "",
+		"html_footer": "",
+		"html_sidebar": "",
+		"html_index": "",
+		"html_news": ""
+	}
+}

@@ -1,0 +1,4 @@
+/assets/*
+/upload
+/protected/runtime/*
+/.idea/*

@@ -1,0 +1,2942 @@
+/*---------------------------------------------------------------------------
+	© Ganta for «WoT.pw» 2015
+	«Goliath» theme
+---------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------
+	Шрифты
+---------------------------------------------------------------------------*/
+@font-face {
+	font-family:'LeagueGothicRegular';
+	src:url('/font/leaguegothiccyrillic-webfont.eot');
+	src:url('/font/leaguegothiccyrillic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/font/leaguegothiccyrillic-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'WarHeliosCondC';
+	src:url('/font/warhelioscondc-webfont.eot');
+	src:url('/font/warhelioscondc-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/font/warhelioscondc-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'WarHeliosCondCBold';
+	src:url('/font/warhelioscondcbold-webfont.eot');
+	src:url('/font/warhelioscondcbold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/font/warhelioscondcbold-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'MoonRegular';
+	src:url('/font/moon-free.ttf?-b7qzp2') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Фон страницы
+---------------------------------------------------------------------------*/
+body {
+	background-image:url('../images/page-bg.jpg');
+	background-color:#0d0f11;
+	background-position:center -20px;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	/* color:#b2b2b2; */
+	color:#ccc;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Выравниваем мекет по центру страницы, фиксируем его ширину
+---------------------------------------------------------------------------*/
+.wrapper {
+	width:1190px;
+	margin:0 auto;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Сетка главной колонки и сайдбара
+---------------------------------------------------------------------------*/
+.content {
+	overflow:hidden;
+}
+.content.side-left .column {
+	float:right;
+}
+.content.side-right .column {
+	float:left;
+}
+.content.single-column {
+	float:none;
+}
+.content.single-column main.column {
+	width:100%;
+}
+.content.single-column aside.column {
+	width:100%;
+}
+/*---------------------------------------------------------------------------
+	Ширина главной колонки и сайдбара
+---------------------------------------------------------------------------*/
+.content main.column {
+	width:884px;
+}
+.content aside.column {
+	width:276px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Выпадайка для горизонального меню
+---------------------------------------------------------------------------*/
+nav.navigation ul:before,
+nav.navigation ul:after {
+	content:' ';
+	display:table;
+}
+nav.navigation ul:after {
+	clear:both;
+}
+nav.navigation ul {
+	*zoom:1;
+	list-style-type:none;
+}
+
+nav.navigation > ul > li {
+	float:left;
+	position:relative;
+}
+
+nav.navigation ul li a {
+	white-space:nowrap;
+}
+
+nav.navigation > ul > li > a {
+	display:inline-block;
+}
+
+nav.navigation ul li ul {
+	position:absolute;
+	z-index:9;
+}
+
+nav.navigation ul li ul li {
+	display:none;
+}
+
+nav.navigation ul li:hover ul li {
+	display:block;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Выпадайка для вертикального меню
+---------------------------------------------------------------------------*/
+nav.subnav ul {
+	display:inline-block;
+	list-style-type:none;
+}
+
+nav.subnav > ul > li {
+	position:relative;
+}
+
+nav.subnav ul li a {
+	white-space:nowrap;
+}
+
+nav.subnav > ul > li > a {
+	display:inline-block;
+}
+
+nav.subnav ul li ul {
+	position:absolute;
+	top:0;
+}
+
+.side-left nav.subnav ul li ul {
+	left:0;
+	padding-left:270px;/*--- Опционально ---*/
+}
+
+.side-right nav.subnav ul li ul {
+	right:0;
+	padding-right:270px;/*--- Опционально ---*/
+	margin-left:-270px;/*--- Опционально ---*/
+}
+
+nav.subnav ul li ul li {
+	display:none;
+}
+
+nav.subnav ul li:hover ul li {
+	display:block;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Внутренние отступы для колонок
+---------------------------------------------------------------------------*/
+.content.side-left main.column {
+	padding-left:20px;
+	padding-right:20px;
+}
+.content.side-right main.column {
+	padding-left:20px;
+	padding-right:20px;
+}
+.content.side-left aside.column {
+	padding-left:20px;
+}
+.content.side-right aside.column {
+	padding-right:20px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Фон враппера
+---------------------------------------------------------------------------*/
+.wrapper {
+	padding:0 15px 15px;
+	background-image:url('../images/wpapper-bg.png');
+	background-position:left top;
+	background-repeat:repeat;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Логотип
+---------------------------------------------------------------------------*/
+header.header .logotip {
+	background-image:url('../images/logotip.png');
+	background-position:50px 118px;
+	background-repeat:no-repeat;
+	padding:142px 0 75px 190px;
+}
+header.header .logotip a,
+header.header .logotip span {
+	line-height:1.1em;
+	text-shadow:0 0 1px rgba(0, 0, 0, .5),
+				0 0 2px rgba(0, 0, 0, .5),
+				0 0 3px rgba(0, 0, 0, .5),
+				1px 1px 3px rgba(0, 0, 0, .5),
+				0 0 4px rgba(0, 0, 0, .5),
+				0 0 5px rgba(0, 0, 0, .5);
+}
+header.header .logotip a {
+	display:inline-block;
+	font-size:3.75em;
+	font-family:'LeagueGothicRegular', 'Arial Narrow', Arial, sans-serif;
+	text-decoration:none;
+	color:#fff;
+}
+header.header .logotip span {
+	display:block;
+	font-size:.85em;
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#fff;
+	padding-left:2px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Фон контента и футера
+---------------------------------------------------------------------------*/
+.content,
+footer.footer {
+   background-color:rgba(6, 8, 10, 0.8);
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Навигация в шапке
+---------------------------------------------------------------------------*/
+.wrapper {
+	position:relative;
+}
+
+nav.navigation {
+	position:absolute;
+	width:100%;
+	top:0;
+	padding:25px 30px 0 0;
+}
+
+nav.navigation::before,
+nav.navigation::after {
+	content:' ';
+	display:table;
+}
+nav.navigation::after {
+	clear:both;
+}
+nav.navigation {
+	*zoom:1;
+}
+
+nav.navigation {
+	margin-bottom:15px;
+}
+
+nav.navigation ul.nav-menu {
+	float:left;
+}
+
+nav.navigation ul.nav-login {
+	float:right;
+}
+
+nav.navigation a {
+	display:block;
+	position:relative;
+	background-color:rgba(0, 0, 0, 0.7);
+	font-family:'LeagueGothicRegular', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.85em;
+	text-decoration:none;
+	color:#ffebe7;
+	padding:6px 14px 3px;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:background-color .2s, color .2s;
+	-moz-transition:background-color .2s, color .2s;
+	transition:background-color .2s, color .2s;
+}
+
+nav.navigation ul.nav-login a {
+	font-size:1.25em;
+}
+
+nav.navigation a:hover {
+	color:#fff;
+}
+
+nav.navigation ul.nav-menu a {
+	text-transform:uppercase;
+}	
+
+nav.navigation li:hover a,
+nav.navigation li a:hover {
+	background-color:rgba(255, 87, 50, 0.7);
+	color:#fff;
+}
+
+nav.navigation ul.nav-menu ul {
+	padding-top:14px;
+	z-index:97;
+}
+
+nav.navigation ul.nav-menu ul a {
+	background-color:rgba(0, 0, 0, 0.9);
+	font-size:1.25em;
+}
+
+nav.navigation ul.nav-menu ul a:hover {
+	background-color:rgba(255, 87, 50, 0.85);
+}
+
+nav.navigation ul.nav-menu li {
+	padding-right:15px;
+}
+
+nav.navigation ul.nav-login li {
+	padding-left:15px;
+}
+
+nav.navigation .nav-menu > li,
+nav.navigation .nav-login li {
+	float:left;
+}
+
+nav.navigation ul.nav-login li a {
+	padding-left:33px;
+}
+
+nav.navigation ul.nav-login li a::before {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	font-family:'MoonRegular';
+	font-weight:normal;
+	font-size:.8em;
+	padding-left:11px;
+}
+
+nav.navigation ul.nav-login li.login a::before {
+	content:'\e98f';
+	top:7px;
+}
+
+nav.navigation ul.nav-login li.logout a::before {
+	content:'\ea14';
+	top:8px;
+}
+
+nav.navigation ul.nav-login li.myprofile a::before {
+	content:'\e976';
+	top:8px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Общие настройки для всего контента
+---------------------------------------------------------------------------*/
+.content {
+	padding-bottom:24px;
+	color:#bbb;
+}
+.content a {
+	color:#999;
+}
+.content ul {
+	list-style-type:none;
+}
+.content h3 {
+	margin:0;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Общие стили модулей и их заголовков
+---------------------------------------------------------------------------*/
+.modul .title {
+	box-shadow:#333 0 -3px 0 inset;
+	margin:20px 0 0;
+}
+
+.modul .title h3 {
+	position:relative;
+	display:inline-block;
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.25em;
+	font-weight:normal;
+	text-transform:uppercase;
+	color:#ccc;
+	padding:0 0 12px 30px;
+	box-shadow:#777 0 -3px 0 inset;
+	-webkit-transition:color .45s, box-shadow .45s;
+	-moz-transition:color .45s, box-shadow .45s;
+	transition:color .45s, box-shadow .45s;
+}
+
+.modul:hover .title h3 {
+	color:#fff;
+	box-shadow:#ccc 0 -3px 0 inset;
+}
+
+.modul:hover .title h3 a {
+	color:#ff5732;
+}
+
+.modul .cell {
+	overflow:hidden;
+	background-color:rgba(23, 25, 27, 0.8);
+	-webkit-border-radius:0 0 6px 6px;
+	-moz-border-radius:0 0 6px 6px;
+	border-radius:0 0 6px 6px;
+}
+
+.content main.column .modul .cell {
+	padding:17px 18px;
+}
+.content aside.column .modul .cell {
+	padding:17px 8px;
+}
+
+.modul .title h3::before {
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	font-family:'MoonRegular';
+	font-weight:normal;
+	font-size:1em;
+	padding-right:7px;
+}
+
+.modul.online .title h3::before {
+	content:'\e91c';
+	top:-2px;
+}
+.modul.chat .title h3::before {
+	content:'\e96e';
+	top:-1px;
+}
+.modul.adminnav .title h3::before {
+	content:'\e994';
+	top:-1px;
+}
+.modul.static .title h3::before {
+	content:'\e926';
+	top:-1px;
+}
+.modul.subnav .title h3::before {
+	content:'\e9bd';
+	top:-2px;
+}
+.modul.news .title h3::before {
+	content:'\e904';
+	top:-1px;
+}
+.modul.news-mini .title h3::before {
+	content:'\e904';
+	top:-1px;
+}
+.modul.themes-mini .title h3::before {
+	content:'\e904';
+	top:-1px;
+}
+.modul.vkontakte .title h3::before {
+	content:'\e9de';
+	top:-1px;
+}
+.modul.publicity .title h3::before {
+	content:'\e915';
+	top:-2px;
+}
+.modul.twitch .title h3::before {
+	content:'\e914';
+	top:-2px;
+}
+
+.modul.staff.members .title h3::before {
+	content:'\e971';
+	top:-2px;
+}
+.modul.staff.companies .title h3::before {
+	content:'\e972';
+	top:-2px;
+}
+.modul.staff.battles .title h3::before {
+	content:'\e9a9';
+	top:-2px;
+}
+.modul.staff.provinces .title h3::before {
+	content:'\e9cc';
+	top:-2px;
+}
+.modul.staff.history .title h3::before {
+	content:'\e944';
+	top:-2px;
+}
+.modul.staff.famepoints .title h3::before {
+	content:'\e9d8';
+	top:-2px;
+}
+
+.modul.recruitment.recr-index .title h3::before {
+	content:'\e923';
+	top:-2px;
+}
+.modul.recruitment.recr-add .title h3::before {
+	content:'\e973';
+	top:-1px;
+}
+.modul.recruitment.recr-cand .title h3::before {
+	content:'\e9b8';
+	top:-2px;
+}
+.modul.recruitment.recr-stat .title h3::before {
+	content:'\e975';
+	top:-1px;
+}
+
+.modul.forum .title h3::before {
+	content:'\e970';
+	top:-1px;
+}
+
+.modul.detail-news .title h3::before {
+	content:'\e904';
+	top:-1px;
+}
+
+.modul.news-comment .title h3::before {
+	content:'\e96f';
+	top:-2px;
+}
+
+.modul.video .title h3::before {
+	content:'\e95b';
+	top:-3px;
+}
+
+.modul.myaccount .title h3::before {
+	content:'\e976';
+	top:-2px;
+}
+
+.modul.poll .title h3::before {
+	content:'\e99c';
+	top:-2px;
+}
+
+.modul.donate .title h3::before {
+	content:'\e99f';
+	top:-2px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Статичные страницы
+---------------------------------------------------------------------------*/
+.modul.static .statik-content {
+	padding:0 1px 16px;
+	font-size:.9em;
+}
+.modul.static .statik-edit {
+	padding:8px 1px 0;
+	border-top:1px solid #333;
+	font-size:.8em;
+	color:#999;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Модуль субменю
+---------------------------------------------------------------------------*/
+.modul.subnav > ul {
+	display:block;
+	width:100%;
+}
+
+.modul.subnav > ul {
+	padding:17px 0;
+	background-color:rgba(23, 25, 27, 0.8);
+	-webkit-border-radius:0 0 6px 6px;
+	-moz-border-radius:0 0 6px 6px;
+	border-radius:0 0 6px 6px;
+}
+
+.modul.subnav > ul > li > a {
+	position:relative;
+	display:block;
+	width:100%;
+	padding:5px 18px;
+	margin:1px 0 0;	
+	white-space:normal;
+	font-size:.9em;
+	color:#ccc;
+	background-color:#232427;
+	text-decoration:none;
+	border-left:0 solid #444;
+	-webkit-transition:background-color .25s, border-left .25s;
+	-moz-transition:background-color .25s, border-left .25s;
+	transition:background-color .25s, border-left .25s;
+	z-index:99;
+}
+
+.modul.subnav > ul > li > a:hover {
+	background-color:#111;
+	border-left:18px solid #444;
+}
+
+.modul.subnav li:hover a {
+	background-color:#111;
+	border-left:18px solid #444;
+}
+
+.modul.subnav ul ul a {
+	display:block;
+	width:100%;
+	padding:5px 18px;
+	margin:0;
+	font-size:.9em;
+	color:#ccc;
+	background-color:#333 !important;
+	border-left:none !important;
+	text-decoration:none;
+	border-bottom:1px solid #222;
+	border-left:0 solid #444;
+	-webkit-transition:background-color .25s, border-left .25s;
+	-moz-transition:background-color .25s, border-left .25s;
+	transition:background-color .25s, border-left .25s;
+}
+
+.modul.subnav ul ul a:hover {
+	background-color:#222 !important;
+}
+
+.modul.subnav ul ul li:last-child a {
+	border-bottom:1px solid transparent;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Модуль новости
+---------------------------------------------------------------------------*/
+.modul.news .news-segment {
+	position:relative;
+	padding:16px 0 24px;
+	border-top:1px solid #252525;
+	border-bottom:1px solid #000;
+}
+.modul.news .news-segment:first-child {
+	padding:0 0 22px;
+	border-top:none;
+}
+.modul.news .news-segment:last-child {
+	padding:16px 0 0;
+	border-bottom:none;
+}
+/*---------------------------------------------------------------------------
+	Модуль новости заголовок
+---------------------------------------------------------------------------*/
+.modul.news .news-title h4 {
+	margin:0;
+	font-family:'WarHeliosCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.25em;
+	font-weight:normal;
+	padding-left:2px;
+}
+.modul.news .news-title h4 a {
+	text-decoration:none;
+	color:#ccc;
+	-webkit-transition:color .25s;
+	-moz-transition:color .25s;
+	transition:color .25s;
+}
+.modul.news .news-title h4 a:hover {
+	color:#ff5732;
+}
+/*---------------------------------------------------------------------------
+	Модуль новости секция контент
+---------------------------------------------------------------------------*/
+.modul.news .news-content {
+	overflow:hidden;
+	padding:14px 0 24px;
+	font-size:.9em;
+	color:#b2b2b2;
+}
+
+.modul.news .news-image {
+	overflow:hidden;
+	float:left;
+	width:200px;
+	margin-right:18px;
+}
+.modul.news .news-image img {
+	padding-top:3px;
+}
+/*---------------------------------------------------------------------------
+	Блок ссылок
+---------------------------------------------------------------------------*/
+.modul.news .news-link {
+	overflow:hidden;
+}
+
+.modul.news .news-link span {
+	float:left;
+}
+
+.modul.news .news-link span.date {
+	display:block;
+	position:absolute;
+	overflow:hidden;
+	font-size:.7em;
+	font-weight:bold;
+	color:#777;
+	bottom:27px;
+	right:0;
+}
+
+.modul.news .news-link span a {
+	position:relative;
+	display:block;
+	padding:4px 8px 4px 25px;
+	font-size:.8em;
+	color:#ddd;
+	text-decoration:none;
+	background-color:#333;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+.modul.news .news-link span a:hover {
+	color:#fff;
+	background-color:#555;
+}
+
+.modul.news .news-link span a::before {
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	font-family:'MoonRegular';
+	font-weight:normal;
+	font-size:.8em;
+}
+.modul.news .news-link span.comment a::before {
+	content:'\e96b';
+	padding-left:8px;
+	top:6px;
+}
+.modul.news .news-link span.more a::before {
+	content:'\e9d2';
+	padding-left:9px;
+	top:6px;
+}
+.modul.news .news-link span.edit a::before {
+	content:'\e991';
+	padding-left:8px;
+	top:6px;
+}
+.modul.news .news-link span.delet a::before {
+	content:'\e9ad';
+	padding-left:8px;
+	top:6px;
+}
+
+.modul.news .news-link span.comment a,
+.modul.news .news-link span.more a,
+.modul.news .news-link span.edit a,
+.modul.news .news-link span.delet a {
+	margin-right:6px;
+}
+/*---------------------------------------------------------------------------
+	Мини-блок новостей
+---------------------------------------------------------------------------*/
+.news-mini p {
+	margin:0 0 10px;
+	font-size:.75em;
+}
+.news-mini p:last-child {
+	margin:0 0 2px;
+}
+
+aside.column .modul.news-mini .cell {	
+	padding:14px 14px 14px !important;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Модуль штаб
+---------------------------------------------------------------------------*/
+.modul.staff .staff-legend {
+	margin-bottom:30px;
+	margin-left:3px;
+	font-size:.9em;
+	color:#b2b2b2;
+}
+
+.modul.staff p.errorSummary {
+	font-size:.85em;
+	background-color:#333;
+	margin:22px 0;
+	padding:16px 22px;
+	border:3px solid #ff5732;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+.modul.staff p {
+	font-size:.75em;
+	margin-top:16px;
+	color:#ccc;
+}
+
+/*---------------------------------------------------------------------------
+	Таблицы штаба и военкомата
+---------------------------------------------------------------------------*/
+/*--- Таблица ---*/
+.modul.recruitment table,
+.modul.staff table {
+	width:100%;
+	margin-bottom:18px;
+}
+
+.modul.recruitment th,
+.modul.staff th {
+	padding:7px 3px;
+	color:#ccc;
+	background-color:#0d0f11;
+	text-align:left;
+}
+.modul.recruitment th a,
+.modul.staff th a {
+	color:#ccc;
+	text-decoration:none;
+}
+.modul.recruitment th a:hover,
+.modul.staff th a:hover {
+	color:#f39c12;
+}
+
+.modul.recruitment td,
+.modul.staff td {
+	padding:6px 6px;
+	color:#bbb;
+	background-color:#181C1F;
+	border-top:1px solid #0d0f11;
+	border-bottom:1px solid #0d0f11;
+	text-align:left;
+	-webkit-transition:color .1s, background-color .1s;
+	-moz-transition:color .1s, background-color .1s;
+	transition:color .1s, background-color .1s;
+}
+
+.modul.recruitment tr:hover td,
+.modul.staff tr:hover td {
+	color:#fff;
+	background-color:#23292e;
+}
+
+.modul.recruitment th,
+.modul.recruitment td,
+.modul.staff th,
+.modul.staff td {
+	text-align:center;
+}
+.modul.recruitment td {
+	text-align:left;
+}
+.modul.recruitment th,
+.modul.staff th {
+	font-size:12px;
+}
+.modul.recruitment td,
+.modul.staff td {
+	font-size:12px;
+}
+
+.modul.recruitment tr:first-child td,
+.modul.staff tr:first-child td {
+	border-top:none;
+}
+.modul.recruitment tr:last-child td,
+.modul.staff tr:last-child td {
+	border-bottom:none;
+}
+.modul.recruitment td:first-child,
+.modul.staff td:first-child {
+	border-left:none;
+}
+.modul.recruitment td:last-child,
+.modul.staff td:last-child {
+	border-right:none;
+}
+/*--- Сортировка в таблице ---*/
+.modul.recruitment thead a,
+.modul.staff thead a {
+	position:relative;
+	overflow:hidden;
+	padding-left:12px;
+}
+.modul.recruitment thead a.sort-link::before,
+.modul.recruitment thead a.sort-link.desc::before,
+.modul.recruitment thead a.sort-link.asc::before,
+.modul.staff thead a.sort-link::before,
+.modul.staff thead a.sort-link.desc::before,
+.modul.staff thead a.sort-link.asc::before {
+	position:absolute;
+	display:block;
+	font-family:'MoonRegular';
+	font-weight:normal;
+}
+
+.modul.recruitment thead a.sort-link::before,
+.modul.staff thead a.sort-link::before {
+	content: '\ea3d';
+	top:0px;
+	left:0;
+	color:#999;
+	font-size:10px;
+}
+.modul.recruitment thead a.sort-link.desc::before,
+.modul.staff thead a.sort-link.desc::before {
+	content: '\ea3a';
+	top:0px;
+	left:0;
+	color:#f39c12;
+	font-size:10px;
+}
+.modul.recruitment thead a.sort-link.asc::before,
+.modul.staff thead a.sort-link.asc::before {
+	content: '\ea3e';
+	top:0px;
+	left:0;
+	color:#f39c12;
+	font-size:10px;
+}
+
+.modul.staff td.nickname,
+.modul.staff td.role,
+.modul.staff td.region {
+	text-align:left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.modul.staff td.nickname {
+    max-width:110px;
+}
+.modul.staff td.role {
+    max-width:110px;
+}
+.modul.staff td.region {
+    max-width:100px;
+}
+
+.modul.staff .company-title {
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.25em;
+	font-weight:normal;
+	color:#ccc;
+	padding:0 0 8px 1px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Модуль штаб навигация
+---------------------------------------------------------------------------*/
+.modul.staff ul.staff-nav {
+	overflow:hidden;
+}
+.modul.staff ul.staff-nav li {
+	float:left;
+	margin-right:8px;
+}
+.modul.staff ul.staff-nav li a {
+	position:relative;
+	display:block;
+	padding:4px 8px 4px 28px;
+	font-size:.9em;
+	color:#ddd;
+	text-decoration:none;
+	background-color:#333;
+	-webkit-border-radius:2px;
+	-moz-border-radius:12px;
+	border-radius:2px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+.modul.staff ul.staff-nav li.active a,
+.modul.staff ul.staff-nav li a:hover {
+	color:#fff;
+	background-color:#555;
+}
+
+.modul.staff ul.staff-nav li a::before {
+	position:absolute;
+	left:0;
+	display:block;
+	font-family:'MoonRegular';
+	font-weight:normal;
+	padding-left:8px;
+	font-size:.9em;
+}
+.modul.staff li a.members::before {
+	content:'\e971';
+	top:4px;
+}
+.modul.staff li a.online::before {
+	content:'\e94e';
+	top:5px;
+}
+.modul.staff li a.companies::before {
+	content:'\e972';
+	top:5px;
+}
+.modul.staff li a.battles::before {
+	content:'\e9a9';
+	top:5px;
+}
+.modul.staff li a.provinces::before {
+	content:'\e9cc';
+	top:6px;
+}
+.modul.staff li a.history::before {
+	content:'\e944';
+	top:5px;
+}
+.modul.staff li a.famepoints::before {
+	content:'\e9d8';
+	top:5px;
+}
+
+.modul.staff ul.staff-clannav {
+	overflow:hidden;
+	margin:26px 0 24px;
+}
+.modul.staff ul.staff-clannav li {
+	float:left;
+	margin-right:22px;
+}
+.modul.staff ul.staff-clannav a {
+	display:block;
+	background-repeat:no-repeat;
+	padding:1px 4px 1px 30px;
+	text-decoration:none;
+}
+.modul.staff ul.staff-clannav a:hover {
+	text-decoration:underline;
+	color:#fff;
+}
+.modul.staff ul.staff-clannav li.active a {
+	color:#ff5732;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Модуль военкомат
+---------------------------------------------------------------------------*/
+.modul.recruitment ul.recruitment-nav {
+	overflow:hidden;
+}
+.modul.recruitment ul.recruitment-nav li {
+	float:left;
+	margin-right:8px;
+}
+.modul.recruitment ul.recruitment-nav li a {
+	position:relative;
+	display:block;
+	padding:4px 8px 4px 28px;
+	font-size:.9em;
+	color:#ddd;
+	text-decoration:none;
+	background-color:#333;
+	-webkit-border-radius:2px;
+	-moz-border-radius:12px;
+	border-radius:2px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+.modul.recruitment ul.recruitment-nav li.active a,
+.modul.recruitment ul.recruitment-nav li a:hover {
+	color:#fff;
+	background-color:#555;
+}
+
+.modul.recruitment ul.recruitment-nav li a::before {
+	position:absolute;
+	left:0;
+	display:block;
+	font-family:'MoonRegular';
+	font-weight:normal;
+	padding-left:8px;
+	font-size:.9em;
+}
+.modul.recruitment li a.recr-index::before {
+	content:'\e923';
+	top:5px;
+}
+.modul.recruitment li a.recr-add::before {
+	content:'\e973';
+	top:5px;
+}
+.modul.recruitment li a.recr-cand::before {
+	content:'\e9b8';
+	top:5px;
+}
+.modul.recruitment li a.recr-stat::before {
+	content:'\e975';
+	top:6px;
+}
+
+.modul.recruitment table {
+	width:100%;
+	margin-top:22px;
+	font-size:.75em;
+}
+
+.modul.recruitment table td {
+	border-top:1px solid #0d0F11;
+	border-bottom:1px solid #0d0F11;
+	background-color:#181c1f;
+}
+
+.modul.recruitment table th {
+	background-color:#0d0F11;
+	text-align:left;
+	white-space:nowrap;
+}
+
+.modul.recruitment table td,
+.modul.recruitment table th {
+	padding:6px 8px;
+}
+
+.modul.recruitment p {
+	font-size:.75em;
+	margin-top:16px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Форум общие настройки
+---------------------------------------------------------------------------*/
+.body-forum .content main.column {
+	width:100%;
+}
+.body-forum .content aside.column {
+	display:none;
+}
+
+.modul.forum .cell {
+	padding:0 0 18px 0 !important;
+	color:#999;
+}
+
+.modul.forum table {
+	width:100%;
+	font-size:.85em;
+}
+
+.modul.forum thead {
+	font-family:'WarHeliosCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.2em;
+}
+
+.modul.forum thead th {
+	padding:9px 0 10px;
+	background-color:#0d0f11;
+	font-weight:normal;
+}
+
+.modul.forum tbody {
+	font-size:.95em;
+}
+
+.modul.forum .forum-button {
+	float:right;
+	padding:0 0 22px 0;
+}
+.modul.forum .forum-button:last-child {
+	padding:0;
+}
+
+.modul.forum .forum-button a {
+	position:relative;
+	display:inline-block;
+	margin:0 14px 0 0;
+	padding:6px 11px 6px 30px;
+	font-size:.9em;
+	text-decoration:none;
+	background-color:#333;
+	color:#ccc;
+	-webkit-border-radius:2px;
+	-moz-border-radius:12px;
+	border-radius:2px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+
+.modul.forum.category .forum-button a {
+	margin:0 14px 0 0;
+}
+
+.modul.forum .forum-button a:hover {
+	background-color:#555;
+	color:#fff;
+}
+.modul.forum .forum-button a::before {
+	position:absolute;
+	left:0;
+	display:block;
+	font-family:'MoonRegular';
+	font-weight:normal;
+	padding-left:11px;
+	font-size:.85em;
+}
+.modul.forum .forum-button a.create-theme::before {
+	content:'\ea0a';
+	top:7px;
+}
+.modul.forum .forum-button a.close-theme::before {
+	content:'\ea0f';
+	top:7px;
+}
+.modul.forum .forum-button a.open-theme::before {
+	content:'\e984';
+	top:7px;
+}
+.modul.forum .forum-button a.fixed-theme::before {
+	content:'\ea10';
+	top:7px;
+}
+.modul.forum .forum-button a.unfixed-theme::before {
+	content:'\ea11';
+	top:7px;
+}
+
+.modul.forum table span.theme-fixed,
+.modul.forum table span.theme-closed {
+	position:relative;
+	display:inline-block;	
+}
+
+.modul.forum table span.theme-fixed::before,
+.modul.forum table span.theme-closed::before {
+	position:absolute;
+	display:block;
+	font-family:'MoonRegular';
+	font-weight:normal;
+	font-size:1.45em;
+	text-align:center;
+}
+
+.modul.forum table span.theme-fixed::before {
+	content:'\e946';
+	top:-17px;
+	left:4px;
+}
+.modul.forum table span.theme-closed::before {
+	content:'\e98f';
+
+	top:-18px;
+	left:7px;
+}
+
+.modul.forum .forum-nav {
+	margin:20px 0 0 ;
+	overflow:hidden;
+	padding:0 4px;
+}
+.modul.forum .forum-nav:first-child {
+	margin:0 0 20px;
+}
+
+
+.modul.forum .forum-nav .pager {
+	float:left;
+	margin:0 0 0 9px;
+}
+.modul.forum .forum-nav .forum-button {
+	float:right;
+}
+
+.modul.forum span.icon-point-right {
+	position:relative;
+}
+
+.modul.forum span.icon-point-right::before {
+	position:absolute;
+	display:block;
+	padding-left:6px;
+	font-family:'MoonRegular';
+	font-weight:normal;
+	font-size:1em;
+	content:'\ea3c';
+	top:0;
+	left:0;
+}
+
+.modul.forum.forum-index p.no-forum {
+	padding:32px 0;
+	text-align:center;
+	font-size:.9em;
+}
+
+.modul.forum .form {
+	padding:0 18px;
+}
+/*---------------------------------------------------------------------------
+	Форум forum-index
+---------------------------------------------------------------------------*/
+.modul.forum.forum-index tbody td {
+	padding:9px 15px 10px;
+	background-color:#181c1f;
+	-webkit-transition:background-color .25s;
+	-moz-transition:background-color .25s;
+	transition:background-color .25s;
+}
+
+.modul.forum.forum-index tbody tr:hover td {
+	background-color:#202528;
+}
+
+.modul.forum.forum-index th,
+.modul.forum.forum-index td {
+	border:1px solid #0d0f11;
+}
+
+.modul.forum.forum-index th {
+	border-top:none;
+}
+.modul.forum.forum-index td:first-child,
+.modul.forum.forum-index th:first-child {
+	border-left:none;
+}
+.modul.forum.forum-index td:last-child,
+.modul.forum.forum-index th:last-child {
+	border-right:none
+}
+.modul.forum.forum-index tr:last-child td {
+	border-bottom:none;
+}
+
+.modul.forum.forum-index th:nth-child(1),
+.modul.forum.forum-index td:nth-child(1) {
+	width:65%;
+}
+.modul.forum.forum-index th:nth-child(2),
+.modul.forum.forum-index td:nth-child(2) {
+	width:10%;
+	text-align:center;
+}
+.modul.forum.forum-index th:nth-child(3),
+.modul.forum.forum-index td:nth-child(3) {
+	width:10%;
+	text-align:center;
+}
+.modul.forum.forum-index th:nth-child(4),
+.modul.forum.forum-index td:nth-child(4) {
+	width:15%;
+}
+
+.modul.forum.forum-index td:nth-child(1) a {
+	display:inline-block;
+	margin-bottom:3px;
+	font-family:'WarHeliosCondCBold', 'Arial Narrow', Arial, sans-serif;	
+	font-size:1.35em;
+	text-decoration:none;
+	color:#ccc;
+	-webkit-transition:color .25s;
+	-moz-transition:color .25s;
+	transition:color .25s;
+}
+
+.modul.forum.forum-index td:nth-child(1) a:hover {
+	text-decoration:underline;
+	color:#fff;
+}
+
+.modul.forum.forum-index td:nth-child(1) span {
+	display:block;
+}
+/*---------------------------------------------------------------------------
+	Форум category
+---------------------------------------------------------------------------*/
+.modul.forum.category tbody td {
+	padding:9px 15px 10px;
+	background-color:#181c1f;
+	-webkit-transition:background-color .25s;
+	-moz-transition:background-color .25s;
+	transition:background-color .25s;
+}
+
+.modul.forum.category tbody tr:hover td {
+	background-color:#202528;
+}
+
+.modul.forum.category th,
+.modul.forum.category td {
+
+	border:1px solid #0d0f11;
+}
+
+.modul.forum.category th {
+	border-top:none;
+}
+.modul.forum.category td:first-child,
+.modul.forum.category th:first-child {
+	border-left:none;
+}
+.modul.forum.category td:last-child,
+.modul.forum.category th:last-child {
+	border-right:none;
+}
+.modul.forum.category tr:last-child td {
+	border-bottom:none;
+}
+
+.modul.forum.category th:nth-child(1),
+.modul.forum.category td:nth-child(1) {
+	width:5%;
+}
+.modul.forum.category th:nth-child(2),
+.modul.forum.category td:nth-child(2) {
+	width:55%;
+}
+.modul.forum.category th:nth-child(3),
+.modul.forum.category td:nth-child(3) {
+	width:15%;
+	text-align:center;
+}
+.modul.forum.category th:nth-child(4),
+.modul.forum.category td:nth-child(4) {
+	width:10%;
+	text-align:center;
+}
+.modul.forum.category th:nth-child(5),
+.modul.forum.category td:nth-child(5) {
+	width:15%;
+}
+
+.modul.forum.category td:nth-child(2) a {
+	display:inline-block;
+	margin-bottom:3px;
+	font-family:'WarHeliosCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.25em;
+
+	text-decoration:none;
+	color:#ccc;
+	-webkit-transition:color .25s;
+	-moz-transition:color .25s;
+	transition:color .25s;
+}
+.modul.forum.category td:nth-child(2) a:hover {
+	text-decoration:underline;
+	color:#fff;
+}
+
+.modul.forum.category h3.category-title {
+	padding:20px 0 18px 15px;
+	font-family:'WarHeliosCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.3em;
+	font-weight:normal;
+	color:#999;
+}
+.modul.forum.category h3.category-title a {
+	text-decoration:none;
+	color:#ccc;
+}
+.modul.forum.category h3.category-title a:hover {
+	text-decoration:underline;
+}
+/*---------------------------------------------------------------------------
+	Форум theme
+---------------------------------------------------------------------------*/
+.modul.forum.theme td:nth-child(1) {
+	width:12%;
+	padding:10px 34px 10px 14px;
+}
+.modul.forum.theme td:nth-child(2) {
+	width:55%;
+}
+
+.modul.forum.theme table tr td {
+	vertical-align:top;
+}
+
+.modul.forum.theme table tr:nth-child(odd) td {
+	background-color:#202528;
+}
+.modul.forum.theme table tr:nth-child(even) td {
+	background-color:#181c1f;
+}
+
+.modul.forum.theme td:nth-child(1) {
+	width:17%;
+}
+.modul.forum.theme td:nth-child(2) {
+	width:83%;
+}
+
+.modul.forum.theme table .nickname {
+	position:relative;
+	overflow:hidden;
+	width:150px;
+	white-space:nowrap;
+	font-family:'WarHeliosCondC', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.5em;
+}
+
+.modul.forum.theme table td {
+	background-color:;
+}
+.modul.forum.theme table tr:nth-child(odd) .nickname::before {
+	display:block;
+	position:absolute;
+	content:' ';
+	top:0;
+	right:0;
+	width:20px;
+	height:100px;
+	background:rgb(32, 37, 40);
+	background:-moz-linear-gradient(0deg, rgba(32, 37, 40, 0) 10%, rgb(32, 37, 40) 80%);
+	background:-webkit-linear-gradient(0deg, rgba(32, 37, 40, 0) 10%, rgb(32, 37, 40) 80%);
+	background:-o-linear-gradient(0deg, rgba(32, 37, 40, 0) 10%, rgb(32, 37, 40) 80%);
+	background:-ms-linear-gradient(0deg, rgba(32, 37, 40, 0) 10%, rgb(32, 37, 40) 80%);
+	background:linear-gradient(90deg, rgba(32, 37, 40, 0) 10%, rgb(32, 37, 40) 80%);
+	z-index:99;
+}
+.modul.forum.theme table tr:nth-child(even) .nickname::before {
+	display:block;
+	position:absolute;
+	content:' ';
+	top:0;
+	right:0;
+	width:20px;
+	height:100px;
+	background:rgb(24, 28, 31);
+	background:-moz-linear-gradient(0deg, rgba(24, 28, 31, 0) 10%, rgb(24, 28, 31) 80%);
+	background:-webkit-linear-gradient(0deg, rgba(24, 28, 31, 0) 10%, rgb(24, 28, 31) 80%);
+	background:-o-linear-gradient(0deg, rgba(24, 28, 31, 0) 10%, rgb(24, 28, 31) 80%);
+	background:-ms-linear-gradient(0deg, rgba(24, 28, 31, 0) 10%, rgb(24, 28, 31) 80%);
+	background:linear-gradient(90deg, rgba(24, 28, 31, 0) 10%, rgb(24, 28, 31) 80%);
+	z-index:99;
+}
+
+
+.modul.forum.theme table .nickname a {
+	text-decoration:none;
+}
+.modul.forum.theme table .nickname a:hover {
+	text-decoration:underline;
+	color:#ff5732;
+}
+.modul.forum.theme table .avatar a.user {
+	display:block;
+	overflow:hidden;
+	width:150px;
+}
+.modul.forum.theme table .avatar img {
+	max-width:150px;
+	max-height:150px;
+	padding:1px;
+	border:1px solid #999;
+}
+.modul.forum.theme table .role {
+	font-size:.85em;
+	margin-bottom:8px;
+}
+.modul.forum.theme table .clan {
+	margin:4px 0;
+}
+.modul.forum.theme table .clan a {
+	display:block;
+	font-size:1em;
+	padding-left:28px;
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.modul.forum.theme table .messages {
+	margin:8px 0;
+	font-size:.85em;
+	font-weight:bold;
+}
+
+.modul.forum.theme table div.status {
+	overflow:hidden;
+	padding:10px 14px;
+	font-size:.85em;
+}
+.modul.forum.theme table div.status a {
+	text-decoration:none;
+	padding-left:12px;
+}
+.modul.forum.theme table div.status a:hover {
+	text-decoration:underline;
+}
+.modul.forum.theme table div.status .time {
+	float:left;	
+	color:#888;
+}
+.modul.forum.theme table div.status .links {
+	float:right;	
+}
+
+.modul.forum.theme table div.message {
+	padding:9px 14px 20px;
+}
+
+.modul.forum.theme table .update {
+	padding:8px 14px 14px;
+	font-style:italic;
+}
+.modul.forum.theme table .signature {
+	border-top:1px solid #333;
+	margin:0 14px 20px;
+	padding:12px 1px 0;
+}
+
+.modul.forum.theme h3.category-title {
+	padding:26px 0 18px 15px;
+	font-family:'WarHeliosCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-size:1.3em;
+	font-weight:normal;
+	color:#999;
+}
+.modul.forum.theme h3.category-title a {
+	text-decoration:none;
+	color:#ccc;
+}
+.modul.forum.theme h3.category-title a:hover {
+	text-decoration:underline;
+}
+
+.modul.forum.theme h3.category-title span {
+	display:block;
+}
+.modul.forum.theme h3.category-title span.small {
+	font-family:Arial, sans-serif;
+	font-size:.55em;
+	margin-top:-10px;
+}
+.modul.forum.theme h3.category-title span.small a {
+	text-decoration:underline;
+}
+.modul.forum.theme h3.category-title span.small a:hover {
+	text-decoration:none;
+}
+
+.modul.forum.theme .user-message,
+.modul.forum.theme .theme-close {
+	position:relative;
+	padding-bottom:60px;
+	padding-top:20px;
+	font-size:.85em;
+	text-align:center;
+	font-weight:bold;
+}
+
+.modul.forum.theme .user-message::before,
+.modul.forum.theme .theme-close::before {
+	position:absolute;
+	width:100%;
+	display:block;
+	top:50px;
+	font-family:'MoonRegular';
+	font-weight:normal;
+	font-size:1.45em;
+	text-align:center;
+}
+
+.modul.forum.theme .theme-close::before {
+	content:'\e98f';
+}
+
+.modul.forum.theme .user-message::before {
+	content:'\ea07';
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Подробная новость
+---------------------------------------------------------------------------*/
+.modul.detail-news h4.detail-news-title {
+	margin:0;
+	font-family:'WarHeliosCondCBold', 'Arial Narrow', Arial, sans-serif;
+	font-weight:normal;
+	font-size:1.45em;
+}
+
+.modul.detail-news .date {
+	font-size:.7em;
+	color:#999;
+}
+
+.modul.detail-news .detail-news-content {
+	margin:16px 0;
+	font-size:.85em;
+}
+
+.modul.detail-news .detail-news-links {
+	font-size:.85em;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Комментарии к новостям
+---------------------------------------------------------------------------*/
+.modul.news-comment span.empty {
+	display:block;
+	width:100%;
+	padding-top:14px;
+	white-space:nowrap;
+	text-align:center;
+}
+.modul.news-comment table {
+	border-collapse:separate;
+}
+
+.modul.news-comment td {
+	border-top:1px solid #252525;
+	border-bottom:1px solid #000;
+}
+.modul.news-comment tr:first-child td {
+	border-top:none;
+}
+.modul.news-comment tr:last-child td {
+	border-bottom:none;
+}
+
+.modul.news-comment td {
+	vertical-align:top;
+}
+.modul.news-comment td:nth-child(1) {
+	width:12%;
+	padding:20px 30px 20px 0;
+}
+.modul.news-comment td:nth-child(2) {
+	width:87%;
+	padding:20px 15px 20px 0;
+}
+
+.modul.news-comment .nickname {
+	margin:0 auto;	
+}
+
+.modul.news-comment .avatar {
+	margin:0 auto;
+	width:70px;
+	height:70px;
+}
+.modul.news-comment .avatar img {
+	max-width:70px;
+	max-height:70px;
+	-webkit-border-radius:90px;
+	-moz-border-radius:90px;
+	border-radius:90px;
+}
+
+.modul.news-comment .time {
+	margin-top:7px;
+	font-size:.7em;
+	color:#999;
+}
+.modul.news-comment .time span {
+	display:block;
+	text-align:center;
+
+}
+
+.modul.news-comment .status {
+	position:relative;
+	overflow:hidden;
+	padding:8px 0;
+}
+.modul.news-comment .nickname {
+	font-size:1.35em;
+}
+.modul.news-comment .nickname a {
+	text-decoration:none;
+}
+.modul.news-comment .nickname a:hover {
+	text-decoration:underline;
+	color:#fff;
+}
+.modul.news-comment .role {
+	font-size:.7em;
+}
+.modul.news-comment .links {
+	position:absolute;
+	top:0;
+	right:0;
+	font-size:.7em;
+}
+
+.modul.news-comment .message {
+	font-size:.85em;
+	color:#b2b2b2;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Футер
+---------------------------------------------------------------------------*/
+footer.footer {
+
+	width:1190px;
+	margin:0 auto;
+	overflow:hidden;
+	margin-top:15px;
+	padding:22px 26px;
+}
+
+footer.footer p {
+	font-size:.8em;
+}
+
+footer.footer a {
+	display:block;
+	padding:5px 0 4px 28px;
+	color:#999;
+}
+
+footer.footer p.copy-wg {
+	float:left;
+}
+
+footer.footer p.copy-pw {
+	float:right;
+}
+
+footer.footer p.copy-wg a:first-child {
+	background-image:url('../images/small-wg-wot-dark.png');
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+
+footer.footer p.copy-wg a:last-child {
+	background-image:url('../images/small-wg-cpp-dark.png');
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+
+footer.footer p.copy-pw a {
+	background-image:url('../images/wot-pw-small-white.png');
+	background-position:left center;
+	background-repeat:no-repeat;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цвета для рейтингов, званий и событий
+---------------------------------------------------------------------------*/
+/* Рейтинги */
+.very-bad {color:#FE0E00;}
+.bad {color:#FE7903;}
+.normal {color:#D7CA2B;}
+.good {color:#A0C419;}
+.very-good {color:#02C9B3;}
+.unique {color:#D042F3;}
+
+/* Звания */
+span.leader {color:#D93DF9;}
+span.vice-leader {color:#D93DF9;}
+span.personnel-officer {color:#489928;}
+
+span.commander {color:#489928;}
+span.diplomat {color:#D7CA2B;}
+span.treasurer {color:#D7CA2B;}
+span.recruiter {color:#FF7D00;}
+span.junior-officer {color:#FF7D00;}
+span.private {color:#FE0E01;}
+span.recruit {color:#FE0E01;}
+span.reservist {color:#FE0E01;}
+
+/* События */
+.joined-clan {color:#009900;}
+.left-clan {color:#FF0000;}
+
+
+
+/*---------------------------------------------------------------------------
+	Чат
+---------------------------------------------------------------------------*/
+.chat .pastic {
+	padding:10px !important;
+}
+.chat .tabs {
+	overflow:hidden;
+}
+.chat .tabs div {
+	margin-right:10px;
+	cursor:pointer;
+	font-size:13px;
+	position:relative;
+	background-color:#f2f2f2;
+	padding:4px 6px 3px 12px;
+	float:left;
+
+	text-decoration:none;
+	color:#999;
+	-webkit-border-radius:2px 0 0 0;
+	-moz-border-radius:2px 0 0 0;
+	border-radius:2px 0 0 0;
+	z-index:1;
+}
+.chat .tabs div::after {
+	content:' ';
+	position:absolute;
+	top:0;
+	right:-9px;  
+	bottom:0;
+	width:17px;
+	background-color:#f2f2f2;
+	-webkit-transform:skew(30deg);
+	-moz-transform:skew(30deg);
+	-ms-transform:skew(30deg);
+	-o-transform:skew(30deg);
+	transform:skew(30deg);
+	-webkit-border-radius:0 2px 0 0;
+	-moz-border-radius:0 2px 0 0;
+	border-radius:0 2px 0 0;
+	z-index:-1;
+}
+
+.chat .tabs div:hover,
+
+.chat .tabs div:hover::after {
+	background:#ececec;
+	color:#333 !important;
+}
+
+#tabs #current a,
+#tabs #current a::after{
+	background-color:#fff;
+	z-index:3;
+}
+
+.chat .tabs div.active {
+	background-color:#555;
+	color:#ddd !important;
+	z-index:9;
+}
+.chat .tabs div.active::after {
+  background-color:#555; 
+}
+
+.chat .tabs div:hover {
+	text-decoration:none;
+}
+.chat .tabs div.active {
+	color:#555;	
+	text-decoration:none;
+}
+
+.chat .window {
+	clear:both;
+	border:1px solid #444;
+	background-color:#111;
+	display:none;
+	overflow-y:auto;
+	overflow-x:hidden;
+	font-size:12px;
+	padding:4px 6px;
+	word-wrap:break-word;
+	-webkit-border-radius:0 2px 2px 2px;
+	-moz-border-radius:0 2px 2px 2px;
+	border-radius:0 2px 2px 2px;
+}
+
+.chat .window.active {
+	display:block;
+}
+.chat .message {
+	width:100%;
+	display:block;
+}
+
+.chat-message {
+	margin:2px 0;
+	padding:2px 0;
+	color:#ccc;
+}
+
+.chat-message .msg {
+	padding-left:6px;
+}
+
+.chat-message .nick {
+	float:left;
+	margin-right:5px;
+	font-weight:bold;
+	cursor:pointer;
+	padding-left:6px;
+}
+.chat-message .nick:hover {
+	text-decoration:underline;
+}
+.chat-message .nick:after {
+	content:':'
+}
+.chat-message .time {
+	float:right;
+	margin-left:5px;
+	font-style:italic;
+	padding-right:6px;
+}
+.chat-message.to-me {
+	background:#373737;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+.chat textarea {
+	width:100%;
+	height:28px;
+	margin:8px 0;
+
+	padding:6px 7px;
+	color:#ddd;
+	background-color:#444;
+	border:1px solid #444;
+	font-size:12px;
+	resize:none;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:border .25s, background-color .25s;
+	-moz-transition:border .25s, background-color .25s;
+	transition:border .25s, background-color .25s;
+}
+.chat textarea:focus {
+	border:1px solid #777;
+	background-color:#555;
+}
+
+.chat button {
+	cursor:pointer;
+	padding:6px 12px;
+	font-size:.85em;
+	color:#ccc;
+	background-color:#333;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	border:none;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+.chat button:hover {
+	background-color:#555;
+	color:#fff;
+}
+
+.chat .admin.chat-message .nick {
+	color:red;
+}
+
+.chat .admin.chat-message .nick {
+	color:green;
+}
+
+.chat .controls {
+	margin-top:6px;
+	color:#ccc;
+}
+
+.chat .controls span {
+	font-size:.85em;
+	color:#ccc;
+}
+
+
+
+
+/*---------------------------------------------------------------------------
+	Формы
+---------------------------------------------------------------------------*/
+.form {
+	margin-top:32px;
+	color:#ccc;
+}
+.form .row {
+	overflow:hidden;
+	margin:12px 0 12px;
+	font-size:.8em;
+}
+.form .row:last-child {
+	margin:12px 0 0;	
+}
+.form input[type="text"],
+.form select {
+	width:220px;
+	display:block;
+	float:left;
+}
+.form .row label {
+	display:block;
+	float:left;
+	width:200px;
+	padding:0 0 6px 0;
+	font-weight:bold;
+}
+.form label:last-child {
+	padding:7px 0 0 14px;
+}
+.form textarea {
+	height:120px;
+	width:100%;
+}
+.form input[type="text"],
+.form select,
+.form textarea {
+	border:2px solid #444;
+	padding:5px 6px;
+	background:#313337;
+	color:#ccc;
+	display:block;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:border .25s;
+	-moz-transition:border .25s;
+	transition:border .25s;
+}
+.form input:focus,
+.form textarea:focus {
+	border:2px solid #777;
+	background:#313337;
+}
+.form input[type="submit"],
+.form input[type="button"] {
+	display:inline-block;
+	cursor:pointer;
+	border:none;
+	padding:9px 14px;
+	font-size:1.2em;
+	color:#ddd;
+	text-decoration:none;
+	background-color:#333;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition: background-color .25s, color .25s;
+	-moz-transition: background-color .25s, color .25s;
+	transition: background-color .25s, color .25s;
+}
+.form input[type="submit"]:hover,
+.form input[type="button"]:hover {
+	background-color:#555;
+	color:#fff;
+}
+
+.form .row.input,
+.form .row.buttons {
+	padding-left:2px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Онлайн
+---------------------------------------------------------------------------*/
+.online .cell {
+	position:relative;
+	overflow:visible;
+	height:85px;
+	padding:4px 0 0 !important;
+	font-size:.75em;
+	color:#b2b2b2;
+}
+
+.online strong,
+.online span {
+	display:inline-block;
+}
+.online span {
+	padding-right:5px;
+}
+
+.online .online-inner {
+	position:absolute;
+	overflow:hidden;
+	z-index:29;
+	width:100%;
+	padding:8px 12px 4px;
+	max-height:70px;
+	background-color:transparent;
+	-webkit-transition:max-height 0.15s ease-out, background-color 0.15s ease-out;
+	-moz-transition:max-height 0.15s ease-out, background-color 0.15s ease-out;
+	transition:max-height 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+.online .online-inner:hover {
+    max-height:500px;
+	background-color:#171919;
+	-webkit-transition:max-height 0.25s ease-in, background-color 0.15s ease-in;
+	-moz-transition:max-height 0.25s ease-in, background-color 0.15s ease-in;
+	transition:max-height 0.25s ease-in, background-color 0.15s ease-in;
+}
+
+.online .online-allies-list {
+	line-height:16px;
+	padding-top:5px;
+}
+
+.online .online-allies-list a {
+	display:inline-block;
+	padding:2px 4px 4px 0;
+}
+
+.online .online-allies-list a::after {
+	content:', ';
+	display:inline-block;
+}
+
+.online .online-allies-list a:last-child::after {
+	content:'.';
+	display:inline-block;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Пагинация
+---------------------------------------------------------------------------*/
+.pager {
+	overflow:hidden;
+	padding:1px 0;
+	margin:32px 0 0;
+}
+.pager ul {
+	list-style:none;
+	float:right;
+}
+.pager ul li {
+	display:inline-block;
+	margin:0 0 0 5px;
+
+
+	float:left;
+}
+.pager ul li.first,
+.pager ul li.last {
+	display:none;
+}
+.pager ul li.previous,
+.pager ul li.next {
+	display:none;
+}
+.pager ul li a {
+	display:block;
+	font-size:.75em;
+	font-weight:bold;
+	background:#444;
+	color:#fff;
+	padding:6px 9px;
+	text-decoration:none;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:background-color .2s ease, color .2s ease;
+	-moz-transition:background-color .2s ease, color .2s ease;
+	transition:background-color .2s ease, color .2s ease;
+}
+.pager ul li.selected a {
+	background:#777;
+	color:#fff;
+}
+.pager ul li a:hover {
+	background:#777;
+	color:#fff;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Мой аккаунт
+---------------------------------------------------------------------------*/
+.modul.myaccount table {
+	width:100%;
+	margin-top:22px;
+	font-size:.75em;
+}
+
+.modul.myaccount table td {
+	border-top:1px solid #0d0F11;
+	border-bottom:1px solid #0d0F11;
+	background-color:#181c1f;
+}
+
+.modul.myaccount th {
+	background-color:#0d0F11;
+	text-align:right;
+}
+
+.modul.myaccount table td,
+.modul.myaccount table th {
+	padding:6px 8px;
+	white-space:nowrap;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Спойлер форум
+---------------------------------------------------------------------------*/
+.modul.forum .forum-spoiler {
+	margin:6px 0 8px;
+}
+
+.js .modul.forum .forum-spoiler .fs-container {
+	display:none;
+}
+.no-js .modul.forum .forum-spoiler .fs-container {
+	display:block;
+}
+
+.modul.forum .forum-spoiler .fs-container {
+	padding:3px 8px;
+	border-top:1px solid #70838d;
+	border-left:1px solid #70838d;
+	border-right:1px solid #70838d;
+}
+.modul.forum .forum-spoiler::after {
+	display:block;
+	content:' ';
+	border-bottom:1px solid #70838d;
+}
+
+.modul.forum .forum-spoiler .button {
+	display:inline-block;
+	margin-bottom:4px;
+	padding:2px 5px;
+	border:none;
+	font-size:.775em;
+	color:#333;
+	background-color:#f5f5f5;
+	cursor:pointer;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image:-webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:-o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image:linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-image:-moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-repeat:repeat-x;
+	-webkit-transition: border .15s, box-shadow .15s;
+	-moz-transition: border .15s, box-shadow .15s;
+	transition: border .15s, box-shadow .15s;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+.modul.forum .forum-spoiler .button:hover {
+	border:none;
+}
+.modul.forum .forum-spoiler .button:active {
+	background-color:#f5f5f5;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6), to(#ffffff));
+	background-image:-webkit-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:-o-linear-gradient(top, #e6e6e6, #ffffff);
+	background-image:linear-gradient(to bottom, #e6e6e6, #ffffff);
+	background-image:-moz-linear-gradient(top, #e6e6e6, #ffffff);
+	background-repeat:repeat-x;
+}
+.fs-container p {
+	margin:5px 0;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цитата форум
+---------------------------------------------------------------------------*/
+.modul.forum .forum-quote {
+	margin:8px 0;
+}
+.modul.forum .forum-quote .fq-data {
+	padding:4px 6px 3px;
+	font-size:.925em;
+	color:#bbb;
+	background-color:rgba(255, 255, 255, .1);
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+.modul.forum .forum-quote .fq-container {
+	padding:3px 6px;
+	border:1px solid rgba(255, 255, 255, .1);	
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Цитата комментарии
+---------------------------------------------------------------------------*/
+.modul.forum .comment-quote {
+	margin:8px 0;
+}
+.modul.forum .comment-quote .cq-data {
+	padding:4px 6px 3px;
+	font-size:.925em;
+	color:#bbb;
+	background-color:rgba(255, 255, 255, .1);
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+}
+.modul.forum .comment-quote .cq-container {
+	padding:3px 6px;
+	border:1px solid rgba(255, 255, 255, .1);	
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Опросы
+---------------------------------------------------------------------------*/
+.modul.poll .cell {
+	padding:12px 14px !important;
+	font-size:13px;
+}
+
+.modul.poll .cell ul {
+	margin:0 0 16px;
+}
+
+.modul.poll .cell li {
+	margin:6px 0;
+	line-height:15px;
+}
+
+.modul.poll .cell li > span {
+	position:relative;
+	display:block;
+	margin:4px 0 9px 0;
+	height:9px;
+	border:1px solid #444;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+.modul.poll .cell li span span {
+	position:absolute;
+	display:inline-block;
+	height:7px;
+	background-color:#777;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+}
+
+.modul.poll .cell .question {
+	padding:0 0 4px 1px;
+	font-weight:bold;
+	color:#ccc;
+}
+
+.modul.poll input[type="radio"] {
+	display:none !important;
+}
+
+.modul.poll input[type="radio"] + label {
+	cursor:pointer;
+	-webkit-transition:color .15s;
+	-moz-transition:color .15s;
+	transition:color .15s;
+}
+.modul.poll input[type="radio"] + label:hover {
+	color:#ccc;
+}
+
+.modul.poll input[type="radio"] + label::before {
+	position:relative;
+	content:'';
+	display:inline-block;
+	top:2px;
+	margin-right:7px;
+	width:12px; height:12px;
+	border:1px solid #777;
+	background-color:#555;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	-webkit-box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+	-webkit-transition:border .15s;
+	-moz-transition:border .15s;
+	transition:border .15s;
+}
+.modul.poll input[type="radio"] + label:hover::before {
+	border:1px solid #b1b1b1;
+}
+
+.modul.poll input[type="radio"]:checked + label::before {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAACVBMVEXu7u7u7u7u7u4da4BQAAAAAnRSTlMQwKc1HdkAAAAZSURBVHgBY2BgZGJiBJMgmgkMoBRUEKoEAATCADkK7oLSAAAAAElFTkSuQmCC);
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+.modul.poll button {
+	border:none;
+	padding:4px 8px;
+	font-size:13px;
+	color:#ddd;
+	background-color:#353535;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+.modul.poll button:hover {
+	color:#fff;
+	background-color:#555;
+}
+
+
+
+
+/*---------------------------------------------------------------------------
+	Активные темы
+---------------------------------------------------------------------------*/
+.themes-mini {
+
+}
+
+.themes-mini .tm-theme {
+	position:relative;
+	padding:0 0 0 50px;
+	min-height:40px;
+	margin-bottom:12px;
+}
+.themes-mini .tm-theme:last-child {
+	margin:0;
+}
+
+.themes-mini .tm-avatar {
+	position:absolute;
+	top:1px; left:0;
+}
+
+.themes-mini .tm-avatar img {
+	width:40px; height:40px;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+.themes-mini .tm-title {
+	font-size:12px;
+	line-height:15px;
+}
+
+.themes-mini .tm-user-time {
+	overflow:hidden;
+	font-size:10px;
+	padding-top:3px;
+	color:#999;
+}
+
+.themes-mini .tm-user-time a,
+.themes-mini .tm-user-time span {
+	float:left;
+	display:block;
+    white-space:nowrap;
+}
+
+.themes-mini .tm-user-time a {
+	max-width:94px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.themes-mini span.empty {
+	display:block;
+	text-align:center;
+	font-size:12px;
+}
+
+
+
+/*---------------------------------------------------------------------------
+	Помочь сайту
+---------------------------------------------------------------------------*/
+.modul.donate {
+}
+
+.modul.donate p.ballance {
+	margin:0; padding:0 0 0 1px;
+	font-size:16px;
+	font-weight:bold;
+	color:#777;
+}
+
+.modul.donate input[type="text"] {
+	display:block;
+	margin:14px 0 9px; padding:6px 8px 5px;
+	width:100%;
+	font-size:12px;
+	text-transform:uppercase;
+	font-weight:bold;
+	border:none;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	border:1px solid #555;
+	background-color:#393a3d;
+	color:#999;
+}
+.modul.donate input[type="text"]:focus {
+	border:1px solid #eee;
+	background-color:#eee;
+	color:#333;
+}
+
+.modul.donate button {
+	display:block;
+	margin:0; padding:5px 8px 5px;
+	border:none;
+	font-size:14px;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:color .1s, background-color .1s;
+	-moz-transition:color .1s, background-color .1s;
+	transition:color .1s, background-color .1s;
+	background-color:#393a3d;
+	color:#a5a6a7;
+}
+.modul.donate button:active {
+	background-color:;
+	color:;
+}
+.modul.donate button:hover {
+	background-color:#d3d4d4;
+	color:#252629;
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------------
+	Форматирование текста
+---------------------------------------------------------------------------*/
+.statik-edit {
+	font-size:12px;
+	border-top:1px solid rgba(75,75,75,0.5);
+	margin-top:18px; padding-top:8px;
+}
+.detail-news-content ul,
+.news-content ul,
+.modul.static .cell ul,
+.modul.forum.theme .message ul {
+	list-style-type:disc !important;
+	font-size:13px;
+	margin:0 25px 10px;
+}
+.detail-news-content ol,
+.news-content ol,
+.modul.static .cell ol,
+.modul.forum.theme .message ol {
+	font-size:13px;
+	margin:0 28px 10px;
+}
+.detail-news-content p,
+.news-content p,
+.modul.static .cell p,
+.modul.forum.theme .message p {
+	font-size:13px;
+	margin:0 0 10px;
+	color:#999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------
+	Новая считалка онлайна
+---------------------------------------------------------------------------*/
+.scrollable-table {
+
+}
+
+.scrollable-table .st-static {
+	float:left;
+}
+
+.scrollable-table .st-static td {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	max-width:120px;
+	padding:6px 11px;
+	text-align:left;
+	background-color:#16191b;
+}
+.scrollable-table .st-static td:hover {
+	background-color:#16191b !important;
+}
+
+.scrollable-table .st-scrollable {
+	overflow-x:scroll;
+	cursor:move;
+	-webkit-user-select:none;    
+	-moz-user-select:none;   
+	-ms-user-select:none;   
+	user-select:none;    
+}
+
+.scrollable-table .st-scrollable table {
+	margin-bottom:0;  
+}
+
+.scrollable-table .st-scrollable td:first-child {
+	border-left:0;
+}
+
+.modul.staff .scrollable-table tr.date-row td {
+	background:#242D31;
+}
+
+.scrollable-table .st-scrollable td:last-child {
+	background:#16191b;
+}
+
+.staff-attnav {
+	margin:0 0 14px !important;
+	list-style:none;
+}
+
+.staff-attnav li {
+	display:inline-block;
+	margin:0 5px 9px 0;
+}
+
+.staff-attnav li a {
+	position:relative;
+	display:inline-block;
+	padding:4px 8px;
+	font-size:.9em;
+	color:#ddd;
+	text-decoration:none;
+	background-color:#333;
+	-webkit-border-radius:2px;
+	-moz-border-radius:12px;
+	border-radius:2px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+
+.staff-attnav li a:hover,
+.staff-attnav li.active a {
+	color:#fff;
+	background-color:#555;
+}
+
+/*-- --*/
+
+.scrollable-table .st-scrollable td[g] {
+	color:#26FF93;
+}
+
+.scrollable-table .st-scrollable td[l] {
+	color:#FF4D4D;
+}
+
+/*-- --*/
+
+.modul.staff .att-calc {
+	overflow:hidden;
+	margin:10px 0 22px;
+	font:bold 13px/1 Arial, sans-serif;
+	color:#ccc;
+}
+
+.modul.staff .ac-one,
+.modul.staff .ac-two {
+	display:inline-block;
+	margin-right:40px;
+}
+
+.modul.staff .att-calc p {
+	display:block;
+	margin:16px 0 0;
+	font:normal 11px/1 Arial, sans-serif;
+}
+
+.staff .staff-attnav {
+	list-style:none;
+	margin:0 18px 22px 0;
+}
+
+.modul.staff p {
+	margin:12px 0;
+	font:bold 13px/1 Arial, sans-serif;
+}
+
+.modul.staff .att-calc input[type="text"],
+.modul.staff .att-calc select {
+	width:50px;
+	border:1px solid #cbd3dc;
+	background-color:#f7f9fa;
+	color:#444;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	border-radius:1px;
+	-webkit-transition:border .25s, background-color .25s;
+	-moz-transition:border .25s, background-color .25s;
+	transition:border .25s, background-color .25s;
+}
+
+.modul.staff .att-calc input[type="text"] {
+	margin:0 5px; padding:4px 8px;
+}
+
+.modul.staff .att-calc select {
+	margin:0 0 0 5px; padding:4px 4px;
+}
+
+.modul.staff .att-calc input:focus {
+	border:1px solid #80a8e6;
+	background-color:#fff;
+}
+
+.modul.staff .att-calc button {
+	display:inline-block;
+	position:relative;
+	margin:0 0 0 5px;
+	padding:7px 11px;
+	font-size:.9em;
+	color:#ddd;
+	border:none;
+	text-decoration:none;
+	background-color:#333;
+	-webkit-border-radius:2px;
+	-moz-border-radius:12px;
+	border-radius:2px;
+	-webkit-transition:background-color .25s, color .25s;
+	-moz-transition:background-color .25s, color .25s;
+	transition:background-color .25s, color .25s;
+}
+
+.modul.staff .att-calc input[type="submit"]:hover,
+.modul.staff .att-calc button:hover {
+	color:#fff;
+	background-color:#555;
+}
